@@ -1,5 +1,9 @@
-import { Parallax, ParallaxLayer } from '@react-spring/parallax'
-//import heartOfTron from '../app/assets/heartOfTron.jpg';
+import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+import Intro from '../components/IntroSlab';
+import Experience from '../components/ExperienceSlab';
+import Education from '../components/EducationSlab';
+import Hobbies from '../components/HobbiesSlab';
+
 
 const MainPage = () => {
 
@@ -9,18 +13,17 @@ const MainPage = () => {
                 offset={0}
                 speed={2.5}
                 style={{ 
-                    color:'lightblue',
+                    color:'#FFDECD',
                     fontSize: '55px',
                     display: 'flex', 
                     justifyContent: 'center', 
-                    alignItems: 'center', 
-                    // backgroundImage: "linear-gradient(#B68FA2, #333B3E, #3E555E, #586F77, #ACBCB1)"
+                    alignItems: 'center'
                 }}
             >
-                <p><strong>WELCOME TO THE BEGINNINGS OF MY PAGE</strong></p>
+                <Intro />
             </ParallaxLayer>
 
-            <ParallaxLayer offset={1} speed={2} style={{ backgroundColor: '#ff6d6d' }} />
+            <ParallaxLayer offset={1} speed={2} style={{ backgroundColor: '#FCAF67' }} />
 
             <ParallaxLayer
                 offset={1}
@@ -34,7 +37,7 @@ const MainPage = () => {
                 fontSize: '55px',
                 // backgroundImage: `url(${heartOfTron})`
                 }}>
-                <p><strong>THIS IS THE SECOND PAGE</strong></p>
+                <p><strong>PAGE 2</strong></p>
             </ParallaxLayer>   
 
             <ParallaxLayer
@@ -47,9 +50,9 @@ const MainPage = () => {
                 alignItems: 'center',
                 color: 'black',
                 fontSize: '55px',
-                backgroundColor: 'steelblue'
+                backgroundColor: '#FA8743'
                 }}>
-                <p><strong>THIS IS THE THIRD PAGE</strong></p>
+                <p><strong>PAGE 3</strong></p>
             </ParallaxLayer> 
             <ParallaxLayer 
                 offset={3} 
@@ -59,11 +62,11 @@ const MainPage = () => {
                     justifyContent: 'center',
                     alignItems: 'center',
                     fontSize: '55px',
-                    color: 'white', 
-                    backgroundColor: 'black' 
+                    color: '#7E0306', 
+                    backgroundColor: '#FFDECD' 
                 }}
             >
-            <p><strong>THIS IS THE FOURTH PAGE</strong></p>
+            <p><strong>PAGE 4</strong></p>
             </ParallaxLayer>
         </Parallax>       
     );
