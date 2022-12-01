@@ -2,11 +2,10 @@
   text-align: center;
 }
 
- /* body {
-  background-color: steelblue;  
-  background: url('../src/app/assets/electronics1.jpg') no-repeat fixed; 
+html body {
+  background: url('../src/app/assets/cyberWeb.jpg') no-repeat fixed;  
   background-size: 100% 100%;
-}  */
+}  
 
 
 
