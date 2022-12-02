@@ -1,4 +1,5 @@
 import { Container, Row, Col, Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
+import SideSlab from './SideSlab.tsx';
 import profilePic from '../app/assets/profilePicVintage.JPG';
 
 const Intro = () => {
@@ -6,7 +7,7 @@ const Intro = () => {
     return(
         <Container>
             <Row>
-                <Col md='4' className='mx-auto'>
+                <Col md='4' style={{ alignSelf: 'left'}} height='100%'>
                     <Card className='px-3' style={{backgroundColor:'black'}}>
                         <CardTitle>My Pic</CardTitle>
                         <CardImg src={profilePic} />
@@ -15,8 +16,8 @@ const Intro = () => {
                         </CardBody>
                     </Card>
                 </Col>
-                <Col className='mx-auto'>
-                <p>Hello!</p>
+                <Col style={{ height:'50%' }}>
+                    <SideSlab />
                 </Col>
             </Row>
         </Container>
