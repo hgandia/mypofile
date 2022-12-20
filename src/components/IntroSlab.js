@@ -5,9 +5,9 @@ import profilePic from '../app/assets/profilePicVintage.JPG';
 const Intro = () => {
 
     return(
-        <Container>
+         <Container>
             <Row>
-                <Col md='4' style={{ alignSelf: 'left'}} height='100%'>
+                <Col md='4' style={{ alignSelf: 'left'}}>
                     <Card className='px-3' style={{backgroundColor:'black'}}>
                         <CardTitle>My Pic</CardTitle>
                         <CardImg src={profilePic} />
@@ -16,9 +16,10 @@ const Intro = () => {
                         </CardBody>
                     </Card>
                 </Col>
-                <Col style={{ height:'50%' }}>
+                <Col style={{marginTop: '-180px'}}>
                     <SideSlab />
                 </Col>
+                
             </Row>
         </Container>
     );

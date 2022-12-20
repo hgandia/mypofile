@@ -19,7 +19,7 @@ const Page = ({ offset, gradient, onClick } : PageProps ) => (
     </ParallaxLayer>
 
     <ParallaxLayer className={`${styles.text} ${styles.number}`} offset={offset} speed={0.3}>
-      <span>0{offset + 1}</span>
+      <span>0{offset + 1 }</span>
     </ParallaxLayer>
   </>
 )
@@ -33,7 +33,7 @@ export default function SideSlab() {
     }
   }
   return (
-    <div style={{ background: '#dfdfdf' }}>
+    <div style={{  }}>
       <Parallax className={styles.container} ref={parallax} pages={3} horizontal>
         <Page offset={0} gradient="pink" onClick={() => scroll(1)} />
         <Page offset={1} gradient="teal" onClick={() => scroll(2)} />
