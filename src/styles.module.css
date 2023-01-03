@@ -14,8 +14,9 @@
   }
   
   .number {
-    font-size: 300px;
-    color: #545864;
+    font-size: 30px;
+    color: whitesmoke;
+    text-align: center;
   }
   
   .number span {
@@ -24,17 +25,19 @@
   }
   
   .slopeBegin {
-    background-color: #20232f;
+    background-color: #FFFFFF;
+    background: url('../src/app/assets/herbie1.JPG') no-repeat fixed;
+    background-size: 50% 100%;
     clip-path: polygon(0% 0, 70% 0, 50% 100%, 0% 100%);
   }
   
   .slopeEnd {
-    clip-path: polygon(50% 0, 100% 0, 80% 100%, 50% 100%);
+    clip-path: polygon(50% 0, 100% 0, 80% 10000%, 50% 100%);
   }
   
   .slopeBegin,
   .slopeEnd {
-    position: absolute;
+    position: static;
     width: 170%;
     height: 100%;
     cursor: pointer;

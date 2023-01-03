@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax';
 import styles from '../styles.module.css';
+import { Container, Row, Col } from 'reactstrap';
 
 interface PageProps {
   offset: number
@@ -15,11 +16,19 @@ const Page = ({ offset, gradient, onClick } : PageProps ) => (
     </ParallaxLayer>
 
     <ParallaxLayer offset={offset} speed={0.6} onClick={onClick}>
-      <div className={`${styles.slopeEnd} ${styles[gradient]}`} />
+      <div className={`${styles.slopeEnd} ${styles[gradient]}`} >
+        <Container >
+          <Row>
+            <Col style={{ textAlign: 'center'}}>
+              Hi
+            </Col>
+          </Row>
+        </Container>
+      </div>
     </ParallaxLayer>
 
     <ParallaxLayer className={`${styles.text} ${styles.number}`} offset={offset} speed={0.3}>
-      <span>0{offset + 1 }</span>
+      <span></span>
     </ParallaxLayer>
   </>
 )
@@ -32,6 +41,7 @@ export default function SideSlab() {
       parallax.current.scrollTo(to)
     }
   }
+  
   return (
     <div style={{ background: '#dfdfdf' }}>
       <Parallax className={styles.container} ref={parallax} pages={3} horizontal>
