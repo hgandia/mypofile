@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax'
+import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax';
 import styles from '../styles.module.css';
 
 interface PageProps {
@@ -33,7 +33,7 @@ export default function SideSlab() {
     }
   }
   return (
-    <div style={{  }}>
+    <div style={{ background: '#dfdfdf' }}>
       <Parallax className={styles.container} ref={parallax} pages={3} horizontal>
         <Page offset={0} gradient="pink" onClick={() => scroll(1)} />
         <Page offset={1} gradient="teal" onClick={() => scroll(2)} />

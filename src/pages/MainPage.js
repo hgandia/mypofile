@@ -1,33 +1,24 @@
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import Intro from '../components/IntroSlab';
-import Experience from '../components/ExperienceSlab';
-import Education from '../components/EducationSlab';
-import Hobbies from '../components/HobbiesSlab';
+import heartOfTron from '../app/assets/heartOfTron.jpg';
+// import Experience from '../components/ExperienceSlab';
+// import Education from '../components/EducationSlab';
+// import Hobbies from '../components/HobbiesSlab';
 
 
 const MainPage = () => {
 
     return(
         <Parallax pages={5} style={{ top: '0', left: '0' }}>
-            <ParallaxLayer
-                offset={0}
-                speed={2.5}
-                style={{ 
-                    color:'#FFDECD',
-                    fontSize: '55px',
-                    display: 'flex', 
-                    justifyContent: 'center', 
-                    alignItems: 'center'
-                }}
-            >
+            <ParallaxLayer offset={0} speed={2.5}>
                 <Intro />
             </ParallaxLayer>
 
-            <ParallaxLayer offset={1} speed={2} style={{ backgroundColor: '#FCAF67' }} />
+            <ParallaxLayer offset={1} factor={2} speed={2} style={{ backgroundImage: `url(${heartOfTron})`,  backgroundSize: '100%' }} />
 
             <ParallaxLayer
                 offset={1}
-                factor={0.7}
+                factor={0.70}
                 speed={0.5}
                 style={{
                 display: 'flex',
@@ -35,7 +26,8 @@ const MainPage = () => {
                 alignItems: 'center',
                 color: 'white',
                 fontSize: '55px',
-                // backgroundImage: `url(${heartOfTron})`
+                // backgroundImage: `url(${heartOfTron})`,
+                // backgroundSize: '100%'
                 }}>
                 <p><strong>PAGE 2</strong></p>
             </ParallaxLayer>   

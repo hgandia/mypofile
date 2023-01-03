@@ -1,25 +1,19 @@
-import { Container, Row, Col, Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
 import SideSlab from './SideSlab.tsx';
 import profilePic from '../app/assets/profilePicVintage.JPG';
+import '../myStyling.css';
 
 const Intro = () => {
 
     return(
-         <Container>
+          <Container>
             <Row>
-                <Col md='4' style={{ alignSelf: 'left'}}>
-                    <Card className='px-3' style={{backgroundColor:'black'}}>
-                        <CardTitle>My Pic</CardTitle>
-                        <CardImg src={profilePic} />
-                        <CardBody>
-                            <CardText>Hello!</CardText>
-                        </CardBody>
-                    </Card>
+                <Col md='6'>
+                    <img src={profilePic} alt='Herbert' style={{ height: '977px', width: '977px' }} className='herbie' />
                 </Col>
-                <Col style={{marginTop: '-180px'}}>
+                <Col className='side_parallax'>
                     <SideSlab />
                 </Col>
-                
             </Row>
         </Container>
     );
