@@ -16,11 +16,13 @@ const Page = ({ offset, gradient, onClick } : PageProps ) => (
     </ParallaxLayer>
 
     <ParallaxLayer offset={offset} speed={0.6} onClick={onClick}>
-      <div className={`${styles.slopeEnd} ${styles[gradient]}`} >
+      <div className={`${styles.slopeEnd} ${styles[gradient]}`}>
         <Container >
           <Row>
-            <Col style={{ textAlign: 'center'}}>
-              Hi
+            <Col>
+              <p>
+                Hi my name is the real slim shady! 
+              </p>
             </Col>
           </Row>
         </Container>
@@ -28,7 +30,7 @@ const Page = ({ offset, gradient, onClick } : PageProps ) => (
     </ParallaxLayer>
 
     <ParallaxLayer className={`${styles.text} ${styles.number}`} offset={offset} speed={0.3}>
-      <span></span>
+      <span>{offset + 1}</span>
     </ParallaxLayer>
   </>
 )

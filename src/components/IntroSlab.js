@@ -1,20 +1,40 @@
-import { Row, Col } from 'reactstrap';
-import SideSlab from './SideSlab.tsx';
-//import profilePic from '../app/assets/profilePicVintage.JPG';
-import '../myStyling.css';
+import { Container, Row, Col } from 'reactstrap';
+import greenLion from '../app/assets/greenLion.jpg';
+
 
 const Intro = () => {
 
     return(
-    
-            <Row className='herbie'>
-                {/* <Col  lg='6'>
-                    <img src={profilePic} alt='Herbert' style={{ height: '975px', width: '975px' }} />
-                </Col> */}
-                <Col>
-                    <SideSlab />
+         <Container>
+            <Row>
+                <Col sm='6'>
+                    <p style={{
+                        color: '#FFFFFF',
+                        marginLeft: '-250px',
+                        marginTop: '90px',
+                        font: '100px bold Bahnschrift Light SemiCondensed'
+                        }}>Herbert Gandia</p>
+                    <p style={{
+                        color: '#0c7971',
+                        marginTop: '20px',
+                        marginLeft: '150px',
+                        font: ' 30px bold Ariel'
+                        }}>Full Stack Developer / RF Engineer</p>
                 </Col>
+                <Col className='mx-right'>
+                    <img 
+                        src={greenLion} alt='pic of green lion' 
+                        style={{ 
+                            width: '100%',  
+                            height:'100%', 
+                            marginTop: '10px',
+                            marginLeft: '200px'
+                        }}
+                    />
+                </Col>
+
             </Row>
+         </Container>
         
     );
 

@@ -25,14 +25,15 @@
   }
   
   .slopeBegin {
-    background-color: #FFFFFF;
-    background: url('../src/app/assets/herbie1.JPG') no-repeat fixed;
+    background: url('../src/app/assets/herbie_BW.JPG') no-repeat fixed;
     background-size: 50% 100%;
     clip-path: polygon(0% 0, 70% 0, 50% 100%, 0% 100%);
   }
   
   .slopeEnd {
     clip-path: polygon(50% 0, 100% 0, 80% 10000%, 50% 100%);
+    justify-self: right;
+    color: white;
   }
   
   .slopeBegin,
@@ -44,7 +45,7 @@
   }
   
   .pink {
-    background: linear-gradient(to right, deeppink 0%, coral 100%);
+    background: linear-gradient(to right, darkblue 0%, blue 100%);
   }
   
   .teal {

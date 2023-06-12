@@ -2,8 +2,7 @@
   text-align: center;
 }
 
-html body {
-  background: url('../src/app/assets/wrinkleBlack.JPG') no-repeat fixed;  
+html body {  
   background-size: 100% 100%;
-  background-color: #7E0306;
+  background-color: #000000;
 }  
