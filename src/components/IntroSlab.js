@@ -9,15 +9,15 @@ const Intro = () => {
             <Row>
                 <Col sm='6'>
                     <p style={{
-                        color: '#FFFFFF',
-                        marginLeft: '-250px',
+                        color: '#0F6FC6',
+                        marginLeft: '-50px',
                         marginTop: '90px',
                         font: '100px bold Bahnschrift Light SemiCondensed'
                         }}>Herbert Gandia</p>
                     <p style={{
-                        color: '#0c7971',
+                        color: '#0F6FC6',
                         marginTop: '20px',
-                        marginLeft: '150px',
+                        marginLeft: '-60px',
                         font: ' 30px bold Ariel'
                         }}>Full Stack Developer / RF Engineer</p>
                 </Col>

@@ -3,6 +3,8 @@
 }
 
 html body {  
-  background-size: 100% 100%;
-  background-color: #000000;
+  /* background: rgba(0, 128, 0, 0.3); */
+  background-size: 100% 100%; 
+  background-image: url('../src//app/assets/blueFall.gif');
+  /*background-image: linear-gradient(rgba(0, 147, 120, 1), rgba(0, 128, 120, 0.3));*/
 }  
