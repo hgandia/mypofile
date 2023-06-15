@@ -1,40 +1,39 @@
 import { Container, Row, Col } from 'reactstrap';
-import greenLion from '../app/assets/greenLion.jpg';
+import herbie1 from '../app/assets/herbie1.JPG';
 
 
 const Intro = () => {
 
     return(
          <Container>
-            <Row>
-                <Col sm='6'>
+            <Row style={{ marginTop: '300px'}}>
+                <Col md='6'>
                     <p style={{
-                        color: '#0F6FC6',
-                        marginLeft: '-50px',
-                        marginTop: '90px',
+                        color: '#D1CEC5',
+                        marginLeft: '0px',
+                        marginTop: '0px',
                         font: '100px bold Bahnschrift Light SemiCondensed'
                         }}>Herbert Gandia
                     </p>
                     <p style={{
-                        color: '#0F6FC6',
-                        marginTop: '20px',
-                        marginLeft: '-60px',
+                        color: '#887E65',
+                        marginTop: '0px',
+                        marginLeft: '0px',
                         font: ' 30px bold Ariel'
                         }}>Full Stack Developer / RF Engineer
                     </p>
                 </Col>
-                <Col className='mx-right'>
+                <Col>
                     <img 
-                        src={greenLion} alt='pic of green lion' 
+                        src={herbie1} alt='pic of green lion' 
                         style={{ 
-                            width: '100%',  
+                            width: '80%',  
                             height:'100%', 
-                            marginTop: '10px',
-                            marginLeft: '200px'
+                            marginTop: '0px',
+                            marginLeft: '0px'
                         }}
                     />
                 </Col>
-
             </Row>
          </Container>
         
