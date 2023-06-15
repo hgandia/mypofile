@@ -4,16 +4,18 @@ import CircuitLine3 from '../app/assets/circuit_lines/blueCircuitLinesBlackBG/Sl
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import Intro from '../components/IntroSlab';
 
-
 const MainPage = () => {
-
     return(
-        <Parallax pages={6} style={{ top: '0', left: '0' }}>
+    <div style={{ width: '100%', height: '100%'}}>
+        <Parallax pages={5} style={{ top: '0', left: '0' }}>
             <ParallaxLayer 
                 offset={0} 
                 factor={1.5} 
                 speed={0} 
-                style={{ backgroundImage: `url(${CircuitLine1})`,  backgroundSize: '100%' }} 
+                style={{ 
+                    backgroundImage: `url(${CircuitLine1})`,  
+                    backgroundSize: '100%'
+                }} 
             />
             <ParallaxLayer offset={0.25} speed={0.8}>
                 <Intro />
@@ -29,7 +31,7 @@ const MainPage = () => {
             />
             <ParallaxLayer
                 offset={1.2}
-                factor={0.70}
+                factor={0.6}
                 speed={0.3}
                 style={{
                 display: 'flex',
@@ -85,7 +87,8 @@ const MainPage = () => {
             <p><strong>PAGE 4</strong></p>
             </ParallaxLayer>
         </Parallax>        
-    );
+    </div>
+);
 }
 
 export default MainPage;
