@@ -1,13 +1,11 @@
 import { Container, Row, Col } from 'reactstrap';
-import herbie1 from '../app/assets/herbie1.JPG';
-
 
 const Intro = () => {
 
     return(
          <Container>
-            <Row style={{ marginTop: '300px'}}>
-                <Col md='6'>
+            <Row style={{ marginTop: '380px' }}>
+                <Col >
                     <p style={{
                         color: '#D1CEC5',
                         marginLeft: '0px',
@@ -23,7 +21,7 @@ const Intro = () => {
                         }}>Full Stack Developer / RF Engineer
                     </p>
                 </Col>
-                <Col>
+                {/* <Col>
                     <img 
                         src={herbie1} alt='pic of green lion' 
                         style={{ 
@@ -33,7 +31,7 @@ const Intro = () => {
                             marginLeft: '0px'
                         }}
                     />
-                </Col>
+                </Col> */}
             </Row>
          </Container>
         

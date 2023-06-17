@@ -2,9 +2,27 @@
   text-align: center;
 }
 
-/* html body {  
-  background-size: 100% 100%; 
-  background-image: url('../src/app/assets/bluePinkTunnel.gif');
-  
-}   */
+html body {  
+  height: 100%;
+  margin: 0;
+  /* background-color: brown; */
+}  
 
+.bg1 {
+  background-image: url('../src/app/assets/herbie.jpg');
+}
+
+.bg2 {
+  background-image: url('../src/app/assets/backgournd1.jpg');
+}
+
+.bg3 {
+  background-image: url('../src/app/assets/teach.jpg');
+}
+
+.bg1, .bg2, .bg3 {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}

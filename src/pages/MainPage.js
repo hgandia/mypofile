@@ -1,91 +1,101 @@
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import Slide1 from '../app/assets/Modern design/Slide1.JPG';
-import Slide2 from '../app/assets/Modern design/Slide2.JPG';
-import herbie1 from '../app/assets/herbie1.JPG';
+//import Slide2 from '../app/assets/Modern design/Slide2.JPG';
+import bass from '../app/assets/bass.jpg';
 import Intro from '../components/IntroSlab';
+import UnderWater from '../app/assets/underWater.jpg';
+import { Container, Row, Col } from 'reactstrap';
 import { useRef } from 'react';
 
 const MainPage = () => {
     const ref = useRef();
     
     return(
-    <div style={{ width: '100%', height: '100%'}}>
-        <Parallax pages={8} enabled={true} ref={ref}>
-    {/*------------------------Home Page--------------------------------------------------*/}
-                <ParallaxLayer 
-                    offset={0} 
-                    factor={1} 
-                    speed={0.5} 
-                    style={{ 
-                        backgroundImage: `url(${Slide1})`,  
-                        backgroundSize: 'cover'
-                    }} 
-                >
-                            <Intro />
-                </ParallaxLayer>
-    {/*------------------------Backdrop Image #1--------------------------------------------------*/}
-                <ParallaxLayer 
-                    offset={1}
-                >
-                    <img src={Slide2} alt='slide 2 pic' />
-                </ParallaxLayer> 
-    {/*------------------------Projects Page--------------------------------------------------*/}
-                <ParallaxLayer 
-                    offset={2} 
-                    factor={1} 
-                    speed={0.5} 
-                    style={{ 
-                        backgroundImage: `url(${Slide1})`,  
-                        backgroundSize: 'cover'
-                    }} 
-                >
-                            <Intro />
-                </ParallaxLayer>
-    {/*------------------------Backdrop Image #2--------------------------------------------------*/}
-                <ParallaxLayer 
-                    offset={3}
-                >
-                    <img src={Slide2} alt='slide 2 pic' />
-                </ParallaxLayer>
-    {/*------------------------About Page--------------------------------------------------*/}  
-                <ParallaxLayer 
-                    offset={4} 
-                    factor={1} 
-                    speed={0.5} 
-                    style={{ 
-                        backgroundImage: `url(${Slide1})`,  
-                        backgroundSize: 'cover'
-                    }} 
-                >
-                            <Intro />
-                </ParallaxLayer>
-    {/*------------------------Backdrop Image #3--------------------------------------------------*/}
-                <ParallaxLayer 
-                    offset={5}
-                >
-                    <img src={Slide2} alt='slide 2 pic' />
-                </ParallaxLayer>
-    {/*------------------------Contact Page--------------------------------------------------*/} 
-                <ParallaxLayer 
-                    offset={6} 
-                    factor={1} 
-                    speed={0.5} 
-                    style={{ 
-                        backgroundImage: `url(${Slide1})`,  
-                        backgroundSize: 'cover'
-                    }} 
-                >
-                            <Intro />
-                </ParallaxLayer> 
-    {/*------------------------Backdrop Image #4--------------------------------------------------*/}          
-                <ParallaxLayer 
-                    offset={7}
-                >
-                    <img src={herbie1} alt='slide 2 pic' />
-                </ParallaxLayer>  
-                    
-        </Parallax>       
-    </div>
+            <Parallax 
+                pages={6} 
+                ref={ref}  
+                style={{
+                    backgroundImage: `url(${Slide1})`,  
+                    backgroundSize: 'cover',
+                    backgroundAttachment: 'fixed',
+                    backgroundPosition: 'center',
+                    backgroundRepeat:'no-repeat'
+                }}
+            >
+                    <ParallaxLayer 
+                        offset={0} 
+                        factor={1} 
+                        speed={-1.8}
+                        horizontal
+                    >
+                        <Intro />
+                    </ParallaxLayer>        
+                    <ParallaxLayer offset={1} speed={1.5}
+                        style={{ 
+                            backgroundColor: 'tan',  
+                            backgroundSize: 'cover',
+                            maxHeight: '20%'
+                        }}
+                    >
+                        <Container>
+                            <Row>
+                                <Col style={{ 
+                                    fontWeight: 'bold', 
+                                    marginTop: '445px'
+                                }}>
+                                    <h2>This is a heading</h2>
+                                    <p>This is a test for Parallax</p>
+                                </Col>
+                            </Row>
+                        </Container>   
+                    </ParallaxLayer>
+                    <ParallaxLayer
+                        offset={2}
+                        factor={1}
+                        speed={-2.5}
+                        style={{
+                            backgroundImage: `url(${bass})`,  
+                            backgroundSize: 'cover',
+                            backgroundAttachment: 'fixed',
+                            backgroundPosition: 'center',
+                            backgroundRepeat:'no-repeat',
+                            maxHeight: ''
+                        }} 
+                    />
+                    <ParallaxLayer
+                        offset={2}
+                        factor={1}
+                    >
+                        <Container>
+                            <Row>
+                                <Col style={{ 
+                                    fontWeight: 'bold', 
+                                    marginTop: '500px',
+                                    color: '#FFFFFF'
+                                }}>
+                                    <h2>This is a heading</h2>
+                                    <p>This is a test for Parallax</p>
+                                </Col>
+                            </Row>
+                        </Container>
+                    </ParallaxLayer>
+                    <ParallaxLayer 
+                        offset={2.2} horizontal
+                        factor={2.3} 
+                        speed={3.3}
+                        style={{
+                            backgroundImage: `url(${UnderWater})`,  
+                            backgroundSize: '100%',
+                            backgroundAttachment: 'fixed',
+                            backgroundPosition: 'center',
+                            backgroundRepeat:'no-repeat',
+                            maxHeight: ''
+                        }}
+                    >
+                                <Intro />
+                    </ParallaxLayer>
+            </Parallax>     
+    
 );
 }
 
