@@ -1,12 +1,13 @@
 import { Container, Row, Col } from 'reactstrap';
+import Logo from '../app/assets/HG.jpg'
 
-const Intro = () => {
+const HomePage = () => {
 
     return(
          <Container>
-            <Row style={{ marginTop: '380px' }}>
+            <Row style={{ marginTop: '100px' }}>
                 <Col >
-                    <p style={{
+                    {/* <p style={{
                         color: '#D1CEC5',
                         marginLeft: '0px',
                         marginTop: '0px',
@@ -19,7 +20,14 @@ const Intro = () => {
                         marginLeft: '0px',
                         font: ' 30px bold Ariel'
                         }}>Full Stack Developer / RF Engineer
-                    </p>
+                    </p> */}
+                    {/* <img 
+                        src={Logo} alt='pic of green lion' 
+                        style={{ 
+                            width: '100%',  
+                            height:'100%'
+                        }}
+                    /> */}
                 </Col>
                 {/* <Col>
                     <img 
@@ -38,4 +46,4 @@ const Intro = () => {
     );
 
 }
-export default Intro;
+export default HomePage;

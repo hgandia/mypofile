@@ -1,8 +1,8 @@
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import Slide1 from '../app/assets/Modern design/Slide1.JPG';
-//import Slide2 from '../app/assets/Modern design/Slide2.JPG';
+import Logo from '../app/assets/HG1.gif';
 import bass from '../app/assets/bass.jpg';
-import Intro from '../components/IntroSlab';
+import HomePage from '../components/HomePage';
 import UnderWater from '../app/assets/underWater.jpg';
 import { Container, Row, Col } from 'reactstrap';
 import { useRef } from 'react';
@@ -15,22 +15,23 @@ const MainPage = () => {
                 pages={6} 
                 ref={ref}  
                 style={{
-                    backgroundImage: `url(${Slide1})`,  
+                    backgroundImage: `url(${Logo})`,  
                     backgroundSize: 'cover',
                     backgroundAttachment: 'fixed',
                     backgroundPosition: 'center',
-                    backgroundRepeat:'no-repeat'
+                    backgroundRepeat:'no-repeat',
+                    backgroundColor: 'black'
                 }}
             >
                     <ParallaxLayer 
                         offset={0} 
                         factor={1} 
-                        speed={-1.8}
-                        horizontal
+                        speed={0.1}
+                        //horizontal
                     >
-                        <Intro />
+                        <HomePage />
                     </ParallaxLayer>        
-                    <ParallaxLayer offset={1} speed={1.5}
+                    <ParallaxLayer offset={1} speed={0.5}
                         style={{ 
                             backgroundColor: 'tan',  
                             backgroundSize: 'cover',
@@ -92,7 +93,7 @@ const MainPage = () => {
                             maxHeight: ''
                         }}
                     >
-                                <Intro />
+                                <HomePage />
                     </ParallaxLayer>
             </Parallax>     
     
