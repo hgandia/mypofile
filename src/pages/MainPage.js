@@ -1,5 +1,4 @@
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
-import Slide1 from '../app/assets/Modern design/Slide1.JPG';
 import Logo from '../app/assets/HG1.gif';
 import bass from '../app/assets/bass.jpg';
 import HomePage from '../components/HomePage';
@@ -18,16 +17,16 @@ const MainPage = () => {
                     backgroundImage: `url(${Logo})`,  
                     backgroundSize: 'cover',
                     backgroundAttachment: 'fixed',
-                    backgroundPosition: 'center',
-                    backgroundRepeat:'no-repeat',
-                    backgroundColor: 'black'
+                    backgroundPosition: 'center'
                 }}
             >
                     <ParallaxLayer 
                         offset={0} 
-                        factor={1} 
-                        speed={0.1}
-                        //horizontal
+                        factor={0.5} 
+                        speed={1}
+                        style={{
+                            maxHeight: '50%'
+                        }}
                     >
                         <HomePage />
                     </ParallaxLayer>        
@@ -74,7 +73,7 @@ const MainPage = () => {
                                     marginTop: '500px',
                                     color: '#FFFFFF'
                                 }}>
-                                    <h2>This is a heading</h2>
+                                    <h2>This is the other heading</h2>
                                     <p>This is a test for Parallax</p>
                                 </Col>
                             </Row>

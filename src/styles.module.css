@@ -1,58 +1,16 @@
 .container > div > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* scale: 0.65; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* scale: 0.65; */
   }
-  
-  .text {
-    pointer-events: none;
-    justify-content: start !important;
-    font-family: 'Kanit', sans-serif;
-    line-height: 0px;
-    text-transform: uppercase;
-  }
-  
-  .number {
-    font-size: 30px;
-    color: whitesmoke;
-    text-align: center;
-  }
-  
-  .number span {
-    display: inline-block;
-    position: relative;
-  }
-  
-  .slopeBegin {
-    background: url('../src/app/assets/herbie_BW.JPG') no-repeat fixed;
-    background-size: 50% 100%;
-    clip-path: polygon(0% 0, 70% 0, 50% 100%, 0% 100%);
-  }
-  
-  .slopeEnd {
-    clip-path: polygon(50% 0, 100% 0, 80% 10000%, 50% 100%);
-    justify-self: right;
-    color: white;
-  }
-  
-  .slopeBegin,
-  .slopeEnd {
-    position: static;
-    width: 170%;
-    height: 100%;
-    cursor: pointer;
-  }
-  
-  .pink {
-    background: linear-gradient(to right, darkblue 0%, blue 100%);
-  }
-  
-  .teal {
-    background: linear-gradient(to right, SlateBlue 0%, DeepSkyBlue 100%);
-  }
-  
-  .tomato {
-    background: linear-gradient(to right, tomato 0%, gold 100%);
-  }
-  
+    
+.navigationFont {
+  color: #FFF2CC;
+  font-size: 30px;
+  font-family: vivaldi;
+}
+
+.toggler {
+  color: #FFF2CC;
+}
