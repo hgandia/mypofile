@@ -23,7 +23,7 @@ const MainPage = () => {
                     <ParallaxLayer 
                         offset={0} 
                         factor={0.5} 
-                        speed={1}
+                        speed={0.2}
                         style={{
                             maxHeight: '50%'
                         }}
@@ -94,8 +94,7 @@ const MainPage = () => {
                     >
                                 <HomePage />
                     </ParallaxLayer>
-            </Parallax>     
-    
+            </Parallax>        
 );
 }
 

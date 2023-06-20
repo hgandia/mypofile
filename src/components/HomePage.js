@@ -1,18 +1,19 @@
-import { Container, Row, Col } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import Navigator from './Navigator';
 
 
 const HomePage = () => {
+    const cssMenuRight = {
+        display: 'flex',
+        justifyContent: 'flex-end'
+    }
 
     return(
-         <Container>
-            <Row>
-                <Col>
+            <Row >
+                <Col style={cssMenuRight}>
                     <Navigator />
                 </Col>
-            </Row>
-         </Container>
-        
+            </Row>        
     );
 
 }

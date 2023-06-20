@@ -6,30 +6,32 @@ const Navigator = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return(
-        <Navbar>
-            <NavbarToggler className={styles.toggler}/>
-            <Nav> 
-                <NavItem>
-                    <NavLink className={styles.navigationFont}>
-                        Home
-                    </NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink className={styles.navigationFont}>
-                        Projects
-                    </NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink className={styles.navigationFont}>
-                        About
-                    </NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink className={styles.navigationFont}>
-                        Contact
-                    </NavLink>
-                </NavItem>
-            </Nav>
+        <Navbar expand='md'>
+            <NavbarToggler onClick={() => setIsOpen(!isOpen)} />
+            <Collapse isOpen={isOpen} navbar>
+                <Nav> 
+                    <NavItem className={styles.navigationFont}>
+                        <NavLink className='nav-link'>
+                            Home
+                        </NavLink>
+                    </NavItem>
+                    <NavItem className={styles.navigationFont}>
+                        <NavLink className='nav-link'>
+                            Projects
+                        </NavLink>
+                    </NavItem>
+                    <NavItem className={styles.navigationFont}>
+                        <NavLink className='nav-link'>
+                            About
+                        </NavLink>
+                    </NavItem>
+                    <NavItem className={styles.navigationFont}>
+                        <NavLink className='nav-link'>
+                            Contact
+                        </NavLink>
+                    </NavItem>
+                </Nav>
+            </Collapse>
         </Navbar>
     );
 };
