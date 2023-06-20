@@ -6,27 +6,27 @@ const Navigator = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return(
-        <Navbar expand='md'>
-            <NavbarToggler onClick={() => setIsOpen(!isOpen)} />
+        <Navbar expand='md' >
+            <NavbarToggler style={{ backgroundColor: '#FFF2CC'}} onClick={() => setIsOpen(!isOpen)} />
             <Collapse isOpen={isOpen} navbar>
-                <Nav> 
+                <Nav className={styles.navigationFont}> 
                     <NavItem className={styles.navigationFont}>
-                        <NavLink className='nav-link'>
+                        <NavLink style={{ color: '#FFF2CC'}}>
                             Home
                         </NavLink>
                     </NavItem>
                     <NavItem className={styles.navigationFont}>
-                        <NavLink className='nav-link'>
+                        <NavLink style={{ color: '#FFF2CC'}}>
                             Projects
                         </NavLink>
                     </NavItem>
                     <NavItem className={styles.navigationFont}>
-                        <NavLink className='nav-link'>
+                        <NavLink style={{ color: '#FFF2CC'}}>
                             About
                         </NavLink>
                     </NavItem>
                     <NavItem className={styles.navigationFont}>
-                        <NavLink className='nav-link'>
+                        <NavLink style={{ color: '#FFF2CC'}}>
                             Contact
                         </NavLink>
                     </NavItem>

@@ -1,6 +1,7 @@
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import Logo from '../app/assets/HG1.gif';
-import bass from '../app/assets/bass.jpg';
+import Slide1 from '../app/assets/Modern design/Slide1.JPG';
+import Slide2 from '../app/assets/Modern design/Slide2.JPG';
 import HomePage from '../components/HomePage';
 import UnderWater from '../app/assets/underWater.jpg';
 import { Container, Row, Col } from 'reactstrap';
@@ -32,9 +33,10 @@ const MainPage = () => {
                     </ParallaxLayer>        
                     <ParallaxLayer offset={1} speed={0.5}
                         style={{ 
-                            backgroundColor: 'tan',  
+                            backgroundColor: '#FFF2CC',  
                             backgroundSize: 'cover',
-                            maxHeight: '20%'
+                            maxHeight: '20%',
+                            color:'darkred'
                         }}
                     >
                         <Container>
@@ -54,7 +56,7 @@ const MainPage = () => {
                         factor={1}
                         speed={-2.5}
                         style={{
-                            backgroundImage: `url(${bass})`,  
+                            backgroundImage: `url(${Slide1})`,  
                             backgroundSize: 'cover',
                             backgroundAttachment: 'fixed',
                             backgroundPosition: 'center',
@@ -71,7 +73,7 @@ const MainPage = () => {
                                 <Col style={{ 
                                     fontWeight: 'bold', 
                                     marginTop: '500px',
-                                    color: '#FFFFFF'
+                                    color: '#FFF2CC'
                                 }}>
                                     <h2>This is the other heading</h2>
                                     <p>This is a test for Parallax</p>
@@ -84,7 +86,7 @@ const MainPage = () => {
                         factor={2.3} 
                         speed={3.3}
                         style={{
-                            backgroundImage: `url(${UnderWater})`,  
+                            backgroundImage: `url(${Slide2})`,  
                             backgroundSize: '100%',
                             backgroundAttachment: 'fixed',
                             backgroundPosition: 'center',
