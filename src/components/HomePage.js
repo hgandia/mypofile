@@ -1,17 +1,18 @@
 import { Row, Col } from 'reactstrap';
 import Navigator from './Navigator';
 
-
-const HomePage = () => {
+const HomePage = (ref) => {
+    console.log('ref is: ', ref);
     const cssMenuRight = {
         display: 'flex',
-        justifyContent: 'flex-end'
+        justifyContent: 'flex-start'
+        
     }
 
     return(
-            <Row >
+            <Row>
                 <Col style={cssMenuRight}>
-                    <Navigator />
+                    <Navigator ref={ref}/>
                 </Col>
             </Row>        
     );
