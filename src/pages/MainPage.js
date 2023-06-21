@@ -3,13 +3,14 @@ import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import Logo from '../app/assets/HG1.gif';
 import Slide1 from '../app/assets/Modern design/Slide1.JPG';
 import Slide2 from '../app/assets/Modern design/Slide2.JPG';
+import CircuitLine from '../app/assets/Slide1_Graphics.png';
 import styles from '../styles.module.css';
 import { Container, Row, Col } from 'reactstrap';
-//import Navigator from '../components/Navigator';
 import { useRef, useState } from 'react';
 
 const MainPage = () => {
     const ref = useRef();
+    console.log('ref is: ', ref);
     const [isOpen, setIsOpen] = useState(false);
     
     return(
@@ -27,7 +28,7 @@ const MainPage = () => {
                         factor={0.5} 
                         speed={0.2}
                         style={{
-                            maxHeight: '1%'
+                            maxHeight: '10%'                            
                         }} 
                     >
                         <Navbar expand='md' >
@@ -201,15 +202,27 @@ const MainPage = () => {
                     </ParallaxLayer>
                     <ParallaxLayer 
                         offset={3} 
-                        factor={1.5} 
-                        speed={-3.3}
+                        factor={1} 
+                        speed={3.3}
                         style={{
-                            backgroundImage: `url(${Slide2})`,  
+                            backgroundImage: 'linear-gradient(rgba(0,0,0,0), rgba(255,255,176,0.4), rgba(255,255,176,0.4))',
                             backgroundSize: 'cover',
                             backgroundAttachment: 'fixed',
                             backgroundPosition: 'center',
                             backgroundRepeat:'no-repeat',
                             maxHeight: ''
+                        }}
+                    />
+                    <ParallaxLayer 
+                        offset={3} 
+                        factor={1} 
+                        speed={-3.3}
+                        style={{
+                            backgroundImage: `url(${CircuitLine})`,  
+                            backgroundSize: '18%',
+                            backgroundAttachment: 'fixed',
+                            backgroundPosition: 'right',
+                            backgroundRepeat:'no-repeat'
                         }}
                     >
                         <Navbar expand='md'>
@@ -251,7 +264,6 @@ const MainPage = () => {
                                 </Nav>
                             </Collapse>
                         </Navbar>
-                                {/* <HomePage /> */}
                     </ParallaxLayer>
             </Parallax>        
 );
