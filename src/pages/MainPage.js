@@ -1,7 +1,9 @@
 import { Nav, Navbar, NavLink, NavItem, NavbarToggler, Collapse } from 'reactstrap';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
-import Logo from '../app/assets/HG1.gif';
-import Slide1 from '../app/assets/cyberWeb.jpg';
+import Logo from '../app/assets/HG_Orbitron.gif';
+import Slate1 from '../app/assets/Slate1.jpg';
+import Slate3 from '../app/assets/graySlate.jpg';
+import Galaxy from '../app/assets/Galaxy.jpg';
 import CircuitLine1 from '../app/assets/Slide1_Graphics.png';
 import CircuitLine2 from '../app/assets/Slide2_Graphics.png';
 import CircuitLine3 from '../app/assets/Slide3_Graphics.png';
@@ -11,7 +13,6 @@ import { useRef, useState } from 'react';
 
 const MainPage = () => {
     const ref = useRef();
-    console.log('ref is: ', ref);
     const [isOpen, setIsOpen] = useState(false);
     
     return(
@@ -22,7 +23,7 @@ const MainPage = () => {
                     backgroundImage: `url(${Logo})`,  
                     backgroundSize: 'cover',
                     backgroundAttachment: 'fixed',
-                    backgroundPosition: 'center'
+                    backgroundPosition: 'center',
                 }}>
                     <ParallaxLayer 
                         offset={0} 
@@ -77,12 +78,11 @@ const MainPage = () => {
                         factor={1}
                         speed={0.5}
                         style={{
-                            backgroundImage: `url(${Slide1})`,  
+                            backgroundImage: `url(${Slate1})`,  
                             backgroundSize: 'cover',
                             backgroundAttachment: 'fixed',
                             backgroundPosition: 'center',
-                            backgroundRepeat:'no-repeat',
-                            maxHeight: ''
+                            backgroundRepeat:'no-repeat'
                         }} 
                     />      
                     <ParallaxLayer offset={1} speed={1.5}
@@ -152,7 +152,7 @@ const MainPage = () => {
                         factor={1}
                         speed={-2.5}
                         style={{
-                            backgroundImage: `url(${Slide1})`,  
+                            backgroundImage: `url(${Slate3})`,  
                             backgroundSize: 'cover',
                             backgroundAttachment: 'fixed',
                             backgroundPosition: 'center',
@@ -228,12 +228,13 @@ const MainPage = () => {
                         factor={1} 
                         speed={3.3}
                         style={{
-                            backgroundImage: 'linear-gradient(rgba(0,0,0,0), rgba(255,255,176,0.4), rgba(255,255,176,0.4))',
+                           // backgroundImage: 'linear-gradient(rgba(255,255,176,1), rgba(255,255,176,1), rgba(0,0,0,1))',
                             backgroundSize: 'cover',
                             backgroundAttachment: 'fixed',
                             backgroundPosition: 'center',
                             backgroundRepeat:'no-repeat',
-                            maxHeight: ''
+                            maxHeight: '',
+                            backgroundImage:`url(${Galaxy})`
                         }}
                     />
                     <ParallaxLayer 
@@ -250,35 +251,35 @@ const MainPage = () => {
                     >
                         <Navbar expand='md'>
                             <NavbarToggler 
-                                style={{ backgroundColor: '#FFF2CC'}} 
+                                style={{ backgroundColor: '#000000'}} 
                                 onClick={() => setIsOpen(!isOpen)} 
                                 className='me-1'
                             />
                             <Collapse isOpen={isOpen} navbar>
                                 <Nav className={styles.navigationFont} justified> 
                                     <NavItem className={styles.navigationFont} >
-                                        <NavLink style={{ color: '#FFF2CC'}}
+                                        <NavLink style={{ color: '#000000'}}
                                             onClick={() => ref.current.scrollTo(0)}
                                         >
                                             Home
                                         </NavLink>
                                     </NavItem>
                                     <NavItem className={styles.navigationFont}>
-                                        <NavLink style={{ color: '#FFF2CC'}}
+                                        <NavLink style={{ color: '#000000'}}
                                             onClick={() => ref.current.scrollTo(1)}
                                         >
                                             Projects
                                         </NavLink>
                                     </NavItem>
                                     <NavItem className={styles.navigationFont}>
-                                        <NavLink style={{ color: '#FFF2CC'}}
+                                        <NavLink style={{ color: '#000000'}}
                                             onClick={() => ref.current.scrollTo(2)}
                                         >
                                             About
                                         </NavLink>
                                     </NavItem>
                                     <NavItem className={styles.navigationFont}>
-                                        <NavLink style={{ color: '#FFF2CC'}}
+                                        <NavLink style={{ color: '#000000'}}
                                             onClick={() => ref.current.scrollTo(3)}
                                         >
                                             Contact
