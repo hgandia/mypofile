@@ -1,14 +1,16 @@
 import { Nav, Navbar, NavLink, NavItem, NavbarToggler, Collapse } from 'reactstrap';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
-import Logo from '../app/assets/HG_Orbitron.gif';
-import Slate1 from '../app/assets/Slate1.jpg';
-import Slate3 from '../app/assets/graySlate.jpg';
-import Galaxy from '../app/assets/Galaxy.jpg';
 import CircuitLine1 from '../app/assets/Slide1_Graphics.png';
 import CircuitLine2 from '../app/assets/Slide2_Graphics.png';
 import CircuitLine3 from '../app/assets/Slide3_Graphics.png';
-import styles from '../styles.module.css';
+import ContactForm from '../components/ContactForm';
+import Finger from '../app/assets/SVG/Finger.svg';
 import { Container, Row, Col } from 'reactstrap';
+import Logo from '../app/assets/HG_Orbitron.gif';
+import Slate3 from '../app/assets/graySlate.jpg';
+import Slate1 from '../app/assets/Slate1.jpg';
+import Galaxy from '../app/assets/Galaxy.jpg';
+import styles from '../styles.module.css';
 import { useRef, useState } from 'react';
 
 const MainPage = () => {
@@ -280,13 +282,22 @@ const MainPage = () => {
                             </Collapse>
                         </Navbar>
                         <Container>
-                            <Row>
-                                <Col className={styles.contactme}>
-                                    <h1>Contact Me</h1>
-                                    <p>~ For any questions or Inquiries please reach out ~</p>
-                                </Col>
+                            <Row className={styles.contactme}>
+                                <h1>Contact Me</h1>
+                                <p>~ For any questions or Inquiries please reach out ~</p>
                             </Row>
                         </Container>
+                            <Row>
+                                <Col 
+                                    md='3' 
+                                    className={styles.finger}>
+                                    <img src={Finger} alt='Pointing finger to the right' />
+                                </Col>
+                                <Col md='9' className={styles.contactform}>
+                                    <ContactForm />
+                                </Col>
+                            </Row>
+                        
                     </ParallaxLayer>
             </Parallax>        
 );

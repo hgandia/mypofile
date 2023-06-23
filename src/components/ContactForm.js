@@ -2,7 +2,7 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import { Button, Label, Col, FormGroup } from "reactstrap";
 import { validateContactForm } from "../utils/validateContactForm";
 import { useDispatch } from "react-redux";
-import { postVisitor } from "../features/visitors/visitorSlice";
+//import { postVisitor } from "../features/visitors/visitorSlice";
 
 const ContactForm = () => {
 
@@ -12,15 +12,13 @@ const ContactForm = () => {
         const petition = {
           firstname: values.firstname,
           lastname: values.lastname,
-          phoneNum: values.phoneNum,
+          organization: values.organization,
           email: values.email,
-          agree: values.agree,
-          contactType: values.contactType,
           feedback: values.feedback,
           date: new Date(Date.now()).toISOString(),
         };
         console.log('The petition object is: ', petition);
-        dispatch(postVisitor(petition));
+       // dispatch(postVisitor(petition));
         resetForm();
     }
 
@@ -29,10 +27,8 @@ const ContactForm = () => {
       initialValues={{
         firstname: '',
         lastname: '',
-        phoneNum: '',
+        organization: '',
         email: '',
-        agree: false,
-        contactType: "By Phone",
         feedback: '',
       }}
       validate={validateContactForm}
@@ -41,9 +37,9 @@ const ContactForm = () => {
       <Form>
         <FormGroup row>
           <Label htmlFor='firstname' md='2'>
-            First Name
+            First Name :
           </Label>
-          <Col md='10'>
+          <Col md='4'>
             <Field
                 name='firstname' 
                 placeholder='Nombre'
@@ -56,9 +52,9 @@ const ContactForm = () => {
         </FormGroup>
         <FormGroup row>
           <Label htmlFor='lastname' md='2'>
-            Last Name
+            Last Name :
           </Label>
-          <Col md='10'>
+          <Col md='4'>
             <Field
                     name='lastname'
                     placeholder='Apellido' 
@@ -70,25 +66,25 @@ const ContactForm = () => {
           </Col>
         </FormGroup>
         <FormGroup row>
-          <Label htmlFor='phoneNum' md='2' >
-            Phone Number
+          <Label htmlFor='organization' md='2' >
+            Organization :
           </Label>
-          <Col md='10'>
+          <Col md='4'>
             <Field
-                    name='phoneNum'
-                    placeholder='Telefono' 
+                    name='organization'
+                    placeholder='Organizacion' 
                     className='form-control'
             />
-            <ErrorMessage name='phoneNum'>
+            <ErrorMessage name='organization'>
                 {(msg) => <p className='text-danger'>{msg}</p>}
             </ErrorMessage>
           </Col>
         </FormGroup>
         <FormGroup row>
           <Label htmlFor='email' md='2'>
-            E-mail
+            E-mail :
           </Label>
-          <Col md='10'>
+          <Col md='4'>
             <Field
                     name='email'
                     placeholder='Correo Electronico'
@@ -101,43 +97,23 @@ const ContactForm = () => {
           </Col>
         </FormGroup>
         <FormGroup row>
-          <Label check md={{ size: 2, offset: 2 }}>
-            <Field 
-                name='agree'
-                type='checkbox'
-                className='form-check-input'
-            />{' '}
-            Contacteme Por:
-          </Label>
-          <Col md='2'>
-          <Field
-                name='contactType'
-                as='select' 
-                className='form-control'
-            >
-                <option>Telefono</option>
-                <option>E-Mail</option>
-            </Field>
-          </Col>
-        </FormGroup>
-        <FormGroup row>
             <Label htmlFor='feedback' md='2'>
-                Request
+                Request :
             </Label>
-            <Col md='10'>
+            <Col md='4'>
             <Field
                 name='feedback'
                 placeholder='Su mensaje/pedido aqui'
                 as='textarea'
-                rows='15' 
+                rows='10' 
                 className='form-control'
             />
             </Col>
         </FormGroup>
         <FormGroup row>
-            <Col md={{ size: 10, offset: 2 }}>
-                <Button type='submit' color='primary'>
-                    Someter
+            <Col md={{ size: 4, offset: 2}}>
+                <Button type='submit' color='warning' size='lg' block>
+                    Submit
                 </Button>
             </Col>
         </FormGroup>

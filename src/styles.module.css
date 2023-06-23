@@ -35,3 +35,17 @@ h1 {
   font-size: 100px;
 }
 
+.finger {
+  display: flex;
+  justify-content: left;
+  height: 400px;
+}
+
+.contactform {
+  margin-top: 200px;
+}
+
+.orbitronFont {
+  font-weight: bold;
+  font-family: 'Orbitron', sans-serif;
+}
