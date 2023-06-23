@@ -135,13 +135,9 @@ const MainPage = () => {
                         </Navbar>
                         <Container>
                             <Row>
-                                <Col style={{ 
-                                    fontWeight: 'bold', 
-                                    marginTop: '440px',
-                                    color: '#FFF2CC'
-                                }}>
+                                <Col className={styles.projects}>
                                     
-                                    <h2>This is a heading</h2>
+                                    <h2>PROJECTS</h2>
                                     <p>This is a test for Parallax</p>
                                 </Col>
                             </Row>
@@ -212,12 +208,8 @@ const MainPage = () => {
                         </Navbar>
                         <Container>
                             <Row>
-                                <Col style={{ 
-                                    fontWeight: 'bold', 
-                                    marginTop: '500px',
-                                    color: '#FFF2CC'
-                                }}>
-                                    <h2>This is the other heading</h2>
+                                <Col className={styles.aboutme}>
+                                    <h2>About Me</h2>
                                     <p>This is a test for Parallax</p>
                                 </Col>
                             </Row>
@@ -243,7 +235,7 @@ const MainPage = () => {
                         speed={-3.3}
                         style={{
                             backgroundImage: `url(${CircuitLine3})`,  
-                            backgroundSize: '18%',
+                            backgroundSize: ' 18%', 
                             backgroundAttachment: 'fixed',
                             backgroundPosition: 'right',
                             backgroundRepeat:'no-repeat'
@@ -251,7 +243,6 @@ const MainPage = () => {
                     >
                         <Navbar expand='md'>
                             <NavbarToggler 
-                                style={{ backgroundColor: '#000000'}} 
                                 onClick={() => setIsOpen(!isOpen)} 
                                 className='me-1'
                             />
@@ -288,6 +279,14 @@ const MainPage = () => {
                                 </Nav>
                             </Collapse>
                         </Navbar>
+                        <Container>
+                            <Row>
+                                <Col className={styles.contactme}>
+                                    <h1>Contact Me</h1>
+                                    <p>~ For any questions or Inquiries please reach out ~</p>
+                                </Col>
+                            </Row>
+                        </Container>
                     </ParallaxLayer>
             </Parallax>        
 );
