@@ -4,7 +4,7 @@ import CircuitLine1 from '../app/assets/Slide1_Graphics.png';
 import CircuitLine2 from '../app/assets/Slide2_Graphics.png';
 import CircuitLine3 from '../app/assets/Slide3_Graphics.png';
 import ContactForm from '../components/ContactForm';
-import Finger from '../app/assets/SVG/Finger.svg';
+import Arrow from '../app/assets/SVG/Arrow.gif';
 import { Container, Row, Col } from 'reactstrap';
 import Logo from '../app/assets/HG_Orbitron.gif';
 import Slate3 from '../app/assets/graySlate.jpg';
@@ -281,19 +281,21 @@ const MainPage = () => {
                                 </Nav>
                             </Collapse>
                         </Navbar>
-                        <Container>
+                        {/* <Container> */}
                             <Row className={styles.contactme}>
-                                <h1>Contact Me</h1>
+                                <h1 className={styles.h1_heading}>Contact Me</h1>
                                 <p>~ For any questions or Inquiries please reach out ~</p>
                             </Row>
-                        </Container>
+                        {/* </Container> */}
                             <Row>
                                 <Col 
                                     md='3' 
-                                    className={styles.finger}>
-                                    <img src={Finger} alt='Pointing finger to the right' />
+                                    className={styles.finger}
+                                    style={{ marginTop: '-70px', marginLeft:'-135px'}}
+                                >
+                                    <img src={Arrow} alt='Pointing finger to the right' />
                                 </Col>
-                                <Col md='9' className={styles.contactform}>
+                                <Col md='9' style={{ marginTop:'70px', marginLeft:'130px'}}>
                                     <ContactForm />
                                 </Col>
                             </Row>

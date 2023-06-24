@@ -28,21 +28,22 @@
 
 .contactme {
   color: #000000;
-  font: 20px 'Orbitron', sans-serif
+  font-family: 'Orbitron', sans-serif;
+  /* margin-bottom: 70px; */
 }
 
-h1 {
+.h1_heading {
   font-size: 100px;
+}
+
+p {
+  font-size: 20px;
 }
 
 .finger {
   display: flex;
-  justify-content: left;
+  justify-content: center;
   height: 400px;
-}
-
-.contactform {
-  margin-top: 200px;
 }
 
 .orbitronFont {
