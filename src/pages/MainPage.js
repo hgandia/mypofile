@@ -5,10 +5,12 @@ import Arrow from '../app/assets/SVG/Arrow.gif';
 import { Container, Row, Col } from 'reactstrap';
 import Logo from '../app/assets/HG_Orbitron.gif';
 import Slate3 from '../app/assets/graySlate.jpg';
+import Viewpager from '../components/Viewpager';
 import Slate1 from '../app/assets/Slate1.jpg';
 import Galaxy from '../app/assets/Galaxy.jpg';
 import styles from '../styles.module.css';
 import { useRef, useState } from 'react';
+
 
 const MainPage = () => {
     const ref = useRef();
@@ -132,10 +134,13 @@ const MainPage = () => {
                         </Navbar>
                         <Container>
                             <Row>
-                                <Col className={styles.projects}>
-                                    
-                                    <h2>PROJECTS</h2>
-                                    <p>This is a test for Parallax</p>
+                                <Col>
+                                    <h1 className={styles.projects}>PROJECTS</h1>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col>
+                                    <Viewpager />
                                 </Col>
                             </Row>
                         </Container>   

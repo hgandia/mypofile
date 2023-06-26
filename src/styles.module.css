@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 
-.container > div > div {
+/* .container > div > div {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* scale: 0.65; */
-  }
+  } */
     
 .navigationFont {
   font-size: 15px;
@@ -16,8 +15,13 @@
 .projects {
   font-family: 'Orbitron', sans-serif;
   font-weight: 'bold'; 
+  font-size: 80px;
   color: #FFF2CC;
-  margin-top: '350px';
+  display: flex;
+  justify-content: center;
+  @media screen and (max-width: 768px){
+    font-size: 64px;
+  }
 }
 .aboutme {
   font-family: 'Orbitron', sans-serif;
@@ -39,7 +43,7 @@
   display: flex;
   justify-content: center;
   @media screen and (max-width: 768px){
-    font-size: 90px;
+    font-size: 64px;
   }
 }
 
@@ -56,7 +60,6 @@ p {
     height: 200px;
     margin-left: -335px;
   }
-  
 }
 
 .orbitronFont {
@@ -102,4 +105,34 @@ p {
   @media screen and (max-width: 768px){
     background-size: 73%;
   };
+}
+/* The below css code was copied from react-spring viewpager example */
+.page {
+  position: absolute;
+  width: 50%;
+  height: 80%;
+  will-change: transform;
+}
+
+.page > div {
+  touch-action: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+  box-shadow: 0 62.5px 125px -25px rgba(50, 50, 73, 0.5), 0 37.5px 75px -37.5px rgba(0, 0, 0, 0.6);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
 }
