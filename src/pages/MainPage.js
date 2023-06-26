@@ -154,8 +154,7 @@ const MainPage = () => {
                             backgroundSize: 'cover',
                             backgroundAttachment: 'fixed',
                             backgroundPosition: 'center',
-                            backgroundRepeat:'no-repeat',
-                            maxHeight: ''
+                            backgroundRepeat:'no-repeat'
                         }} 
                     />
                     <ParallaxLayer
@@ -281,21 +280,21 @@ const MainPage = () => {
                                 </Nav>
                             </Collapse>
                         </Navbar>
-                        {/* <Container> */}
-                            <Row className={styles.contactme}>
-                                <h1 className={styles.h1_heading}>Contact Me</h1>
-                                <p>~ For any questions or Inquiries please reach out ~</p>
-                            </Row>
-                        {/* </Container> */}
+                        <Container>
                             <Row>
-                                <Col 
-                                    md='3' 
-                                    className={styles.finger}
-                                    style={{ marginTop: '-70px', marginLeft:'-135px'}}
-                                >
-                                    <img src={Arrow} alt='Pointing finger to the right' />
+                                <Col className={styles.contactme}>
+                                    <h1 className={styles.h1_heading}>Contact Me</h1>
+                                    <p>~ For any questions or Inquiries please reach out ~</p></Col>
+                            </Row>
+                        </Container>
+                            <Row>
+                                <Col md='3' className={styles.finger} style={{marginTop: '-120px'}}>
+                                    <img src={Arrow} alt='Arrow pointing to the right' />
                                 </Col>
-                                <Col md='9' style={{ marginTop:'70px', marginLeft:'130px'}}>
+                                <Col md='9' 
+                                    className={styles.contactform}
+                                    style={{ marginTop: '70px'}}
+                                     >
                                     <ContactForm />
                                 </Col>
                             </Row>

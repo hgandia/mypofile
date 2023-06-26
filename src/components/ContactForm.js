@@ -79,7 +79,7 @@ const ContactForm = () => {
           <Col md='4'>
             <Field
                 name='organization'
-                placeholder='Organizacion' 
+                placeholder='Organización' 
                 className='form-control'
                 style={fieldStyle}
             />
@@ -95,7 +95,7 @@ const ContactForm = () => {
           <Col md='4'>
             <Field
                 name='email'
-                placeholder='Correo Electronico'
+                placeholder='Correo Electrónico'
                 type='email' 
                 className='form-control'
                 style={fieldStyle}
@@ -118,6 +118,9 @@ const ContactForm = () => {
                 className='form-control'
                 style={fieldStyle}
             />
+            <ErrorMessage name='feedback'>
+                {(msg) => <p className='text-danger'>{msg}</p>}
+            </ErrorMessage>
             </Col>
         </FormGroup>
         <FormGroup row>
