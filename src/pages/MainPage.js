@@ -1,8 +1,5 @@
 import { Nav, Navbar, NavLink, NavItem, NavbarToggler, Collapse } from 'reactstrap';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
-import CircuitLine1 from '../app/assets/Slide1_Graphics.png';
-import CircuitLine2 from '../app/assets/Slide2_Graphics.png';
-import CircuitLine3 from '../app/assets/Slide3_Graphics.png';
 import ContactForm from '../components/ContactForm';
 import Arrow from '../app/assets/SVG/Arrow.gif';
 import { Container, Row, Col } from 'reactstrap';
@@ -87,15 +84,13 @@ const MainPage = () => {
                             backgroundRepeat:'no-repeat'
                         }} 
                     />      
-                    <ParallaxLayer offset={1} speed={1.5}
+                    <ParallaxLayer 
+                        offset={1} 
+                        speed={1.5}
+                        className={styles.circuit1}
                         style={{
-                            backgroundImage: `url(${CircuitLine1})`,  
-                            backgroundSize: '5%',
-                            backgroundAttachment: 'fixed',
-                            backgroundPosition: 'right',
-                            backgroundRepeat:'no-repeat'
-                        }}
-                    >
+                            backgroundSize: ''
+                        }}>
                         <Navbar expand='md' light>
                             <NavbarToggler 
                                 style={{ backgroundColor: '#FFF2CC'}} 
@@ -160,14 +155,10 @@ const MainPage = () => {
                     <ParallaxLayer
                         offset={2}
                         factor={1}
+                        className={styles.circuit2}
                         style={{
-                            backgroundImage: `url(${CircuitLine2})`,  
-                            backgroundSize: '9.2%',
-                            backgroundAttachment: 'fixed',
-                            backgroundPosition: 'right',
-                            backgroundRepeat:'no-repeat'
-                        }}
-                    >
+                           backgroundSize: ''
+                        }}>
                         <Navbar expand='md' light>
                             <NavbarToggler 
                                 style={{ backgroundColor: '#FFF2CC'}} 
@@ -234,14 +225,10 @@ const MainPage = () => {
                         offset={3} 
                         factor={1} 
                         speed={-3.3}
-                        style={{
-                            backgroundImage: `url(${CircuitLine3})`,  
-                            backgroundSize: ' 18%', 
-                            backgroundAttachment: 'fixed',
-                            backgroundPosition: 'right',
-                            backgroundRepeat:'no-repeat'
-                        }}
-                    >
+                        className={styles.circuit3}
+                        style={{  
+                            backgroundSize: ''
+                        }}>
                         <Navbar expand='md'>
                             <NavbarToggler 
                                 onClick={() => setIsOpen(!isOpen)} 
@@ -298,7 +285,6 @@ const MainPage = () => {
                                     <ContactForm />
                                 </Col>
                             </Row>
-                        
                     </ParallaxLayer>
             </Parallax>        
 );

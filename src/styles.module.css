@@ -70,3 +70,36 @@ p {
     margin-left: 0px;
   }
 }
+
+.circuit1 {
+  background-image: url('./app/assets/Slide1_Graphics.png');
+  background-size: 5.1%;
+  background-attachment: fixed;
+  background-position: right;
+  background-repeat: no-repeat;
+  @media screen and (max-width: 768px){
+    background-size: 21.2%;
+  };
+}
+
+.circuit2 {
+  background-image: url('./app/assets/Slide2_Graphics.png');
+  background-size: 9.2%;
+  background-attachment: fixed;
+  background-position: right;
+  background-repeat: no-repeat;
+  @media screen and (max-width: 768px){
+    background-size: 39%;
+  };
+}
+
+.circuit3 {
+  background-image: url('./app/assets/Slide3_Graphics.png');
+  background-attachment: fixed;
+  background-size: 18%;
+  background-position: right; 
+  background-repeat: no-repeat;
+  @media screen and (max-width: 768px){
+    background-size: 73%;
+  };
+}
