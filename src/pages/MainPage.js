@@ -139,7 +139,8 @@ const MainPage = () => {
                                 </Col>
                             </Row>
                             <Row>
-                                <Col>
+                                <Col></Col>
+                                <Col className={styles.container}>
                                     <Viewpager />
                                 </Col>
                             </Row>

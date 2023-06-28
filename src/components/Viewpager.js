@@ -1,5 +1,6 @@
 import { useSprings, animated } from '@react-spring/web';
-import { useDrag } from '@use-gesture/react';
+//import { useDrag } from '@use-gesture/react';
+import { useDrag } from 'react-use-gesture';
 import useMeasure from 'react-use-measure';
 import styles from '../styles.module.css';
 import clamp from 'lodash.clamp';
