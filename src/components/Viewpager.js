@@ -41,7 +41,7 @@ function Viewpager() {
     api.start(i => {
       if (i < index.current - 1 || i > index.current + 1) return { display: 'none' }
       const x = (i - index.current) * width + (active ? mx : 0)
-      const scale = active ? 1 - distance / width / 2 : 1
+      const scale = active ? 1 - distance / width / 0.7 : 1
       return { x, scale, display: 'block' }
     });
   });
@@ -51,7 +51,7 @@ function Viewpager() {
       {props.map(({ x, display, scale }, i) => (
         <animated.div className={styles.page} {...bind()} key={i} style={{ display, x }}>
           <animated.div style={{ x, scale, backgroundImage: `url(${pages[i]})` }} />
-          <h1 style={{color: 'white'}}>{pagesText[i]}</h1>
+          <h1 style={{color: '#FFF2CC', marginLeft: '640px'}}>{pagesText[i]}</h1>
         </animated.div>
       ))}
     </div>
