@@ -139,11 +139,9 @@ const MainPage = () => {
                                 </Col>
                             </Row>
                             <Row>
-                                <Col><p style={{color: 'white'}}>TEST</p></Col>
-                                <Col >
+                                <Col>
                                     <Viewpager />
                                 </Col>
-                                
                             </Row>   
                         </Container>   
                     </ParallaxLayer>
