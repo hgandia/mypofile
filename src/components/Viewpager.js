@@ -25,8 +25,6 @@ const pagesText = ['HTML', 'Church Website', 'JavaScript', 'React.JS', 'Node.JS'
 function Viewpager() {
   const index = useRef(0);
   const [ref, { width }] = useMeasure();
-  console.log('ref: ', ref);
-  console.log('width: ', width);
   const [props, api] = useSprings(
     pages.length,
     i => ({
@@ -45,7 +43,7 @@ function Viewpager() {
     api.start(i => {
       if (i < index.current - 1 || i > index.current + 1) return { display: 'none' }
       const x = (i - index.current) * width + (active ? mx : 0)
-      const scale = active ? 1 - distance / width / 1.5 : 1
+      const scale = active ? 1 - distance / width / 2  : 1
       return { x, scale, display: 'block' }
     });
   });
@@ -53,11 +51,13 @@ function Viewpager() {
   return (
     <div ref={ref} className={styles.wrapper}>
       {props.map(({ x, display, scale }, i) => (
-        <animated.div className={styles.page} {...bind()} key={i} style={{ display, x, marginLeft: '220px' }}>
-          <h2 style={{color: '#FFF2CC'}}>{pagesText[i]}</h2>
+        <animated.div className={styles.page} {...bind()} key={i} style={{ display, x }}>
+          <animated.h2 style={{color: '#FFF2CC', x, scale}}>
+            {pagesText[i]}
+          </animated.h2>
           <animated.div style={{ x, scale, backgroundImage: `url(${pages[i]})`, marginBottom: '10px' }} />
-            <h5>
-              <a  href={github[i]} 
+            <animated.h5 style={{ x, scale}}>
+              <a  href={github[i]}
                   style={{color: '#FFF2CC', margin: '25px'}} 
                   target='_blank' 
                   rel='noreferrer'>Source Code</a>{' '}
@@ -65,7 +65,7 @@ function Viewpager() {
                   style={{color: '#FFF2CC', margin: '25px'}} 
                   target='_blank' 
                   rel='noreferrer'>Live Demo</a>
-            </h5>
+            </animated.h5>
         </animated.div>
       ))}
     </div>

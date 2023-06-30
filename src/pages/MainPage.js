@@ -132,18 +132,21 @@ const MainPage = () => {
                                 </Nav>
                             </Collapse>
                         </Navbar>
-                        <Container>
+                        {/* <Container> */}
                             <Row>
                                 <Col>
                                     <h1 className={styles.projects}>PROJECTS</h1>
                                 </Col>
                             </Row>
                             <Row>
-                                <Col>
+                                <Col style={{color: '#FFF2CC'}}>
+                                    <h3>This is a section to describe the projects.</h3>
+                                </Col>
+                                <Col className={styles.container}>
                                     <Viewpager />
                                 </Col>
                             </Row>   
-                        </Container>   
+                        {/* </Container>    */}
                     </ParallaxLayer>
                     <ParallaxLayer
                         offset={2}
