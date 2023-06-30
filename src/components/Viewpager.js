@@ -1,5 +1,7 @@
 import { useSprings, animated } from '@react-spring/web';
 import edjWebsite from '../app/assets/edjWebsite1.jpg';
+import Backend from '../app/assets/edjWebsiteBackend.png';
+import Hangman from '../app/assets/Hangman1.jpg'
 import { useDrag } from 'react-use-gesture';
 import useMeasure from 'react-use-measure';
 import styles from '../styles.module.css';
@@ -7,20 +9,20 @@ import clamp from 'lodash.clamp';
 import { useRef } from 'react';
 
 const pages = [
-  'https://images.pexels.com/photos/62689/pexels-photo-62689.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-  edjWebsite,
-  'https://images.pexels.com/photos/4016596/pexels-photo-4016596.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-  'https://images.pexels.com/photos/351265/pexels-photo-351265.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-  'https://images.pexels.com/photos/924675/pexels-photo-924675.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    edjWebsite,
+    Backend,
+    Hangman,
+    'https://images.pexels.com/photos/351265/pexels-photo-351265.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    'https://images.pexels.com/photos/924675/pexels-photo-924675.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
 ];
 
-const github = ['', 'https://github.com/hgandia/edj-react', '', '', ''
+const github = ['https://github.com/hgandia/edj-react', 'https://github.com/hgandia/edjServer', 'https://github.com/hgandia/Hangman', '', ''
 ];
 
-const liveDemo = ['', 'https://estrelladejacob.org/home', '', '', ''
+const liveDemo = ['https://estrelladejacob.org/home', 'https://estrelladejacob.org/contactus', '', '', ''
 ];
 
-const pagesText = ['HTML', 'Church Website', 'JavaScript', 'React.JS', 'Node.JS'];
+const pagesText = ['Church Front-end', 'Church Back-end', 'Hangman - Terminal Game', 'React.JS', 'Node.JS'];
 
 function Viewpager() {
   const index = useRef(0);
@@ -52,11 +54,15 @@ function Viewpager() {
     <div ref={ref} className={styles.wrapper}>
       {props.map(({ x, display, scale }, i) => (
         <animated.div className={styles.page} {...bind()} key={i} style={{ display, x }}>
-          <animated.h2 style={{color: '#FFF2CC', x, scale}}>
+          <animated.h2 
+            className={styles.orbitronFont}
+            style={{color: '#FFF2CC', x, scale}}>
             {pagesText[i]}
           </animated.h2>
           <animated.div style={{ x, scale, backgroundImage: `url(${pages[i]})`, marginBottom: '10px' }} />
-            <animated.h5 style={{ x, scale}}>
+            <animated.h5 
+              className={styles.orbitronFont}
+              style={{ x, scale}}>
               <a  href={github[i]}
                   style={{color: '#FFF2CC', margin: '25px'}} 
                   target='_blank' 

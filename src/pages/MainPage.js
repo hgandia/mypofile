@@ -77,7 +77,7 @@ const MainPage = () => {
                     <ParallaxLayer
                         offset={1}
                         factor={1}
-                        speed={0.5}
+                        speed={0}
                         style={{
                             backgroundImage: `url(${Slate1})`,  
                             backgroundSize: 'cover',
@@ -88,7 +88,7 @@ const MainPage = () => {
                     />      
                     <ParallaxLayer 
                         offset={1} 
-                        speed={1.5}
+                        speed={1}
                         className={styles.circuit1}
                         style={{
                             backgroundSize: ''
@@ -132,21 +132,25 @@ const MainPage = () => {
                                 </Nav>
                             </Collapse>
                         </Navbar>
-                        {/* <Container> */}
                             <Row>
                                 <Col>
                                     <h1 className={styles.projects}>PROJECTS</h1>
                                 </Col>
                             </Row>
                             <Row>
-                                <Col style={{color: '#FFF2CC'}}>
-                                    <h3>This is a section to describe the projects.</h3>
+                                <Col 
+                                    className={styles.orbitronFont}
+                                    style={{color: '#FFF2CC'}}>
+                                    <h3><u>Welcome to the Projects Section</u></h3>
+                                    <p style={{ margin: '40px 160px' }}>
+                                        To your right you will see sample snapshots of projects that I have
+                                        worked on or am currently wokring on.
+                                    </p>
                                 </Col>
                                 <Col className={styles.container}>
                                     <Viewpager />
-                                </Col>
-                            </Row>   
-                        {/* </Container>    */}
+                                </Col> 
+                            </Row>                           
                     </ParallaxLayer>
                     <ParallaxLayer
                         offset={2}
