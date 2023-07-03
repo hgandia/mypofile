@@ -15,3 +15,19 @@ body {
 *:before {
   box-sizing: border-box;
 }
+
+/* The below css is for the Chaining Transition and Spring
+   project section.
+*/
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex.fill {
+  height: 100%;
+}
+
+.flex.center {
+  justify-content: center;
+}

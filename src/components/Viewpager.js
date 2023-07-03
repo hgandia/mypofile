@@ -13,14 +13,21 @@ const pages = [
     edjWebsite,
     Backend,
     Hangman,
-    Portfolio,
-    'https://images.pexels.com/photos/924675/pexels-photo-924675.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    Portfolio
 ];
 
-const github = ['https://github.com/hgandia/edj-react', 'https://github.com/hgandia/edjServer', 'https://github.com/hgandia/Hangman', 'https://github.com/hgandia/myprofile', ''
+const github = [
+    'https://github.com/hgandia/edj-react', 
+    'https://github.com/hgandia/edjServer', 
+    'https://github.com/hgandia/Hangman', 
+    'https://github.com/hgandia/myprofile'
 ];
 
-const liveDemo = ['https://estrelladejacob.org/home', 'https://estrelladejacob.org/contactus', '', '', ''
+const liveDemo = [
+  'https://estrelladejacob.org/home', 
+  'https://estrelladejacob.org/contactus', 
+  '', 
+  ''
 ];
 
 const pagesText = ['Church Front-end', 'Church Back-end', 'Hangman - Terminal Game', 'Portfolio Page', 'Node.JS'];

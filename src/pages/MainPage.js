@@ -10,6 +10,7 @@ import Slate1 from '../app/assets/Slate1.jpg';
 import Galaxy from '../app/assets/Galaxy.jpg';
 import styles from '../styles.module.css';
 import { useRef, useState } from 'react';
+import BoxSpread from '../components/BoxSpread';
 
 
 const MainPage = () => {
@@ -157,7 +158,11 @@ const MainPage = () => {
                                         Redux, React-Router, ReactSpring and Express.JS for back-end, to programming
                                         languages like JavaScript, Python and some C. 
                                     </p>
-                                    
+                                    <Row>
+                                        <Col>
+                                            <BoxSpread />
+                                        </Col>
+                                    </Row>
                                 </Col>
                                 <Col me='6'className={styles.container}>
                                     <Viewpager />
