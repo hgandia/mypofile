@@ -59,7 +59,7 @@ function Viewpager() {
             style={{color: '#FFF2CC', x, scale}}>
             {pagesText[i]}
           </animated.h2>
-          <animated.div style={{ x, scale, backgroundImage: `url(${pages[i]})`, marginBottom: '10px' }} />
+          <animated.div style={{ x, scale, backgroundImage: `url(${pages[i]})`, marginBottom: '10px' }} className={styles.container}/>
             <animated.h5 
               className={styles.orbitronFont}
               style={{ x, scale}}>

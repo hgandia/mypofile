@@ -138,16 +138,17 @@ const MainPage = () => {
                                 </Col>
                             </Row>
                             <Row>
-                                <Col 
+                                <Col
+                                    md='6' sm='10'
                                     className={styles.orbitronFont}
                                     style={{color: '#FFF2CC'}}>
                                     <h3><u>Welcome to the Projects Section</u></h3>
-                                    <p style={{ margin: '40px 160px' }}>
+                                    <p className={styles.projects_paragraph}>
                                         To your right you will see sample snapshots of projects that I have
                                         worked on or am currently wokring on.
                                     </p>
                                 </Col>
-                                <Col className={styles.container}>
+                                <Col me='6'className={styles.container}>
                                     <Viewpager />
                                 </Col> 
                             </Row>                           
