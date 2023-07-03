@@ -142,11 +142,22 @@ const MainPage = () => {
                                     md='6' sm='10'
                                     className={styles.orbitronFont}
                                     style={{color: '#FFF2CC'}}>
-                                    <h3><u>Welcome to the Projects Section</u></h3>
+                                    <h3 className={styles.h3_heading}>Welcome to the Projects Section!</h3>
                                     <p className={styles.projects_paragraph}>
-                                        To your right you will see sample snapshots of projects that I have
-                                        worked on or am currently wokring on.
+                                        Here, I would like to share with you some of the exciting 
+                                        projects I have been working on. These projects represent 
+                                        my passion, expertise, and dedication to creating innovative 
+                                        solutions. Please take a moment to explore the diverse range 
+                                        of projects listed by going through the pictured animated carousel.
                                     </p>
+                                    <p className={styles.projects_paragraph}>
+                                        I have used multiple technologies to develop these projects. 
+                                        From CSS frameworks like bootstrap to JavaScript libraries 
+                                        like React.JS and Node.JS for back-end, to frameworks like Reactstrap, 
+                                        Redux, React-Router, ReactSpring and Express.JS for back-end, to programming
+                                        languages like JavaScript, Python and some C. 
+                                    </p>
+                                    
                                 </Col>
                                 <Col me='6'className={styles.container}>
                                     <Viewpager />

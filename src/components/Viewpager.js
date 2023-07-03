@@ -1,7 +1,8 @@
 import { useSprings, animated } from '@react-spring/web';
 import edjWebsite from '../app/assets/edjWebsite1.jpg';
 import Backend from '../app/assets/edjWebsiteBackend.png';
-import Hangman from '../app/assets/Hangman1.jpg'
+import Hangman from '../app/assets/Hangman1.jpg';
+import Portfolio from '../app/assets/portfolioHome.jpg';
 import { useDrag } from 'react-use-gesture';
 import useMeasure from 'react-use-measure';
 import styles from '../styles.module.css';
@@ -12,17 +13,17 @@ const pages = [
     edjWebsite,
     Backend,
     Hangman,
-    'https://images.pexels.com/photos/351265/pexels-photo-351265.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    Portfolio,
     'https://images.pexels.com/photos/924675/pexels-photo-924675.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
 ];
 
-const github = ['https://github.com/hgandia/edj-react', 'https://github.com/hgandia/edjServer', 'https://github.com/hgandia/Hangman', '', ''
+const github = ['https://github.com/hgandia/edj-react', 'https://github.com/hgandia/edjServer', 'https://github.com/hgandia/Hangman', 'https://github.com/hgandia/myprofile', ''
 ];
 
 const liveDemo = ['https://estrelladejacob.org/home', 'https://estrelladejacob.org/contactus', '', '', ''
 ];
 
-const pagesText = ['Church Front-end', 'Church Back-end', 'Hangman - Terminal Game', 'React.JS', 'Node.JS'];
+const pagesText = ['Church Front-end', 'Church Back-end', 'Hangman - Terminal Game', 'Portfolio Page', 'Node.JS'];
 
 function Viewpager() {
   const index = useRef(0);
@@ -59,7 +60,7 @@ function Viewpager() {
             style={{color: '#FFF2CC', x, scale}}>
             {pagesText[i]}
           </animated.h2>
-          <animated.div style={{ x, scale, backgroundImage: `url(${pages[i]})`, marginBottom: '10px' }} className={styles.container}/>
+          <animated.div style={{ x, scale, backgroundImage: `url(${pages[i]})`, marginBottom: '10px' }} />
             <animated.h5 
               className={styles.orbitronFont}
               style={{ x, scale}}>
