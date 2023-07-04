@@ -1,6 +1,7 @@
 import { Nav, Navbar, NavLink, NavItem, NavbarToggler, Collapse } from 'reactstrap';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import ContactForm from '../components/ContactForm';
+//import BoxSpread from '../components/BoxSpread';
 import Arrow from '../app/assets/SVG/Arrow.gif';
 import { Container, Row, Col } from 'reactstrap';
 import Logo from '../app/assets/HG_Orbitron.gif';
@@ -10,7 +11,7 @@ import Slate1 from '../app/assets/Slate1.jpg';
 import Galaxy from '../app/assets/Galaxy.jpg';
 import styles from '../styles.module.css';
 import { useRef, useState } from 'react';
-import BoxSpread from '../components/BoxSpread';
+
 
 
 const MainPage = () => {
@@ -89,7 +90,7 @@ const MainPage = () => {
                     />      
                     <ParallaxLayer 
                         offset={1} 
-                        speed={1}
+                        speed={1.4}
                         className={styles.circuit1}
                         style={{
                             backgroundSize: ''
@@ -144,6 +145,13 @@ const MainPage = () => {
                                     className={styles.orbitronFont}
                                     style={{color: '#FFF2CC'}}>
                                     <h3 className={styles.h3_heading}>Welcome to the Projects Section!</h3>
+                                    <Row className='mx-5'>
+                                        <Col className='mx-5'>        
+                                            <hr 
+                                                className='mx-5' 
+                                                style={{ border: 'double 10px #FFF2CC' }}/>
+                                        </Col>
+                                    </Row>
                                     <p className={styles.projects_paragraph}>
                                         Here, I would like to share with you some of the exciting 
                                         projects I have been working on. These projects represent 
@@ -156,11 +164,17 @@ const MainPage = () => {
                                         From CSS frameworks like bootstrap to JavaScript libraries 
                                         like React.JS and Node.JS for back-end, to frameworks like Reactstrap, 
                                         Redux, React-Router, ReactSpring and Express.JS for back-end, to programming
-                                        languages like JavaScript, Python and some C. 
+                                        languages like JavaScript and Python. 
+                                    </p>
+                                    <p className={styles.projects_paragraph}>
+                                        For an in-depth look at the source code please follow the 
+                                        'Source Code' link that will take you to the respective github 
+                                        repository.  For the app experience please click on the 'Live Demo'
+                                        link underneath the app picture. 
                                     </p>
                                     <Row>
                                         <Col>
-                                            <BoxSpread />
+                                            {/* <BoxSpread /> */}
                                         </Col>
                                     </Row>
                                 </Col>

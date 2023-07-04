@@ -7,9 +7,12 @@
   } */
     
 .navigationFont {
-  font-size: 15px;
+  font-size: 20px;
   font-family: 'Orbitron', sans-serif;
   font-weight: bold;
+  @media screen and (max-width: 768px){
+    font-size: 15px;
+  }
 }
 
 .projects {
@@ -49,19 +52,16 @@
   }
 }
 .h3_heading {
-  /* font-weight: bold; */
   font-size: 40px;
   @media screen and (max-width: 768px){
     font-size: 17px;
     margin-top: -10px;
-    /* font-weight: bolder; */
   }
-
 }
 
 .projects_paragraph {
   font-size: 20px;
-  margin: 20px 80px;
+  margin: 30px 130px;
   @media screen and (max-width: 768px){
     font-size: 15px;
   margin-left: 10px;
@@ -83,7 +83,6 @@
 }
 
 .orbitronFont {
-  /* font-weight: bold; */
   font-family: 'Orbitron', sans-serif;
 }
 

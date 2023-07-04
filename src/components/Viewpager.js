@@ -30,7 +30,7 @@ const liveDemo = [
   ''
 ];
 
-const pagesText = ['Church Front-end', 'Church Back-end', 'Hangman - Terminal Game', 'Portfolio Page', 'Node.JS'];
+const pagesText = ['Church Front-end App', 'Church Back-end Server', 'Hangman - Terminal Game', 'Portfolio Page', 'Node.JS'];
 
 function Viewpager() {
   const index = useRef(0);
