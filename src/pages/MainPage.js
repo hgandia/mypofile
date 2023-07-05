@@ -147,9 +147,7 @@ const MainPage = () => {
                                     <h3 className={styles.h3_heading}>Welcome to the Projects Section!</h3>
                                     <Row className='mx-5'>
                                         <Col className='mx-5'>        
-                                            <hr 
-                                                className='mx-5' 
-                                                style={{ border: 'double 10px #FFF2CC' }}/>
+                                            <hr  className='mx-5'/>
                                         </Col>
                                     </Row>
                                     <p className={styles.projects_paragraph}>
