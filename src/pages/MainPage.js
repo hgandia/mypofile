@@ -284,9 +284,7 @@ const MainPage = () => {
                                             </Col>
                                         </Row>
                                     </Col>
-                                <Col 
-                                    className={styles.orbitronFont}
-                                    style={{color: '#FFF2CC'}}>
+                                <Col className={styles.orbitronFont}>
                                     <AboutMe />
                                 </Col> 
                             </Row>
