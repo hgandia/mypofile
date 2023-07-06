@@ -1,5 +1,5 @@
-import agere from '../assets/agereSysmtems.png';
-import GD from '../assets/generaldynamics.jpg';
+import agere from '../assets/agereSystems.png';
+import GD from '../assets/generalDynamics.jpg';
 import metroPCS from '../assets/metroPCS.jpg';
 import sprint from '../assets/sprint.png';
 import sony from '../assets/sony.jpg';

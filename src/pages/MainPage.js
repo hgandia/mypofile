@@ -9,8 +9,10 @@ import Slate3 from '../app/assets/graySlate.jpg';
 import Viewpager from '../components/Viewpager';
 import Slate1 from '../app/assets/Slate1.jpg';
 import Galaxy from '../app/assets/Galaxy.jpg';
+import AboutMe from '../components/AboutMe';
 import styles from '../styles.module.css';
 import { useRef, useState } from 'react';
+
 
 
 
@@ -196,6 +198,7 @@ const MainPage = () => {
                     <ParallaxLayer
                         offset={2}
                         factor={1}
+                        speed={1.3}
                         className={styles.circuit2}
                         style={{
                            backgroundSize: ''
@@ -239,14 +242,54 @@ const MainPage = () => {
                                 </Nav>
                             </Collapse>
                         </Navbar>
-                        <Container>
                             <Row>
-                                <Col className={styles.aboutme}>
-                                    <h2>About Me</h2>
-                                    <p>This is a test for Parallax</p>
+                                <Col >
+                                    <h1 className={styles.projects}>ABOUT ME</h1>
                                 </Col>
                             </Row>
-                        </Container>
+                            <Row>
+                                <Col
+                                        md='6' sm='10'
+                                        className={styles.orbitronFont}
+                                        style={{color: '#FFF2CC'}}>
+                                        <h3 className={styles.h3_heading}>My name is Herbert Gandía</h3>
+                                        {/* <Row className='mx-5'>
+                                            <Col className='mx-5'>        
+                                                <hr  className='mx-5'/>
+                                            </Col>
+                                        </Row> */}
+                                        <p className={styles.projects_paragraph}>
+                                            Here, I would like to share with you some of the exciting 
+                                            projects I have been working on. These projects represent 
+                                            my passion, expertise, and dedication to creating innovative 
+                                            solutions. Please take a moment to explore the diverse range 
+                                            of projects listed by going through the pictured animated carousel.
+                                        </p>
+                                        <p className={styles.projects_paragraph}>
+                                            I have used multiple technologies to develop these projects. 
+                                            From CSS frameworks like bootstrap to JavaScript libraries 
+                                            like React.JS and Node.JS for back-end, to frameworks like Reactstrap, 
+                                            Redux, React-Router, ReactSpring and Express.JS for back-end, to programming
+                                            languages like JavaScript and Python. 
+                                        </p>
+                                        <p className={styles.projects_paragraph}>
+                                            For an in-depth look at the source code please follow the 
+                                            'Source Code' link that will take you to the respective github 
+                                            repository.  For the app experience please click on the 'Live Demo'
+                                            link underneath the app picture. 
+                                        </p>
+                                        <Row>
+                                            <Col>
+                                                {/* <BoxSpread /> */}
+                                            </Col>
+                                        </Row>
+                                    </Col>
+                                <Col 
+                                    className={styles.orbitronFont}
+                                    style={{color: '#FFF2CC'}}>
+                                    <AboutMe />
+                                </Col> 
+                            </Row>
                     </ParallaxLayer>
                     <ParallaxLayer 
                         offset={3} 
