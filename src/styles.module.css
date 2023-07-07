@@ -217,25 +217,51 @@ hr {
 /* CSS Styles for the Accordion in the About Me section. */
 .accordion {
   width: 85%;
-  background-color: blue;
+  background-color: #000000;
 }
 
 .accordionBody {
-  background-color: #FFF2CC;
+  background-color: #969489;
+  color: #57554F;
 }
 
 .accordionButton {
+  font-weight: bold;
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: left;
   width: 100%;
   padding: var(--bs-accordion-btn-padding-y) var(--bs-accordion-btn-padding-x);
   font-size: 1rem;
-  color: var(--bs-accordion-btn-color);
+  color: #57554F;
   text-align: left;
-  background-color: var(--bs-accordion-btn-bg);
+  background-color: #969489;
   border: 0;
   border-radius: 0;
   overflow-anchor: none;
   transition: var(--bs-accordion-transition);
 }
+
+.accordionButton::after {
+  flex-shrink: 0;
+  width: var(--bs-accordion-btn-icon-width);
+  height: var(--bs-accordion-btn-icon-width);
+  margin-left: auto;
+  content: "";
+  background-image: var(--bs-accordion-btn-icon);
+  background-repeat: no-repeat;
+  background-size: var(--bs-accordion-btn-icon-width);
+  transition: var(--bs-accordion-btn-icon-transition);
+}
+
+.accordionButton:not(.collapsed)::after{
+  background-image: var(--bs-accordion-btn-icon);
+  transform: var(--bs-accordion-btn-icon-transform);
+}
+
+/* .accordionButton:not(.collapsed) {
+  color: var(--bs-accordion-active-color);
+  background-color: var(--bs-accordion-active-bg);
+  box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
+} */
+

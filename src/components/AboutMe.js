@@ -25,18 +25,25 @@ const AboutMe = () => {
     };
 
     return(
-        <Accordion open={open} toggle={toggle} className={styles.accordion} cssModule={styles.accordionButton}>
+        <Accordion open={open} toggle={toggle} className={styles.accordion} >
             <AccordionItem className={styles.accordionBody}>
-                <AccordionHeader targetId='1'>Volunteer Experience</AccordionHeader>
+                <AccordionHeader 
+                    targetId='1'
+                     cssModule={{ 'accordion-button': `${styles.accordionButton}`}}
+                    style={{ fontSize: '30px'}}
+                >Volunteer Experience</AccordionHeader>
                 <AccordionBody accordionId='1' >
                     <p>This is a test body text.</p>
                 </AccordionBody>
             </AccordionItem>
             <AccordionItem targetId='2'>
-                <AccordionHeader targetId='2'>Professional Experience</AccordionHeader>
-                <AccordionBody accordionId='2'>
-                    <p>This is a test body text.</p>
-                </AccordionBody>
+                <AccordionHeader 
+                    targetId='2' 
+                    cssModule={{ 'accordion-button': `${styles.accordionButton}`}}
+                >Professional Experience</AccordionHeader>
+                    <AccordionBody accordionId='2'>
+                        <p>This is a test body text.</p>
+                    </AccordionBody>
             </AccordionItem>
             <AccordionItem targetId='3'>
                 <AccordionHeader targetId='3'>Education</AccordionHeader>
