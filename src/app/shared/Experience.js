@@ -17,9 +17,9 @@ export const Experience = [
         bullet_1: 'Design, install, optimize, and maintain sound reinforcement system.',
         bullet_2: 'Design, install, optimize, and maintain video capturing system.',
         bullet_3: 'Design, install, optimize, and upgrade computer system.',
-        bullet_4: 'Integrate computer, video capture and sound reinforcement systems to be able stream good quality picture and sound online, while maintaining good sound quality at the live event.',
+        bullet_4: 'Integrate video, sound and computer systems to stream good quality content.',
         bullet_5: 'Instruct the team on the architecture system and how to utilize and troubleshoot it.',
-        bullet_6: 'Create, develop, design, and maintain website using React.JS, CSS, Vanilla JavaScript and Node.JS for back-end.' 
+        bullet_6: 'Design & Develop website using React, JavaScript, CSS, & Node.JS for back-end.' 
     },
     {
         id:1,

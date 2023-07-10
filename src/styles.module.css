@@ -217,7 +217,6 @@ hr {
 /* CSS Styles for the Accordion in the About Me section. */
 .accordion {
   width: 85%;
-  /* background-color: #000000; */
 }
 
 .accordionBody {
@@ -226,13 +225,13 @@ hr {
 }
 
 .accordionButton {
+  font-size: 32px;
   font-weight: bold;
   position: relative;
   display: flex;
   align-items: left;
   width: 100%;
   padding: var(--bs-accordion-btn-padding-y) var(--bs-accordion-btn-padding-x);
-  font-size: 1rem;
   color: #57554F;
   text-align: left;
   background-color: #969489;

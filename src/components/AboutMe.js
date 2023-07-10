@@ -17,6 +17,8 @@ import { useState } from 'react';
 
 const AboutMe = () => {
     const [open, setOpen] = useState('0');
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [animating, setAnimating] = useState(false);
     const toggle = (id) => {
         if(open === id){
             setOpen();
@@ -25,13 +27,46 @@ const AboutMe = () => {
         }
     };
 
+  const next = () => {
+    if (animating) return;
+    const nextIndex = activeIndex === Experience.length - 1 ? 0 : activeIndex + 1;
+    setActiveIndex(nextIndex);
+  };
+
+  const previous = () => {
+    if (animating) return;
+    const nextIndex = activeIndex === 0 ? Experience.length - 1 : activeIndex - 1;
+    setActiveIndex(nextIndex);
+  };
+
+  const goToIndex = (newIndex) => {
+    if (animating) return;
+    setActiveIndex(newIndex);
+  };
+
+  const slides = Experience.map((item) => {
+    return (
+      <CarouselItem
+        onExiting={() => setAnimating(true)}
+        onExited={() => setAnimating(false)}
+        key={item.src}
+      >
+        <img src={item.src} alt={item.altText} />
+        <CarouselCaption
+          captionText={item.caption}
+          captionHeader={item.caption}
+        />
+      </CarouselItem>
+    );
+  });
+
     return(
         <Accordion open={open} toggle={toggle} className={styles.accordion} >
             <AccordionItem className={styles.accordionBody}>
                 <AccordionHeader 
                     targetId='1'
-                     cssModule={{ 'accordion-button': `${styles.accordionButton}`}}
-                    style={{ fontSize: '30px'}}
+                    cssModule={{ 'accordion-button': `${styles.accordionButton}`}}
+                    style={{fontSize:'36px'}}
                 >Volunteer Experience</AccordionHeader>
                 <AccordionBody accordionId='1' style={{color:'black'}}>
                     {   
@@ -39,27 +74,32 @@ const AboutMe = () => {
                             return(
                                 id === 0 ?
                                 <List type='unstyled'>
-                                    <li>{item.employer}</li>
-                                    <ul>
+                                    <li style={{ 
+                                            font:'30px bold', 
+                                            display: 'flex', 
+                                            justifyContent:'flex-start',
+                                            marginBottom: '15px'
+                                            }}><u>{item.employer}</u></li>
+                                    <ul style={{display: 'flex', justifyContent:'flex-start'}}>
                                         <li>{item.bullet_1}</li>
                                     </ul>
-                                    <ul>
+                                    <ul style={{display: 'flex', justifyContent:'flex-start'}}>
                                         <li>{item.bullet_2}</li>
                                     </ul>
-                                    <ul>
+                                    <ul style={{display: 'flex', justifyContent:'flex-start'}}>
                                         <li>{item.bullet_3}</li>
                                     </ul>
-                                    <ul>
+                                    <ul style={{ display:'flex', justifyContent:'flex-start'}}>
                                         <li>{item.bullet_4}</li>
                                     </ul>
-                                    <ul>
+                                    <ul style={{ display:'flex', justifyContent:'flex-start'}}>
                                         <li>{item.bullet_5}</li>
                                     </ul>
-                                    <ul>
+                                    <ul style={{ display:'flex', justifyContent:'flex-start'}}>
                                         <li>{item.bullet_6}</li>
                                     </ul>
-                                </List>
-                        : console.log('Experience.id: ', Experience.id)
+                                </List> :
+                                false
                             );
                         })                        
                     }
