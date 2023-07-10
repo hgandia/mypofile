@@ -36,7 +36,7 @@ const AboutMe = () => {
                     <p>This is a test body text.</p>
                 </AccordionBody>
             </AccordionItem>
-            <AccordionItem targetId='2'>
+            <AccordionItem className={styles.accordionBody}>
                 <AccordionHeader 
                     targetId='2' 
                     cssModule={{ 'accordion-button': `${styles.accordionButton}`}}
@@ -45,20 +45,26 @@ const AboutMe = () => {
                         <p>This is a test body text.</p>
                     </AccordionBody>
             </AccordionItem>
-            <AccordionItem targetId='3'>
-                <AccordionHeader targetId='3'>Education</AccordionHeader>
+            <AccordionItem className={styles.accordionBody}>
+                <AccordionHeader 
+                    targetId='3'
+                    cssModule={{ 'accordion-button': `${styles.accordionButton}`}}>Education</AccordionHeader>
                 <AccordionBody accordionId='3'>
                     <p>This is a test body text.</p>
                 </AccordionBody>
             </AccordionItem>
-            <AccordionItem targetId='4'>
-                <AccordionHeader targetId='4'>Certifications</AccordionHeader>
+            <AccordionItem className={styles.accordionBody}>
+                <AccordionHeader 
+                    targetId='4'
+                    cssModule={{ 'accordion-button': `${styles.accordionButton}`}}>Certifications</AccordionHeader>
                 <AccordionBody accordionId='4'>
                     <p>This is a test body text.</p>
                 </AccordionBody>
             </AccordionItem>
-            <AccordionItem targetId='5'>
-                <AccordionHeader targetId='5'>Skill Set</AccordionHeader>
+            <AccordionItem className={styles.accordionBody}>
+                <AccordionHeader 
+                    targetId='5'
+                    cssModule={{ 'accordion-button': `${styles.accordionButton}`}}>Skill Set</AccordionHeader>
                 <AccordionBody accordionId='5'>
                     <p>This is a test body text.</p>
                 </AccordionBody>

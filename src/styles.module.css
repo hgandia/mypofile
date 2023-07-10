@@ -221,7 +221,7 @@ hr {
 }
 
 .accordionBody {
-  background-color: #969489;
+  background-color: #FFFBEF;
   color: #57554F;
 }
 
@@ -242,7 +242,7 @@ hr {
   transition: var(--bs-accordion-transition);
 }
 
-.accordionButton::after {
+/* .accordionButton::after {
   flex-shrink: 0;
   width: var(--bs-accordion-btn-icon-width);
   height: var(--bs-accordion-btn-icon-width);
@@ -254,10 +254,10 @@ hr {
   transition: var(--bs-accordion-btn-icon-transition);
 }
 
-.accordionButton:not(.collapsed)::after{
+.accordionButton:not(.collapsed)::after {
   background-image: var(--bs-accordion-btn-icon);
   transform: var(--bs-accordion-btn-icon-transform);
-}
+} */
 
 /* .accordionButton:not(.collapsed) {
   color: var(--bs-accordion-active-color);
