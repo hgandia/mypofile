@@ -7,7 +7,8 @@ import {
     CarouselItem,
     CarouselControl,
     CarouselIndicators,
-    CarouselCaption 
+    CarouselCaption,
+    List 
 } from 'reactstrap';
 import { Education } from '../app/shared/Education';
 import { Experience } from '../app/shared/Experience';
@@ -32,8 +33,36 @@ const AboutMe = () => {
                      cssModule={{ 'accordion-button': `${styles.accordionButton}`}}
                     style={{ fontSize: '30px'}}
                 >Volunteer Experience</AccordionHeader>
-                <AccordionBody accordionId='1' >
-                    <p>This is a test body text.</p>
+                <AccordionBody accordionId='1' style={{color:'black'}}>
+                    {   
+                        Experience.map((item, id) => {
+                            return(
+                                id === 0 ?
+                                <List type='unstyled'>
+                                    <li>{item.employer}</li>
+                                    <ul>
+                                        <li>{item.bullet_1}</li>
+                                    </ul>
+                                    <ul>
+                                        <li>{item.bullet_2}</li>
+                                    </ul>
+                                    <ul>
+                                        <li>{item.bullet_3}</li>
+                                    </ul>
+                                    <ul>
+                                        <li>{item.bullet_4}</li>
+                                    </ul>
+                                    <ul>
+                                        <li>{item.bullet_5}</li>
+                                    </ul>
+                                    <ul>
+                                        <li>{item.bullet_6}</li>
+                                    </ul>
+                                </List>
+                        : console.log('Experience.id: ', Experience.id)
+                            );
+                        })                        
+                    }
                 </AccordionBody>
             </AccordionItem>
             <AccordionItem className={styles.accordionBody}>

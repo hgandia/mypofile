@@ -4,10 +4,25 @@ import metroPCS from '../assets/metroPCS.jpg';
 import sprint from '../assets/sprint.png';
 import sony from '../assets/sony.jpg';
 import tMobile from '../assets/t-mobile.jpg'
+import ChurchLogo from '../assets/churchlogo.png';
 
 export const Experience = [
     {
         id:0,
+        image: ChurchLogo,
+        employer: 'Iglesia Pentecostal Estrella de Jacob, Inc',
+        location: 'Bronx, NY',
+        time: '9/2010 - Present',
+        jobTitle: 'Technical Lead',
+        bullet_1: 'Design, install, optimize, and maintain sound reinforcement system.',
+        bullet_2: 'Design, install, optimize, and maintain video capturing system.',
+        bullet_3: 'Design, install, optimize, and upgrade computer system.',
+        bullet_4: 'Integrate computer, video capture and sound reinforcement systems to be able stream good quality picture and sound online, while maintaining good sound quality at the live event.',
+        bullet_5: 'Instruct the team on the architecture system and how to utilize and troubleshoot it.',
+        bullet_6: 'Create, develop, design, and maintain website using React.JS, CSS, Vanilla JavaScript and Node.JS for back-end.' 
+    },
+    {
+        id:1,
         image: tMobile,
         employer: 'T-Mobile US',
         location: 'Parsippany, NJ',
@@ -21,7 +36,7 @@ export const Experience = [
         bullet_6: 'Investigate and address customer trouble tickets.' 
     },
     {
-        id:1,
+        id:2,
         image: metroPCS,
         employer: 'metroPCS',
         location: 'Hawthorne, NY',
@@ -36,7 +51,7 @@ export const Experience = [
         bullet_7: 'Review and approve site designs.' 
     },
     {
-        id:2,
+        id:3,
         image: sprint,
         employer: 'Sprint Nextel',
         location: 'White Plains, NY',
@@ -51,7 +66,7 @@ export const Experience = [
         bullet_7: 'Audit iDEN cellular sites.' 
     },
     {
-        id:3,
+        id:4,
         image: agere,
         employer: 'Agere Systems',
         location: 'Berkley Heights, NJ',
@@ -67,7 +82,7 @@ export const Experience = [
         bullet_8: 'Improved layout flow and debugging process by suggesting alternative solutions or routes to obtain solutions.' 
     },
     {
-        id:4,
+        id:5,
         image: GD,
         employer: 'General Dynamics Defense Systems',
         location: 'Pittsfield, MA',
@@ -78,7 +93,7 @@ export const Experience = [
         bullet_3: 'Edited documentation for the fire control system technical manual.'
     },
     {
-        id:5,
+        id:6,
         image: sony,
         employer: 'Sony Music Entertainment',
         location: 'New York, New York',

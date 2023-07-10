@@ -217,7 +217,7 @@ hr {
 /* CSS Styles for the Accordion in the About Me section. */
 .accordion {
   width: 85%;
-  background-color: #000000;
+  /* background-color: #000000; */
 }
 
 .accordionBody {
