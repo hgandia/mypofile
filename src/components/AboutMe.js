@@ -54,52 +54,64 @@ const AboutMe = (args) => {
       >
             {          
                 id >= 0 ?
-                <List type='unstyled' style={{marginBottom: '90px'}}>
-                    
-                    <li style={{ 
-                            font:'30px bold', 
-                            display: 'flex', 
-                            justifyContent:'flex-start',
-                            marginBottom: '15px'
-                            }}>
-                                <img 
-                                    src={item.image} 
-                                    alt='company icon'
-                                    style={{height:'10%', width:'10%', marginRight:'10px'}}
-                                />
-                                {item.employer}{', '}
-                            <p style={{
-                                    marginLeft:'50px', 
-                                    marginTop: '10px', 
-                                    fontSize:'20px'}}>
-                                {item.location}
-                            </p>
-                            <p style={{
-                                    marginLeft:'30px', 
-                                    marginTop: '10px', 
-                                    fontSize:'20px'
-                                }}>{item.time}</p>
-                    </li>
-                    <ul style={{display: 'flex', justifyContent:'flex-start'}}>
-                        <li>{item.bullet_1}</li>
-                    </ul>
-                    <ul style={{display: 'flex', justifyContent:'flex-start'}}>
-                        <li>{item.bullet_2}</li>
-                    </ul>
-                    <ul style={{display: 'flex', justifyContent:'flex-start'}}>
-                        <li>{item.bullet_3}</li>
-                    </ul>
-                    <ul style={{ display:'flex', justifyContent:'flex-start'}}>
-                        <li>{item.bullet_4}</li>
-                    </ul>
-                    <ul style={{ display:'flex', justifyContent:'flex-start'}}>
-                        <li>{item.bullet_5}</li>
-                    </ul>
-                    <ul style={{ display:'flex', justifyContent:'flex-start'}}>
-                        <li>{item.bullet_6}</li>
-                    </ul>
-                </List> :
-                false                       
+                    <List type='unstyled' style={{marginBottom: '90px'}}>
+                        <li style={{ 
+                                font:'30px bold', 
+                                display: 'flex', 
+                                justifyContent:'flex-start',
+                                }}>
+                                    <img 
+                                        src={item.image} 
+                                        alt='company icon'
+                                        style={{ width:'10%', marginRight:'20px'}}
+                                    />
+                                <p>{item.employer}</p>
+                        </li>
+                        <li style={{
+                                display:'flex', 
+                                justifyContent:'flex-start',
+                                marginLeft:'97px',
+                                marginTop:'-40px',
+                                fontSize:'13px'
+                        }}>
+                            {item.location}
+                        </li>
+                        <li style={{
+                                display:'flex', 
+                                justifyContent:'flex-start',
+                                marginLeft:'97px',
+                                fontSize:'13px'
+                        }}>
+                            {item.time}
+                        </li>
+                        <li style={{ 
+                                font:'20px bold', 
+                                display: 'flex', 
+                                justifyContent:'flex-start',
+                                margin: '15px 0px'
+                        }}>
+                                    <u>{item.jobTitle}</u>
+                        </li>
+                        <ul style={{display: 'flex', justifyContent:'flex-start'}}>
+                            <li>{item.bullet_1}</li>
+                        </ul>
+                        <ul style={{display: 'flex', justifyContent:'flex-start'}}>
+                            <li>{item.bullet_2}</li>
+                        </ul>
+                        <ul style={{display: 'flex', justifyContent:'flex-start'}}>
+                            <li>{item.bullet_3}</li>
+                        </ul>
+                        <ul style={{ display:'flex', justifyContent:'flex-start'}}>
+                            <li>{item.bullet_4}</li>
+                        </ul>
+                        <ul style={{ display:'flex', justifyContent:'flex-start'}}>
+                            <li>{item.bullet_5}</li>
+                        </ul>
+                        <ul style={{ display:'flex', justifyContent:'flex-start'}}>
+                            <li>{item.bullet_6}</li>
+                        </ul>
+                    </List> :
+                    false                       
             }
         {/* <CarouselCaption
           captionText={item.caption}
@@ -166,7 +178,7 @@ const AboutMe = (args) => {
                                 next={next}
                                 previous={previous}
                                 {...args}
-                                interval='10000'
+                                interval='90000'
                                 pause='hover'
                                 dark
                           >
