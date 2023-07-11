@@ -11,14 +11,15 @@ import {
     List 
 } from 'reactstrap';
 import { Education } from '../app/shared/Education';
-import { Experience } from '../app/shared/Experience';
+import { Experience, Vexperience } from '../app/shared/Experience';
 import styles from '../styles.module.css';
 import { useState } from 'react';
 
-const AboutMe = () => {
-    const [open, setOpen] = useState('0');
-    const [activeIndex, setActiveIndex] = useState(0);
-    const [animating, setAnimating] = useState(false);
+const AboutMe = (args) => {
+    const [open, setOpen] = useState('0'); //For the Accordion
+    const [activeIndex, setActiveIndex] = useState(0); //For the Carousel within the Accordion
+    const [animating, setAnimating] = useState(false); //For the Carousel within the Accrodion
+    //For the Accordion
     const toggle = (id) => {
         if(open === id){
             setOpen();
@@ -44,18 +45,66 @@ const AboutMe = () => {
     setActiveIndex(newIndex);
   };
 
-  const slides = Experience.map((item) => {
+  const slides = Experience.map((item, id,) => {
     return (
       <CarouselItem
-        onExiting={() => setAnimating(true)}
+        onExiting={() => setAnimating(true)} //Originally true
         onExited={() => setAnimating(false)}
-        key={item.src}
+        key={item.id}
       >
-        <img src={item.src} alt={item.altText} />
-        <CarouselCaption
+            {          
+                id >= 0 ?
+                <List type='unstyled' style={{marginBottom: '90px'}}>
+                    
+                    <li style={{ 
+                            font:'30px bold', 
+                            display: 'flex', 
+                            justifyContent:'flex-start',
+                            marginBottom: '15px'
+                            }}>
+                                <img 
+                                    src={item.image} 
+                                    alt='company icon'
+                                    style={{height:'10%', width:'10%', marginRight:'10px'}}
+                                />
+                                {item.employer}{', '}
+                            <p style={{
+                                    marginLeft:'50px', 
+                                    marginTop: '10px', 
+                                    fontSize:'20px'}}>
+                                {item.location}
+                            </p>
+                            <p style={{
+                                    marginLeft:'30px', 
+                                    marginTop: '10px', 
+                                    fontSize:'20px'
+                                }}>{item.time}</p>
+                    </li>
+                    <ul style={{display: 'flex', justifyContent:'flex-start'}}>
+                        <li>{item.bullet_1}</li>
+                    </ul>
+                    <ul style={{display: 'flex', justifyContent:'flex-start'}}>
+                        <li>{item.bullet_2}</li>
+                    </ul>
+                    <ul style={{display: 'flex', justifyContent:'flex-start'}}>
+                        <li>{item.bullet_3}</li>
+                    </ul>
+                    <ul style={{ display:'flex', justifyContent:'flex-start'}}>
+                        <li>{item.bullet_4}</li>
+                    </ul>
+                    <ul style={{ display:'flex', justifyContent:'flex-start'}}>
+                        <li>{item.bullet_5}</li>
+                    </ul>
+                    <ul style={{ display:'flex', justifyContent:'flex-start'}}>
+                        <li>{item.bullet_6}</li>
+                    </ul>
+                </List> :
+                false                       
+            }
+        {/* <CarouselCaption
           captionText={item.caption}
           captionHeader={item.caption}
-        />
+        /> */}
       </CarouselItem>
     );
   });
@@ -70,7 +119,7 @@ const AboutMe = () => {
                 >Volunteer Experience</AccordionHeader>
                 <AccordionBody accordionId='1' style={{color:'black'}}>
                     {   
-                        Experience.map((item, id) => {
+                        Vexperience.map((item, id) => {
                             return(
                                 id === 0 ?
                                 <List type='unstyled'>
@@ -111,7 +160,37 @@ const AboutMe = () => {
                     cssModule={{ 'accordion-button': `${styles.accordionButton}`}}
                 >Professional Experience</AccordionHeader>
                     <AccordionBody accordionId='2'>
-                        <p>This is a test body text.</p>
+                        {
+                            <Carousel
+                                activeIndex={activeIndex}
+                                next={next}
+                                previous={previous}
+                                {...args}
+                                interval='10000'
+                                pause='hover'
+                                dark
+                          >
+                            <CarouselIndicators
+                              items={Experience}
+                              activeIndex={activeIndex}
+                              onClickHandler={goToIndex}
+                              style={{ backgroundColor:'#FFFBEF'}}
+                            />
+                            {slides}
+                            <CarouselControl
+                              direction="prev"
+                              directionText="Previous"
+                              onClickHandler={previous}
+                              className={styles.carouselLeft}
+                              />
+                            <CarouselControl
+                              direction="next"
+                              directionText="Next"
+                              onClickHandler={next}
+                              className={styles.carouselRight}
+                            />
+                          </Carousel>
+                        }
                     </AccordionBody>
             </AccordionItem>
             <AccordionItem className={styles.accordionBody}>

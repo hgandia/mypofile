@@ -1,7 +1,7 @@
 import agere from '../assets/agereSystems.png';
 import GD from '../assets/generalDynamics.jpg';
 import metroPCS from '../assets/metroPCS.jpg';
-import sprint from '../assets/sprint.png';
+import sprint from '../assets/sprint.gif';
 import sony from '../assets/sony.jpg';
 import tMobile from '../assets/t-mobile.jpg'
 import ChurchLogo from '../assets/churchlogo.png';
@@ -9,20 +9,6 @@ import ChurchLogo from '../assets/churchlogo.png';
 export const Experience = [
     {
         id:0,
-        image: ChurchLogo,
-        employer: 'Iglesia Pentecostal Estrella de Jacob, Inc',
-        location: 'Bronx, NY',
-        time: '9/2010 - Present',
-        jobTitle: 'Technical Lead',
-        bullet_1: 'Design, install, optimize, and maintain sound reinforcement system.',
-        bullet_2: 'Design, install, optimize, and maintain video capturing system.',
-        bullet_3: 'Design, install, optimize, and upgrade computer system.',
-        bullet_4: 'Integrate video, sound and computer systems to stream good quality content.',
-        bullet_5: 'Instruct the team on the architecture system and how to utilize and troubleshoot it.',
-        bullet_6: 'Design & Develop website using React, JavaScript, CSS, & Node.JS for back-end.' 
-    },
-    {
-        id:1,
         image: tMobile,
         employer: 'T-Mobile US',
         location: 'Parsippany, NJ',
@@ -36,7 +22,7 @@ export const Experience = [
         bullet_6: 'Investigate and address customer trouble tickets.' 
     },
     {
-        id:2,
+        id:1,
         image: metroPCS,
         employer: 'metroPCS',
         location: 'Hawthorne, NY',
@@ -51,7 +37,7 @@ export const Experience = [
         bullet_7: 'Review and approve site designs.' 
     },
     {
-        id:3,
+        id:2,
         image: sprint,
         employer: 'Sprint Nextel',
         location: 'White Plains, NY',
@@ -66,7 +52,7 @@ export const Experience = [
         bullet_7: 'Audit iDEN cellular sites.' 
     },
     {
-        id:4,
+        id:3,
         image: agere,
         employer: 'Agere Systems',
         location: 'Berkley Heights, NJ',
@@ -82,7 +68,7 @@ export const Experience = [
         bullet_8: 'Improved layout flow and debugging process by suggesting alternative solutions or routes to obtain solutions.' 
     },
     {
-        id:5,
+        id:4,
         image: GD,
         employer: 'General Dynamics Defense Systems',
         location: 'Pittsfield, MA',
@@ -93,7 +79,7 @@ export const Experience = [
         bullet_3: 'Edited documentation for the fire control system technical manual.'
     },
     {
-        id:6,
+        id:5,
         image: sony,
         employer: 'Sony Music Entertainment',
         location: 'New York, New York',
@@ -104,4 +90,21 @@ export const Experience = [
         bullet_3: 'Updated cable connectors for all rack units in the studio.',
         bullet_4: 'Replaced microchips in remote control for video console.'
     }   
+];
+
+export const Vexperience = [
+    {
+        id:0,
+        image: ChurchLogo,
+        employer: 'Iglesia Pentecostal Estrella de Jacob, Inc',
+        location: 'Bronx, NY',
+        time: '9/2010 - Present',
+        jobTitle: 'Technical Lead',
+        bullet_1: 'Design, install, optimize, and maintain sound reinforcement system.',
+        bullet_2: 'Design, install, optimize, and maintain video capturing system.',
+        bullet_3: 'Design, install, optimize, and upgrade computer system.',
+        bullet_4: 'Integrate video, sound and computer systems to stream good quality content.',
+        bullet_5: 'Instruct the team on the architecture system and how to utilize and troubleshoot it.',
+        bullet_6: 'Design & Develop website using React, JavaScript, CSS, & Node.JS for back-end.' 
+    }
 ];
