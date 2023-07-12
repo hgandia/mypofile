@@ -14,12 +14,14 @@ export const Experience = [
         location: 'Parsippany, NJ',
         time: '9/2013 - Present',
         jobTitle: 'RF Engineer',
-        bullet_1: 'Maintain and optimize cellular network in NYC on multiple layers of 5G, 4G and 3G.',
-        bullet_2: 'Improve on KPI\'s such as drops, blocks, throughput, SINR, congestion, etc.',
-        bullet_3: 'Work with design team to finalize design of small cell, oDAS nodes & macro layout.',
-        bullet_4: 'Analyze site alarms to clear them and, if necessary, dispatch field operations.',
-        bullet_5: 'Lead a SiriusXM radio interference mitigation project and created a MOP for teams.',
-        bullet_6: 'Investigate and address customer trouble tickets.' 
+        bullets: [
+                    'Maintain and optimize cellular network in NYC on multiple layers of 5G, 4G and 3G.',
+                    'Improve on KPI\'s such as drops, blocks, throughput, SINR, congestion, etc.',
+                    'Work with design team to finalize design of small cell, oDAS nodes & macro layout.',
+                    'Analyze site alarms to clear them and, if necessary, dispatch field operations.',
+                    'Lead a SiriusXM radio interference mitigation project and created a MOP for teams.',
+                    'Investigate and address customer trouble tickets.'
+            ]
     },
     {
         id:1,
@@ -28,13 +30,15 @@ export const Experience = [
         location: 'Hawthorne, NY',
         time: '2/2012 - 9/2013',
         jobTitle: 'RF Engineer',
-        bullet_1: 'Create daily alarm summary reports for LTE and CDMA alarms.',
-        bullet_2: 'Analyze site alarms to clear them and, if necessary, dispatch field operations.',
-        bullet_3: 'Capture and analyze data by drive testing in order to better optimize networks.',
-        bullet_4: 'Work with design team to hardened small cell layout and design.',
-        bullet_5: 'Visit sites for audits, design and optimization work.',
-        bullet_6: 'Investigate and address customer trouble tickets. ',
-        bullet_7: 'Review and approve site designs.' 
+        bullets: [
+                    'Create daily alarm summary reports for LTE and CDMA alarms.',
+                    'Analyze site alarms to clear them and, if necessary, dispatch field operations.',
+                    'Capture and analyze data by drive testing in order to better optimize networks.',
+                    'Work with design team to hardened small cell layout and design.',
+                    'Visit sites for audits, design and optimization work.',
+                    'Investigate and address customer trouble tickets. ',
+                    'Review and approve site designs.'
+            ] 
     },
     {
         id:2,
@@ -43,13 +47,15 @@ export const Experience = [
         location: 'White Plains, NY',
         time: '6/2004 - 4/2008',
         jobTitle: 'RF Engineer',
-        bullet_1: 'Design iDEN cell sites to increase network capacity and/or quality.',
-        bullet_2: 'Design fiber DAS for better quality of network.',
-        bullet_3: 'Analyzed post processed data to address network needs.',
-        bullet_4: 'Perform iDEN cellular site modifications for network optimization.',
-        bullet_5: 'Read / alter lease exhibits and construction drawings.',
-        bullet_6: 'Create daily alarm summary reports for LTE and CDMA alarms.',
-        bullet_7: 'Audit iDEN cellular sites.' 
+        bullets: [
+                    'Design iDEN cell sites to increase network capacity and/or quality.',
+                    'Design fiber DAS for better quality of network.',
+                    'Analyzed post processed data to address network needs.',
+                    'Perform iDEN cellular site modifications for network optimization.',
+                    'Read / alter lease exhibits and construction drawings.',
+                    'Create daily alarm summary reports for LTE and CDMA alarms.',
+                    'Audit iDEN cellular sites.'
+            ] 
     },
     {
         id:3,
@@ -58,14 +64,17 @@ export const Experience = [
         location: 'Berkley Heights, NJ',
         time: '1/2001 - 1/2003',
         jobTitle: 'IC Physical Designer',
-        bullet_1: 'Designed physical layout of blocks for integrated circuits on a 10Gb Network Processor.',
-        bullet_2: 'Created small I/O macro blocks for top-level pad ring using 0.13-micron technology.',
-        bullet_3: 'Managed suite of Avanti tools including Apollo, Saturn, Astro and Enterprise.',
-        bullet_4: 'Performed floor planning, scan chain optimization, placement, GCTS, routing, timing closure, parasitic extraction, and physical verification.',
-        bullet_5: 'Performed timing analysis on sub-micro blocks.',
-        bullet_6: 'Facilitated work within the physical design flow by designing custom PERL / AWK scripts.',
-        bullet_7: 'Provided backend connectivity verification with Hercules LVS/DRC and company\'s internal tools, Goalie/Gemini.',
-        bullet_8: 'Improved layout flow and debugging process by suggesting alternative solutions or routes to obtain solutions.' 
+        bullets: [
+                    'Designed physical layout of blocks for a 10Gb Network Processor.',
+                    'Created I/O macro blocks for top-level pad ring using 0.13-micron technology.',
+                    'Managed suite of Avanti tools including Apollo, Saturn, Astro and Enterprise.',
+                    'Performed floor planning, scan chain optimization, placement, GCTS, and routing,', 
+                    'Addionally performed timing closure, parasitic extraction, and physical verification.',
+                    'Performed timing analysis on sub-micro blocks.',
+                    'Facilitated work within the physical design flow by designing custom PERL scripts.',
+                    'Provided backend connectivity verification with Hercules LVS/DRC and company\'s internal tools, Goalie/Gemini.',
+                    'Improved layout flow and debugging process by suggesting alternative solutions or routes to obtain solutions.' 
+            ]
     },
     {
         id:4,
@@ -74,9 +83,11 @@ export const Experience = [
         location: 'Pittsfield, MA',
         time: '5/2000 - 8/2000',
         jobTitle: 'Engineering Intern',
-        bullet_1: 'Created, edited, and updated Microsoft Access databases.',
-        bullet_2: 'Updated SGML files for fire control system\'s electronic manual.',
-        bullet_3: 'Edited documentation for the fire control system technical manual.'
+        bullets: [
+                    'Created, edited, and updated Microsoft Access databases.',
+                    'Updated SGML files for fire control system\'s electronic manual.',
+                    'Edited documentation for the fire control system technical manual.'
+            ]
     },
     {
         id:5,
@@ -85,10 +96,12 @@ export const Experience = [
         location: 'New York, New York',
         time: '6/1998 - 8/1998',
         jobTitle: 'Engineering Intern',
-        bullet_1: 'Fabricated D adapter and BNC connector cables.',
-        bullet_2: 'Soldered male and female XLR audio connectors.',
-        bullet_3: 'Updated cable connectors for all rack units in the studio.',
-        bullet_4: 'Replaced microchips in remote control for video console.'
+        bullets: [
+                    'Fabricated D adapter and BNC connector cables.',
+                    'Soldered male and female XLR audio connectors.',
+                    'Updated cable connectors for all rack units in the studio.',
+                    'Replaced microchips in remote control for video console.'
+            ]
     }   
 ];
 
