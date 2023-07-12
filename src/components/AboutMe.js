@@ -16,43 +16,27 @@ import { useState } from 'react';
 
 const AboutMe = (args) => {
     const [open, setOpen] = useState('0'); //For the Accordion
-    const [activeIndex, setActiveIndex] = useState(0); //For the Carousel within the Accordion
-    const [animating, setAnimating] = useState(false); //For the Carousel within the Accrodion
+    const [activeIndex, setActiveIndex] = useState(0); //For the Carousels within the Accordion
+    const [animating, setAnimating] = useState(false); //For the Carousels within the Accrodion
     //For the Accordion
-    const toggle = (id) => {
-        if(open === id){
+    const toggle = (accordionId) => {
+        if(open === accordionId){
             setOpen();
         } else {
-            setOpen(id);
+            setOpen(accordionId);
         }
     };
 
   const next = () => {
     if (animating) return;
-    if(Experience){
-        const nextIndex = activeIndex === Experience.length - 1 ? 0 : activeIndex + 1;
-        setActiveIndex(nextIndex);
-    } else if(Education){
-        const nextIndex = activeIndex === Education.length - 1 ? 0 : activeIndex + 1;
-        setActiveIndex(nextIndex);
-    } else{
-        const nextIndex = activeIndex === 0 ? Certifications.length - 1 : activeIndex + 1;
-        setActiveIndex(nextIndex);
-    }
+    const nextIndex = activeIndex === Experience.length - 1 ? 0 : activeIndex + 1;
+    setActiveIndex(nextIndex);        
   };
 
   const previous = () => {
     if (animating) return;
-    if(Experience){
         const nextIndex = activeIndex === 0 ? Experience.length - 1 : activeIndex - 1;
         setActiveIndex(nextIndex);
-    } else if(Education){
-        const nextIndex = activeIndex === 0 ? Education.length - 1 : activeIndex - 1;
-        setActiveIndex(nextIndex);
-    } else {
-        const nextIndex = activeIndex === 0 ? Certifications.length - 1 : activeIndex - 1;
-        setActiveIndex(nextIndex);
-    }
   };
 
   const goToIndex = (newIndex) => {
@@ -168,12 +152,12 @@ const EducationSlides = Education.map((item, id) => {
                                 marginTop:'10px'
                                 }}>
                             <li>
-                                Area of Study: <span style={{marginLeft:'10px'}}>{item.studyField}</span>
+                                Area of Study: <span style={{marginLeft:'1px'}}>{item.studyField}</span>
                             </li>
                         </ul>
                         <ul style={{display: 'flex', justifyContent:'flex-start'}}>
                             <li>
-                                Degree Received: <span style={{marginLeft:'10px'}}>{item.degree}</span>
+                                Degree Received: <span style={{marginLeft:'1px'}}>{item.degree}</span>
                             </li>
                         </ul>
                     </List> :
@@ -264,6 +248,7 @@ const EducationSlides = Education.map((item, id) => {
                                 interval='90000'
                                 pause='hover'
                                 dark
+                                experience={Experience}
                           >
                             <CarouselIndicators
                               items={Experience}
