@@ -7,10 +7,9 @@ import {
     CarouselItem,
     CarouselControl,
     CarouselIndicators,
-    CarouselCaption,
     List 
 } from 'reactstrap';
-import { Education } from '../app/shared/Education';
+import { Education, Certifications } from '../app/shared/Education';
 import { Experience, Vexperience } from '../app/shared/Experience';
 import styles from '../styles.module.css';
 import { useState } from 'react';
@@ -30,14 +29,30 @@ const AboutMe = (args) => {
 
   const next = () => {
     if (animating) return;
-    const nextIndex = activeIndex === Experience.length - 1 ? 0 : activeIndex + 1;
-    setActiveIndex(nextIndex);
+    if(Experience){
+        const nextIndex = activeIndex === Experience.length - 1 ? 0 : activeIndex + 1;
+        setActiveIndex(nextIndex);
+    } else if(Education){
+        const nextIndex = activeIndex === Education.length - 1 ? 0 : activeIndex + 1;
+        setActiveIndex(nextIndex);
+    } else{
+        const nextIndex = activeIndex === 0 ? Certifications.length - 1 : activeIndex + 1;
+        setActiveIndex(nextIndex);
+    }
   };
 
   const previous = () => {
     if (animating) return;
-    const nextIndex = activeIndex === 0 ? Experience.length - 1 : activeIndex - 1;
-    setActiveIndex(nextIndex);
+    if(Experience){
+        const nextIndex = activeIndex === 0 ? Experience.length - 1 : activeIndex - 1;
+        setActiveIndex(nextIndex);
+    } else if(Education){
+        const nextIndex = activeIndex === 0 ? Education.length - 1 : activeIndex - 1;
+        setActiveIndex(nextIndex);
+    } else {
+        const nextIndex = activeIndex === 0 ? Certifications.length - 1 : activeIndex - 1;
+        setActiveIndex(nextIndex);
+    }
   };
 
   const goToIndex = (newIndex) => {
@@ -45,13 +60,13 @@ const AboutMe = (args) => {
     setActiveIndex(newIndex);
   };
 
-  const slides = Experience.map((item, id) => {
+  const professionalSlides = Experience.map((item, id) => {
     return (
-      <CarouselItem
-        onExiting={() => setAnimating(true)}
-        onExited={() => setAnimating(false)}
-        key={item.id}
-      >
+        <CarouselItem
+            onExiting={() => setAnimating(true)}
+            onExited={() => setAnimating(false)}
+            key={item.id}
+        >
             {          
                 id >= 0 ?
                     <List type='unstyled' style={{marginBottom: '90px'}}>
@@ -65,7 +80,7 @@ const AboutMe = (args) => {
                                         alt='company icon'
                                         style={{ width:'10%', marginRight:'20px'}}
                                     />
-                                <p>{item.employer}</p>
+                                    {item.employer}
                         </li>
                         <li style={{
                                 display:'flex', 
@@ -104,13 +119,69 @@ const AboutMe = (args) => {
                     </List> :
                     false                       
             }
-        {/* <CarouselCaption
-          captionText={item.caption}
-          captionHeader={item.caption}
-        /> */}
-      </CarouselItem>
+        </CarouselItem>
     );
-  });
+});
+
+const EducationSlides = Education.map((item, id) => {
+    return (
+        <CarouselItem
+            onExiting={() => setAnimating(true)}
+            onExited={() => setAnimating(false)}
+            key={item.id}
+        >
+            {          
+                id >= 0 ?
+                    <List type='unstyled' style={{marginBottom: '90px'}}>
+                        <li style={{ 
+                                font:'30px bold', 
+                                display: 'flex', 
+                                justifyContent:'flex-start',
+                                }}>
+                                    <img 
+                                        src={item.image} 
+                                        alt='school icon'
+                                        style={{ width:'10%', marginRight:'20px'}}
+                                    />
+                                    {item.school}
+                        </li>
+                        <li style={{
+                                display:'flex', 
+                                justifyContent:'flex-start',
+                                marginLeft:'97px',
+                                marginTop:'-25px',
+                                fontSize:'13px'
+                        }}>
+                            {item.location}
+                        </li>
+                        <li style={{
+                                display:'flex', 
+                                justifyContent:'flex-start',
+                                marginLeft:'97px',
+                                fontSize:'13px'
+                        }}>
+                            {item.time}
+                        </li>
+                        <ul style={{ 
+                                display: 'flex', 
+                                justifyContent:'flex-start',
+                                marginTop:'10px'
+                                }}>
+                            <li>
+                                Area of Study: <span style={{marginLeft:'10px'}}>{item.studyField}</span>
+                            </li>
+                        </ul>
+                        <ul style={{display: 'flex', justifyContent:'flex-start'}}>
+                            <li>
+                                Degree Received: <span style={{marginLeft:'10px'}}>{item.degree}</span>
+                            </li>
+                        </ul>
+                    </List> :
+                    false                       
+            }
+        </CarouselItem>
+    );
+});
 
     return(
         <Accordion open={open} toggle={toggle} className={styles.accordion} >
@@ -200,7 +271,7 @@ const AboutMe = (args) => {
                               onClickHandler={goToIndex}
                               style={{ backgroundColor:'#FFFBEF'}}
                             />
-                            {slides}
+                            {professionalSlides}
                             <CarouselControl
                               direction="prev"
                               directionText="Previous"
@@ -222,7 +293,37 @@ const AboutMe = (args) => {
                     targetId='3'
                     cssModule={{ 'accordion-button': `${styles.accordionButton}`}}>Education</AccordionHeader>
                 <AccordionBody accordionId='3'>
-                    <p>This is a test body text.</p>
+                    {
+                        <Carousel
+                            activeIndex={activeIndex}
+                            next={next}
+                            previous={previous}
+                            {...args}
+                            interval='90000'
+                            pause='hover'
+                            dark
+                        >
+                            <CarouselIndicators
+                            items={Education}
+                            activeIndex={activeIndex}
+                            onClickHandler={goToIndex}
+                            style={{ backgroundColor:'#FFFBEF'}}
+                            />
+                            {EducationSlides}
+                            <CarouselControl
+                            direction="prev"
+                            directionText="Previous"
+                            onClickHandler={previous}
+                            className={styles.carouselLeft}
+                            />
+                            <CarouselControl
+                            direction="next"
+                            directionText="Next"
+                            onClickHandler={next}
+                            className={styles.carouselRight}
+                            />
+                        </Carousel>
+                    }
                 </AccordionBody>
             </AccordionItem>
             <AccordionItem className={styles.accordionBody}>

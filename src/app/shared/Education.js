@@ -3,7 +3,7 @@ import stevens from '../assets/stevens.png';
 import ccny from '../assets/ccny.jpg';
 import nucamp from '../assets/nucamp.png';
 
-export const Experience = [
+export const Education = [
     {
         id:0,
         image: sae,
@@ -25,14 +25,17 @@ export const Experience = [
     {
         id:2,
         image: ccny,
-        school: 'The City College of NEw York',
+        school: 'The City College of New York',
         location: 'New York, New York',
         time: '09/1994 - 01/2001',
         studyField: 'Electrical Engineering',
         degree: 'Bachelors of Engineering'
-    },
+    }
+];
+
+export const Certifications = [
     {
-        id:3,
+        id:0,
         image: nucamp,
         school: 'Nucamp Coding Bootcamp',
         location: 'Newark, New Jersey',
@@ -41,7 +44,7 @@ export const Experience = [
         degree: 'Certificate of Completion'
     },
     {
-        id:4,
+        id:1,
         image: nucamp,
         school: 'Nucamp Coding Bootcamp',
         location: 'Newark, New Jersey',
@@ -50,7 +53,7 @@ export const Experience = [
         degree: 'Certificate of Completion'
     },
     {
-        id:5,
+        id:2,
         image: nucamp,
         school: 'Nucamp Coding Bootcamp',
         location: 'Newark, New Jersey',
