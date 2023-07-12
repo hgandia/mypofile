@@ -72,8 +72,7 @@ export const Experience = [
                     'Addionally performed timing closure, parasitic extraction, and physical verification.',
                     'Performed timing analysis on sub-micro blocks.',
                     'Facilitated work within the physical design flow by designing custom PERL scripts.',
-                    'Provided backend connectivity verification with Hercules LVS/DRC and company\'s internal tools, Goalie/Gemini.',
-                    'Improved layout flow and debugging process by suggesting alternative solutions or routes to obtain solutions.' 
+                    'Verified backend connectivity with Hercules LVS/DRC and in-house tools.' 
             ]
     },
     {
@@ -113,11 +112,13 @@ export const Vexperience = [
         location: 'Bronx, NY',
         time: '9/2010 - Present',
         jobTitle: 'Technical Lead',
-        bullet_1: 'Design, install, optimize, and maintain sound reinforcement system.',
-        bullet_2: 'Design, install, optimize, and maintain video capturing system.',
-        bullet_3: 'Design, install, optimize, and upgrade computer system.',
-        bullet_4: 'Integrate video, sound and computer systems to stream good quality content.',
-        bullet_5: 'Instruct the team on the architecture system and how to utilize and troubleshoot it.',
-        bullet_6: 'Design & Develop website using React, JavaScript, CSS, & Node.JS for back-end.' 
+        bullets: [
+                    'Design, install, optimize, and maintain sound reinforcement system.',
+                    'Design, install, optimize, and maintain video capturing system.',
+                    'Design, install, optimize, and upgrade computer system.',
+                    'Integrate video, sound and computer systems to stream good quality content.',
+                    'Instruct the team on the architecture system and how to utilize and troubleshoot it.',
+                    'Design & Develop website using React, JavaScript, CSS, & Node.JS for back-end.'
+                ] 
     }
 ];

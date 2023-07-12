@@ -48,7 +48,7 @@ const AboutMe = (args) => {
   const slides = Experience.map((item, id) => {
     return (
       <CarouselItem
-        onExiting={() => setAnimating(true)} //Originally true
+        onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
         key={item.id}
       >
@@ -129,27 +129,48 @@ const AboutMe = (args) => {
                                     <li style={{ 
                                             font:'30px bold', 
                                             display: 'flex', 
+                                            justifyContent:'flex-start'
+                                            }}>
+                                                <img 
+                                                    src={item.image}
+                                                    alt='company icon'
+                                                    style={{ width:'10%', marginRight:'20px'}}   
+                                                />{item.employer}
+                                    </li>
+                                    <li style={{
+                                                display:'flex', 
+                                                justifyContent:'flex-start',
+                                                marginLeft:'97px',
+                                                marginTop:'-40px',
+                                                fontSize:'13px'
+                                            }}>
+                                                {item.location}
+                                    </li>
+                                    <li style={{
+                                            display:'flex', 
                                             justifyContent:'flex-start',
-                                            marginBottom: '15px'
-                                            }}><u>{item.employer}</u></li>
-                                    <ul style={{display: 'flex', justifyContent:'flex-start'}}>
-                                        <li>{item.bullet_1}</li>
-                                    </ul>
-                                    <ul style={{display: 'flex', justifyContent:'flex-start'}}>
-                                        <li>{item.bullet_2}</li>
-                                    </ul>
-                                    <ul style={{display: 'flex', justifyContent:'flex-start'}}>
-                                        <li>{item.bullet_3}</li>
-                                    </ul>
-                                    <ul style={{ display:'flex', justifyContent:'flex-start'}}>
-                                        <li>{item.bullet_4}</li>
-                                    </ul>
-                                    <ul style={{ display:'flex', justifyContent:'flex-start'}}>
-                                        <li>{item.bullet_5}</li>
-                                    </ul>
-                                    <ul style={{ display:'flex', justifyContent:'flex-start'}}>
-                                        <li>{item.bullet_6}</li>
-                                    </ul>
+                                            marginLeft:'97px',
+                                            fontSize:'13px'
+                                    }}>
+                                        {item.time}
+                                    </li>
+                                    <li style={{ 
+                                                font:'20px bold', 
+                                                display: 'flex', 
+                                                justifyContent:'flex-start',
+                                                margin: '15px 0px'                                                
+                                        }}>
+                                            <u>{item.jobTitle}</u>
+                                    </li>
+                                    {
+                                        item.bullets.map((bullet, idx) => {
+                                            return(
+                                                <ul style={{display: 'flex', justifyContent:'flex-start'}}>
+                                                    <li key={idx}>{bullet}</li>
+                                                </ul>
+                                            );
+                                         })
+                                    }
                                 </List> :
                                 false
                             );
