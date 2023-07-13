@@ -4,7 +4,7 @@ import css from '../assets/skills/CSS3.png';
 
 export const Skills = [
     {
-      name: 'Rare Wind',
+      name: 'HTML5',
       description: '#a8edea → #fed6e3',
       css: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)',
       height: 200,

@@ -18,10 +18,10 @@ const BoxSpread = () => {
   const { size, ...rest } = useSpring({
     ref: springApi,
     config: config.stiff,
-    from: { size: '20%', background: '#FFF2CC' },
+    from: { size: '20%', background: '#969489' },
     to: {
-      size: open ? '100%' : '20%',
-      background: open ? '' : '#FFF2CC',
+      size: open ? '100%' : '30%',
+      background: open ? '' : '#969489',
     },
   })
 
@@ -55,10 +55,10 @@ const BoxSpread = () => {
                 src={item.image} 
                 alt='tech icon' 
                 className={styles.boxSpreadItem} 
-                style={{ marginTop: '5px', marginBottom: '-20px'}}
+                style={{ marginTop: '5px', marginBottom: '-6px'}}
             />
            </animated.div>
-        ))}
+        ))}<p>Click Me!</p>
       </animated.div>
     </div>
   );

@@ -40,7 +40,7 @@ export const Certifications = [
         school: 'Nucamp Coding Bootcamp',
         location: 'Newark, New Jersey',
         time: '04/2022 - 05/2022',
-        studyField: 'Web Development',
+        studyField: 'Web Development Fundamentals',
         degree: 'Certificate of Completion'
     },
     {

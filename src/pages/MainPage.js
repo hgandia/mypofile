@@ -12,9 +12,6 @@ import AboutMe from '../components/AboutMe';
 import styles from '../styles.module.css';
 import { useRef, useState } from 'react';
 
-
-
-
 const MainPage = () => {
     const ref = useRef();
     const [isOpen, setIsOpen] = useState(false);
