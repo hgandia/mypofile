@@ -3,169 +3,27 @@ import {
     AccordionBody, 
     AccordionHeader, 
     AccordionItem,
-    Carousel,
-    CarouselItem,
-    CarouselControl,
-    CarouselIndicators,
     List 
 } from 'reactstrap';
-import { Education, Certifications } from '../app/shared/Education';
-import { Experience, Vexperience } from '../app/shared/Experience';
+import CertificationsCarousel from './CertificationsCarousel';
+import ProfessionalCarousel from './ProfessionalCarousel';
+import { Vexperience } from '../app/shared/Experience';
+import EducationCarousel from './EducationCarousel';
 import styles from '../styles.module.css';
+import BoxSpread from './BoxSpread';
 import { useState } from 'react';
 
-const AboutMe = (args) => {
-    const [open, setOpen] = useState('0'); //For the Accordion
-    const [activeIndex, setActiveIndex] = useState(0); //For the Carousels within the Accordion
-    const [animating, setAnimating] = useState(false); //For the Carousels within the Accrodion
-    //For the Accordion
+
+const AboutMe = () => {
+    const [open, setOpen] = useState('0');
+    
     const toggle = (accordionId) => {
         if(open === accordionId){
             setOpen();
         } else {
             setOpen(accordionId);
         }
-    };
-
-  const next = () => {
-    if (animating) return;
-    const nextIndex = activeIndex === Experience.length - 1 ? 0 : activeIndex + 1;
-    setActiveIndex(nextIndex);        
-  };
-
-  const previous = () => {
-    if (animating) return;
-        const nextIndex = activeIndex === 0 ? Experience.length - 1 : activeIndex - 1;
-        setActiveIndex(nextIndex);
-  };
-
-  const goToIndex = (newIndex) => {
-    if (animating) return;
-    setActiveIndex(newIndex);
-  };
-
-  const professionalSlides = Experience.map((item, id) => {
-    return (
-        <CarouselItem
-            onExiting={() => setAnimating(true)}
-            onExited={() => setAnimating(false)}
-            key={item.id}
-        >
-            {          
-                id >= 0 ?
-                    <List type='unstyled' style={{marginBottom: '90px'}}>
-                        <li style={{ 
-                                font:'30px bold', 
-                                display: 'flex', 
-                                justifyContent:'flex-start',
-                                }}>
-                                    <img 
-                                        src={item.image} 
-                                        alt='company icon'
-                                        style={{ width:'10%', marginRight:'20px'}}
-                                    />
-                                    {item.employer}
-                        </li>
-                        <li style={{
-                                display:'flex', 
-                                justifyContent:'flex-start',
-                                marginLeft:'97px',
-                                marginTop:'-40px',
-                                fontSize:'13px'
-                        }}>
-                            {item.location}
-                        </li>
-                        <li style={{
-                                display:'flex', 
-                                justifyContent:'flex-start',
-                                marginLeft:'97px',
-                                fontSize:'13px'
-                        }}>
-                            {item.time}
-                        </li>
-                        <li style={{ 
-                                font:'20px bold', 
-                                display: 'flex', 
-                                justifyContent:'flex-start',
-                                margin: '15px 0px'
-                        }}>
-                                    <u>{item.jobTitle}</u>
-                        </li>
-                        {
-                            item.bullets.map((bullet, idx) => {
-                                 return(
-                                    <ul style={{display: 'flex', justifyContent:'flex-start'}}>
-                                        <li key={idx}>{bullet}</li>
-                                    </ul>
-                                 );
-                                })
-                        }
-                    </List> :
-                    false                       
-            }
-        </CarouselItem>
-    );
-});
-
-const EducationSlides = Education.map((item, id) => {
-    return (
-        <CarouselItem
-            onExiting={() => setAnimating(true)}
-            onExited={() => setAnimating(false)}
-            key={item.id}
-        >
-            {          
-                id >= 0 ?
-                    <List type='unstyled' style={{marginBottom: '90px'}}>
-                        <li style={{ 
-                                font:'30px bold', 
-                                display: 'flex', 
-                                justifyContent:'flex-start',
-                                }}>
-                                    <img 
-                                        src={item.image} 
-                                        alt='school icon'
-                                        style={{ width:'10%', marginRight:'20px'}}
-                                    />
-                                    {item.school}
-                        </li>
-                        <li style={{
-                                display:'flex', 
-                                justifyContent:'flex-start',
-                                marginLeft:'97px',
-                                marginTop:'-25px',
-                                fontSize:'13px'
-                        }}>
-                            {item.location}
-                        </li>
-                        <li style={{
-                                display:'flex', 
-                                justifyContent:'flex-start',
-                                marginLeft:'97px',
-                                fontSize:'13px'
-                        }}>
-                            {item.time}
-                        </li>
-                        <ul style={{ 
-                                display: 'flex', 
-                                justifyContent:'flex-start',
-                                marginTop:'10px'
-                                }}>
-                            <li>
-                                Area of Study: <span style={{marginLeft:'1px'}}>{item.studyField}</span>
-                            </li>
-                        </ul>
-                        <ul style={{display: 'flex', justifyContent:'flex-start'}}>
-                            <li>
-                                Degree Received: <span style={{marginLeft:'1px'}}>{item.degree}</span>
-                            </li>
-                        </ul>
-                    </List> :
-                    false                       
-            }
-        </CarouselItem>
-    );
-});
+    }; 
 
     return(
         <Accordion open={open} toggle={toggle} className={styles.accordion} >
@@ -174,7 +32,8 @@ const EducationSlides = Education.map((item, id) => {
                     targetId='1'
                     cssModule={{ 'accordion-button': `${styles.accordionButton}`}}
                     style={{fontSize:'36px'}}
-                >Volunteer Experience</AccordionHeader>
+                >
+                    Volunteer Experience</AccordionHeader>
                 <AccordionBody accordionId='1' style={{color:'black'}}>
                     {   
                         Vexperience.map((item, id) => {
@@ -239,38 +98,7 @@ const EducationSlides = Education.map((item, id) => {
                     cssModule={{ 'accordion-button': `${styles.accordionButton}`}}
                 >Professional Experience</AccordionHeader>
                     <AccordionBody accordionId='2'>
-                        {
-                            <Carousel
-                                activeIndex={activeIndex}
-                                next={next}
-                                previous={previous}
-                                {...args}
-                                interval='90000'
-                                pause='hover'
-                                dark
-                                experience={Experience}
-                          >
-                            <CarouselIndicators
-                              items={Experience}
-                              activeIndex={activeIndex}
-                              onClickHandler={goToIndex}
-                              style={{ backgroundColor:'#FFFBEF'}}
-                            />
-                            {professionalSlides}
-                            <CarouselControl
-                              direction="prev"
-                              directionText="Previous"
-                              onClickHandler={previous}
-                              className={styles.carouselLeft}
-                              />
-                            <CarouselControl
-                              direction="next"
-                              directionText="Next"
-                              onClickHandler={next}
-                              className={styles.carouselRight}
-                            />
-                          </Carousel>
-                        }
+                        <ProfessionalCarousel />
                     </AccordionBody>
             </AccordionItem>
             <AccordionItem className={styles.accordionBody}>
@@ -278,37 +106,7 @@ const EducationSlides = Education.map((item, id) => {
                     targetId='3'
                     cssModule={{ 'accordion-button': `${styles.accordionButton}`}}>Education</AccordionHeader>
                 <AccordionBody accordionId='3'>
-                    {
-                        <Carousel
-                            activeIndex={activeIndex}
-                            next={next}
-                            previous={previous}
-                            {...args}
-                            interval='90000'
-                            pause='hover'
-                            dark
-                        >
-                            <CarouselIndicators
-                            items={Education}
-                            activeIndex={activeIndex}
-                            onClickHandler={goToIndex}
-                            style={{ backgroundColor:'#FFFBEF'}}
-                            />
-                            {EducationSlides}
-                            <CarouselControl
-                            direction="prev"
-                            directionText="Previous"
-                            onClickHandler={previous}
-                            className={styles.carouselLeft}
-                            />
-                            <CarouselControl
-                            direction="next"
-                            directionText="Next"
-                            onClickHandler={next}
-                            className={styles.carouselRight}
-                            />
-                        </Carousel>
-                    }
+                    <EducationCarousel />
                 </AccordionBody>
             </AccordionItem>
             <AccordionItem className={styles.accordionBody}>
@@ -316,7 +114,7 @@ const EducationSlides = Education.map((item, id) => {
                     targetId='4'
                     cssModule={{ 'accordion-button': `${styles.accordionButton}`}}>Certifications</AccordionHeader>
                 <AccordionBody accordionId='4'>
-                    <p>This is a test body text.</p>
+                    <CertificationsCarousel />
                 </AccordionBody>
             </AccordionItem>
             <AccordionItem className={styles.accordionBody}>
@@ -324,7 +122,7 @@ const EducationSlides = Education.map((item, id) => {
                     targetId='5'
                     cssModule={{ 'accordion-button': `${styles.accordionButton}`}}>Skill Set</AccordionHeader>
                 <AccordionBody accordionId='5'>
-                    <p>This is a test body text.</p>
+                    <BoxSpread />
                 </AccordionBody>
             </AccordionItem>
         </Accordion>

@@ -1,7 +1,6 @@
 import { Nav, Navbar, NavLink, NavItem, NavbarToggler, Collapse } from 'reactstrap';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import ContactForm from '../components/ContactForm';
-//import BoxSpread from '../components/BoxSpread';
 import Arrow from '../app/assets/SVG/Arrow.gif';
 import { Container, Row, Col } from 'reactstrap';
 import Logo from '../app/assets/HG_Orbitron.gif';
@@ -172,11 +171,6 @@ const MainPage = () => {
                                         repository.  For the app experience please click on the 'Live Demo'
                                         link underneath the app picture. 
                                     </p>
-                                    <Row>
-                                        <Col>
-                                            {/* <BoxSpread /> */}
-                                        </Col>
-                                    </Row>
                                 </Col>
                                 <Col me='6'className={styles.container}>
                                     <Viewpager />
