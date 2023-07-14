@@ -185,9 +185,9 @@ hr {
 /* CSS classes for BoxSpread from React Spring */
 .boxSpreadWrapper {
   width: 100%;
-  height: 230%;
+  height: 100%;
   /* background: lightblue; */
-  padding: 20px;
+  /* padding: 20px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -197,9 +197,11 @@ hr {
 .boxSpreadContainer {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(6, minmax(100px, 1fr));
-  gap: 10px 20px;
-  padding: 55px;
+  grid-template-columns: repeat(4, minmax(20%, 1fr));
+  grid-gap: 20px;
+  /* gap: 1px 40px; */
+  padding: 70px;
+  /* margin-right: auto; */
   border-radius: 5px;
   cursor: pointer;
   box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.05);
@@ -207,10 +209,11 @@ hr {
 }
 
 .boxSpreadItem {
-  width: 50%;
-  height: 50%;
-  margin-top: 10px;
-  border-radius: 15px;
+  padding: 10px 0px;
+  width: 75%;
+  height: 75%;
+  /* margin-top: 10px; */
+  border-radius: 10px;
   will-change: transform, opacity;
 }
 

@@ -7,7 +7,6 @@ import {
   animated,
   useSpringRef,
 } from '@react-spring/web';
-
 import { Skills }  from '../app/shared/Skills';
 import styles from '../styles.module.css';
 
@@ -20,10 +19,10 @@ const BoxSpread = () => {
     config: config.stiff,
     from: { size: '20%', background: '#969489' },
     to: {
-      size: open ? '100%' : '30%',
+      size: open ? '100%' : '20%',
       background: open ? '' : '#969489',
-    },
-  })
+    }
+  });
 
   const transApi = useSpringRef()
   const transition = useTransition(open ? Skills : [], {
@@ -32,7 +31,7 @@ const BoxSpread = () => {
     from: { opacity: 0, scale: 0 },
     enter: { opacity: 1, scale: 1 },
     leave: { opacity: 0, scale: 0 },
-  })
+  });
 
   // This will orchestrate the two animations above, comment the last arg and it creates a sequence
   useChain(open ? [springApi, transApi] : [transApi, springApi], [
@@ -43,7 +42,7 @@ const BoxSpread = () => {
   return (
     <div className={styles.boxSpreadWrapper}>
       <animated.div
-        style={{ ...rest, width: size, height: size }}
+       style={{ ...rest, width: size, height: size  }}
         className={styles.boxSpreadContainer}
         onClick={() => set(open => !open)}>
         {transition((style, item) => (
@@ -53,12 +52,11 @@ const BoxSpread = () => {
           >
             <img 
                 src={item.image} 
-                alt='tech icon' 
+                alt='skill icon' 
                 className={styles.boxSpreadItem} 
-                style={{ marginTop: '5px', marginBottom: '-6px'}}
-            />
+            /><p style={{margin:'1px 0px', fontSize:'13px'}}>{item.name}</p>
            </animated.div>
-        ))}<p>Click Me!</p>
+        ))}
       </animated.div>
     </div>
   );
