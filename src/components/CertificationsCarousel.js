@@ -40,45 +40,41 @@ return (
         {          
             id >= 0 ?
                 <List type='unstyled' style={{marginBottom: '90px'}}>
-                    <li style={{ 
-                            font:'30px bold', 
-                            display: 'flex', 
-                            justifyContent:'flex-start',
-                            }}>
-                                <img 
-                                    src={item.image} 
-                                    alt='school icon'
-                                    style={{ width:'10%', marginRight:'20px'}}
-                                />
-                                {item.school}
+                    <li className={styles.liHeader}>
+                        <img 
+                            src={item.image} 
+                            alt='school icon'
+                            className={styles.liIcon}
+                        />
+                        {item.school}
                     </li>
-                    <li style={{
-                            display:'flex', 
-                            justifyContent:'flex-start',
+                    <li 
+                        className={styles.liFlex}
+                        style={{
                             marginLeft:'97px',
                             marginTop:'-25px',
                             fontSize:'13px'
                     }}>
                         {item.location}
                     </li>
-                    <li style={{
-                            display:'flex', 
-                            justifyContent:'flex-start',
+                    <li 
+                        className={styles.liFlex}
+                        style={{
                             marginLeft:'97px',
                             fontSize:'13px'
                     }}>
                         {item.time}
                     </li>
-                    <ul style={{ 
-                            display: 'flex', 
-                            justifyContent:'flex-start',
+                    <ul 
+                        className={styles.liFlex}
+                        style={{
                             marginTop:'10px'
                             }}>
                         <li>
                             Area of Study: <span style={{marginLeft:'1px'}}>{item.studyField}</span>
                         </li>
                     </ul>
-                    <ul style={{display: 'flex', justifyContent:'flex-start'}}>
+                    <ul className={styles.liFlex}>
                         <li>
                             Degree Received: <span style={{marginLeft:'1px'}}>{item.degree}</span>
                         </li>

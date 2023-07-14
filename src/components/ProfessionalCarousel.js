@@ -40,39 +40,35 @@ const ProfessionalCarousel = (args) => {
                 {          
                     id >= 0 ?
                         <List type='unstyled' style={{marginBottom: '90px'}}>
-                            <li style={{ 
-                                    font:'30px bold', 
-                                    display: 'flex', 
-                                    justifyContent:'flex-start',
-                                    }}>
-                                        <img 
-                                            src={item.image} 
-                                            alt='company icon'
-                                            style={{ width:'10%', marginRight:'20px'}}
-                                        />
-                                        {item.employer}
+                            <li className={styles.liHeader}>
+                                <img 
+                                    src={item.image} 
+                                    alt='company icon'
+                                    className={styles.liIcon}
+                                />
+                                {item.employer}
                             </li>
-                            <li style={{
-                                    display:'flex', 
-                                    justifyContent:'flex-start',
+                            <li 
+                                className={styles.liFlex}
+                                style={{
                                     marginLeft:'97px',
                                     marginTop:'-40px',
                                     fontSize:'13px'
                             }}>
                                 {item.location}
                             </li>
-                            <li style={{
-                                    display:'flex', 
-                                    justifyContent:'flex-start',
+                            <li 
+                                className={styles.liFlex}
+                                style={{
                                     marginLeft:'97px',
                                     fontSize:'13px'
                             }}>
                                 {item.time}
                             </li>
-                            <li style={{ 
+                            <li 
+                                className={styles.liFlex}
+                                style={{ 
                                     font:'20px bold', 
-                                    display: 'flex', 
-                                    justifyContent:'flex-start',
                                     margin: '15px 0px'
                             }}>
                                         <u>{item.jobTitle}</u>
@@ -80,7 +76,7 @@ const ProfessionalCarousel = (args) => {
                             {
                                 item.bullets.map((bullet, idx) => {
                                      return(
-                                        <ul style={{display: 'flex', justifyContent:'flex-start'}}>
+                                        <ul className={styles.liFlex}>
                                             <li key={idx}>{bullet}</li>
                                         </ul>
                                      );

@@ -27,60 +27,40 @@ const AboutMe = () => {
 
     return(
         <Accordion open={open} toggle={toggle} className={styles.accordion} >
-            <AccordionItem className={styles.accordionBody}>
+            <AccordionItem className={styles.accordionItem}>
                 <AccordionHeader 
                     targetId='1'
                     cssModule={{ 'accordion-button': `${styles.accordionButton}`}}
                     style={{fontSize:'36px'}}
                 >
                     Volunteer Experience</AccordionHeader>
-                <AccordionBody accordionId='1' style={{color:'black'}}>
+                <AccordionBody accordionId='1' className={styles.accordionBody}>
                     {   
                         Vexperience.map((item, id) => {
                             return(
                                 id === 0 ?
                                 <List type='unstyled'>
-                                    <li style={{ 
-                                            font:'30px bold', 
-                                            display: 'flex', 
-                                            justifyContent:'flex-start'
-                                            }}>
+                                    <li className={styles.liHeader}>
                                                 <img 
                                                     src={item.image}
                                                     alt='company icon'
-                                                    style={{ width:'10%', marginRight:'20px'}}   
+                                                    className={styles.liIcon}   
                                                 />{item.employer}
                                     </li>
-                                    <li style={{
-                                                display:'flex', 
-                                                justifyContent:'flex-start',
-                                                marginLeft:'97px',
-                                                marginTop:'-40px',
-                                                fontSize:'13px'
-                                            }}>
-                                                {item.location}
+                                    <li className={`${styles.liFlex} ${styles.liSubHeader1}`}>
+                                        {item.location}
                                     </li>
-                                    <li style={{
-                                            display:'flex', 
-                                            justifyContent:'flex-start',
-                                            marginLeft:'97px',
-                                            fontSize:'13px'
-                                    }}>
+                                    <li className={`${styles.liFlex} ${styles.liSubHeader2}`}>
                                         {item.time}
                                     </li>
-                                    <li style={{ 
-                                                font:'20px bold', 
-                                                display: 'flex', 
-                                                justifyContent:'flex-start',
-                                                margin: '15px 0px'                                                
-                                        }}>
-                                            <u>{item.jobTitle}</u>
+                                    <li className={`${styles.liFlex} ${styles.liSubHeader3}`}>
+                                        <u>{item.jobTitle}</u>
                                     </li>
                                     {
                                         item.bullets.map((bullet, idx) => {
                                             return(
-                                                <ul style={{display: 'flex', justifyContent:'flex-start'}}>
-                                                    <li key={idx}>{bullet}</li>
+                                                <ul className={`${styles.liFlex} `}>
+                                                    <li key={idx} className={styles.liBullet}>{bullet}</li>
                                                 </ul>
                                             );
                                          })
@@ -92,7 +72,7 @@ const AboutMe = () => {
                     }
                 </AccordionBody>
             </AccordionItem>
-            <AccordionItem className={styles.accordionBody}>
+            <AccordionItem className={styles.accordionItem}>
                 <AccordionHeader 
                     targetId='2' 
                     cssModule={{ 'accordion-button': `${styles.accordionButton}`}}
@@ -101,7 +81,7 @@ const AboutMe = () => {
                         <ProfessionalCarousel />
                     </AccordionBody>
             </AccordionItem>
-            <AccordionItem className={styles.accordionBody}>
+            <AccordionItem className={styles.accordionItem}>
                 <AccordionHeader 
                     targetId='3'
                     cssModule={{ 'accordion-button': `${styles.accordionButton}`}}>Education</AccordionHeader>
@@ -109,7 +89,7 @@ const AboutMe = () => {
                     <EducationCarousel />
                 </AccordionBody>
             </AccordionItem>
-            <AccordionItem className={styles.accordionBody}>
+            <AccordionItem className={styles.accordionItem}>
                 <AccordionHeader 
                     targetId='4'
                     cssModule={{ 'accordion-button': `${styles.accordionButton}`}}>Certifications</AccordionHeader>
@@ -117,7 +97,7 @@ const AboutMe = () => {
                     <CertificationsCarousel />
                 </AccordionBody>
             </AccordionItem>
-            <AccordionItem className={styles.accordionBody}>
+            <AccordionItem className={styles.accordionItem}>
                 <AccordionHeader 
                     targetId='5'
                     cssModule={{ 'accordion-button': `${styles.accordionButton}`}}>Skill Set</AccordionHeader>

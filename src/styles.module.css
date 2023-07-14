@@ -220,11 +220,77 @@ hr {
 /* CSS Styles for the Accordion in the About Me section. */
 .accordion {
   width: 85%;
+  @media screen and (max-width: 768px){
+    width: 100%;
+  };
+}
+
+.accordionItem {
+  background-color: #FFFBEF;
 }
 
 .accordionBody {
-  background-color: #FFFBEF;
-  color: #57554F;
+  color:#000000;
+}
+
+.liIcon {
+  width: 10%;
+  margin-right: 20px;
+  @media screen and (max-width: 768px){
+    width: 15%;
+    margin-right: 10px;
+  };
+}
+
+.liHeader {
+  display: flex;
+  justify-content: flex-start;
+  font: 30px bold;
+  @media screen and (max-width: 768px){
+    font: 19px bold;
+    margin-left:'97px';
+  }
+}
+
+.liSubHeader1 {
+  margin-left: 97px;
+  margin-top: -40px;
+  font-size: 13px;
+  @media screen and (max-width: 768px){
+    margin-left: 67px;
+    font-size: 11px;
+    margin-top: -35px;
+  }
+}
+
+.liSubHeader2 {
+  margin-left: 97px;
+  font-size: 13px;
+  @media screen and (max-width: 768px){
+    margin-left: 67px;
+    font-size: 11px;
+  }
+}
+
+.liSubHeader3 {
+  margin: 15px 0px;
+  font: 20px bold;
+  @media screen and (max-width: 768px){
+    margin-left: 0px;
+    font-size: 16px;
+  }
+}
+
+.liBullet {
+  font-size: 16px;
+  @media screen and (max-width: 768px) {
+    font-size: 8px;
+  }
+}
+
+.liFlex {
+  display: flex;
+  justify-content: flex-start;
 }
 
 .accordionButton {
@@ -242,6 +308,10 @@ hr {
   border-radius: 0;
   overflow-anchor: none;
   transition: var(--bs-accordion-transition);
+  @media screen and (max-width: 768px){
+    width: 100%;
+    font-size: 17px;
+  };
 }
 
 /* .accordionButton::after {

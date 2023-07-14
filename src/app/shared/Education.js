@@ -1,4 +1,4 @@
-import sae from '../assets/sae.jpg';
+import sae from '../assets/sae.png';
 import stevens from '../assets/stevens.png';
 import ccny from '../assets/ccny.jpg';
 import nucamp from '../assets/nucamp.png';
@@ -7,7 +7,7 @@ export const Education = [
     {
         id:0,
         image: sae,
-        school: 'SAE Institute of Techonology',
+        school: 'SAE Institute of Technology',
         location: 'New York, New York',
         time: '02/2009 - 09/2009',
         studyField: 'Audio Engineering',
@@ -16,7 +16,7 @@ export const Education = [
     {
         id:1,
         image: stevens,
-        school: 'Stevens Institute of Techonology',
+        school: 'Stevens Institute of Technology',
         location: 'Hoboken, New Jersey',
         time: '09/2002 - 06/2004',
         studyField: 'Electrical Engineering',
