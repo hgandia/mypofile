@@ -16,7 +16,7 @@ export const Experience = [
         jobTitle: 'RF Engineer',
         bullets: [
                     'Maintain and optimize cellular network in NYC on multiple layers of 5G, 4G and 3G.',
-                    'Improve on KPI\'s such as drops, blocks, throughput, SINR, congestion, etc.',
+                    'Improve on KPI\'s such as drops, blocks, throughput, SINR, etc.',
                     'Work with design team to finalize design of small cell, oDAS nodes & macro layout.',
                     'Analyze site alarms to clear them and, if necessary, dispatch field operations.',
                     'Lead a SiriusXM radio interference mitigation project and created a MOP for teams.',
@@ -116,9 +116,9 @@ export const Vexperience = [
                     'Design, install, optimize, and maintain sound reinforcement system.',
                     'Design, install, optimize, and maintain video capturing system.',
                     'Design, install, optimize, and upgrade computer system.',
-                    'Integrate video, sound and computer systems to stream good quality content.',
-                    'Instruct the team on the architecture system and how to utilize and troubleshoot it.',
-                    'Design & Develop website using React, JavaScript, CSS, & Node.JS for back-end.'
+                    'Integrate video, sound to computer to stream good quality content.',
+                    'Instruct the team on the system, how to utilize and troubleshoot it.',
+                    'Create website using React.JS, CSS, & Node.JS for back-end.'
                 ] 
     }
 ];

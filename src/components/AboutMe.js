@@ -59,8 +59,13 @@ const AboutMe = () => {
                                     {
                                         item.bullets.map((bullet, idx) => {
                                             return(
-                                                <ul className={`${styles.liFlex} `}>
-                                                    <li key={idx} className={styles.liBullet}>{bullet}</li>
+                                                <ul className={styles.liFlex}>
+                                                    <li 
+                                                        key={idx} 
+                                                        className={styles.liBullet}
+                                                    >
+                                                        {bullet}
+                                                    </li>
                                                 </ul>
                                             );
                                          })

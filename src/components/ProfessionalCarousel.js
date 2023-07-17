@@ -48,36 +48,25 @@ const ProfessionalCarousel = (args) => {
                                 />
                                 {item.employer}
                             </li>
-                            <li 
-                                className={styles.liFlex}
-                                style={{
-                                    marginLeft:'97px',
-                                    marginTop:'-40px',
-                                    fontSize:'13px'
-                            }}>
+                            <li className={`${styles.liFlex} ${styles.liSubHeader1}`}>
                                 {item.location}
                             </li>
-                            <li 
-                                className={styles.liFlex}
-                                style={{
-                                    marginLeft:'97px',
-                                    fontSize:'13px'
-                            }}>
+                            <li className={`${styles.liFlex} ${styles.liSubHeader2}`}>
                                 {item.time}
                             </li>
-                            <li 
-                                className={styles.liFlex}
-                                style={{ 
-                                    font:'20px bold', 
-                                    margin: '15px 0px'
-                            }}>
+                            <li className={`${styles.liFlex} ${styles.liSubHeader3}`}>
                                         <u>{item.jobTitle}</u>
                             </li>
                             {
                                 item.bullets.map((bullet, idx) => {
                                      return(
                                         <ul className={styles.liFlex}>
-                                            <li key={idx}>{bullet}</li>
+                                            <li 
+                                                className={styles.liBullet}
+                                                key={idx}
+                                            >
+                                                {bullet}
+                                            </li>
                                         </ul>
                                      );
                                     })

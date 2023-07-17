@@ -237,8 +237,8 @@ hr {
   width: 10%;
   margin-right: 20px;
   @media screen and (max-width: 768px){
-    width: 15%;
-    margin-right: 10px;
+    width: 13%;
+    margin-right: 7px;
   };
 }
 
@@ -247,8 +247,8 @@ hr {
   justify-content: flex-start;
   font: 30px bold;
   @media screen and (max-width: 768px){
-    font: 19px bold;
-    margin-left:'97px';
+    font: 20px bold;
+    /* margin-left:'90px'; */
   }
 }
 
@@ -257,9 +257,9 @@ hr {
   margin-top: -40px;
   font-size: 13px;
   @media screen and (max-width: 768px){
-    margin-left: 67px;
+    margin-left: 57px;
     font-size: 11px;
-    margin-top: -35px;
+    margin-top: -30px;
   }
 }
 
@@ -267,7 +267,7 @@ hr {
   margin-left: 97px;
   font-size: 13px;
   @media screen and (max-width: 768px){
-    margin-left: 67px;
+    margin-left: 57px;
     font-size: 11px;
   }
 }
@@ -276,15 +276,17 @@ hr {
   margin: 15px 0px;
   font: 20px bold;
   @media screen and (max-width: 768px){
-    margin-left: 0px;
-    font-size: 16px;
+    margin-left: 3px;
+    font-size: 17px;
   }
 }
 
 .liBullet {
   font-size: 16px;
   @media screen and (max-width: 768px) {
-    font-size: 8px;
+    font-size: 10px;
+    margin-left: -15px;
+    word-break: break-all;
   }
 }
 
