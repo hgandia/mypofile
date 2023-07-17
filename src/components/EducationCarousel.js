@@ -30,58 +30,45 @@ const EducationCarousel = (args) => {
         setActiveIndex(newIndex);
     };
 
-    const EducationSlides = Education.map((item, id) => {
+    const EducationSlides = Education.map((item) => {
         return (
             <CarouselItem
                 onExiting={() => setAnimating(true)}
                 onExited={() => setAnimating(false)}
                 key={item.id}
             >
-                {          
-                    id >= 0 ?
-                        <List type='unstyled' style={{marginBottom: '90px'}}>
-                            <li className={styles.liHeader}>
-                                <img 
-                                    src={item.image} 
-                                    alt='school icon'
-                                    className={styles.liIcon}
-                                />
-                                {item.school}
-                            </li>
-                            <li 
-                                className={styles.liFlex}
-                                style={{
-                                    marginLeft:'97px',
-                                    marginTop:'-25px',
-                                    fontSize:'13px'
+                <List type='unstyled' style={{marginBottom: '90px'}}>
+                    <li className={styles.liHeader}>
+                        <img 
+                            src={item.image} 
+                            alt='school icon'
+                            className={styles.liIcon}
+                        />
+                        {item.school}
+                    </li>
+                    <li className={`${styles.liFlex} ${styles.liSubHeader1}`}
+                        // style={{marginTop:'-25px'}}
+                    >
+                        {item.location}
+                    </li>
+                    <li className={`${styles.liFlex} ${styles.liSubHeader2}`}>
+                        {item.time}
+                    </li>
+                    <ul 
+                        className={styles.liFlex} 
+                        style={{ 
+                                marginTop:'10px'
                             }}>
-                                {item.location}
-                            </li>
-                            <li 
-                                className={styles.liFlex}
-                                style={{
-                                    marginLeft:'97px',
-                                    fontSize:'13px'
-                            }}>
-                                {item.time}
-                            </li>
-                            <ul 
-                                className={styles.liFlex}
-                                style={{ 
-                                        marginTop:'10px'
-                                    }}>
-                                <li>
-                                    Area of Study: <span style={{marginLeft:'1px'}}>{item.studyField}</span>
-                                </li>
-                            </ul>
-                            <ul className={styles.liFlex}>
-                                <li>
-                                    Degree Received: <span style={{marginLeft:'1px'}}>{item.degree}</span>
-                                </li>
-                            </ul>
-                        </List> :
-                        false                       
-                }
+                        <li className={styles.liBullet}>
+                            Area of Study: <span style={{marginLeft:'1px'}}>{item.studyField}</span>
+                        </li>
+                    </ul>
+                    <ul className={styles.liFlex}>
+                        <li className={styles.liBullet}>
+                            Degree Received: <span style={{marginLeft:'1px'}}>{item.degree}</span>
+                        </li>
+                    </ul>
+                </List> 
             </CarouselItem>
         );
     });

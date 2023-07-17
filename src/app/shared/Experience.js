@@ -15,11 +15,13 @@ export const Experience = [
         time: '9/2013 - Present',
         jobTitle: 'RF Engineer',
         bullets: [
-                    'Maintain and optimize cellular network in NYC on multiple layers of 5G, 4G and 3G.',
+                    'Maintain and optimize cellular networks in NYC on LTE & WCDMA.',
+                    'Maintain and optimize multiple layers of technology in 5G, 4G & 3G. ',
                     'Improve on KPI\'s such as drops, blocks, throughput, SINR, etc.',
-                    'Work with design team to finalize design of small cell, oDAS nodes & macro layout.',
-                    'Analyze site alarms to clear them and, if necessary, dispatch field operations.',
-                    'Lead a SiriusXM radio interference mitigation project and created a MOP for teams.',
+                    'Work on the finalization of small cell, oDAS nodes & macro layout.',
+                    'Analyze site alarms, clear them and, if need be, dispatch field techs.',
+                    'Worked on a SiriusXM satellite radio interference mitigation project.',
+                    'Created a MOP for market teams to follow in that same project.',
                     'Investigate and address customer trouble tickets.'
             ]
     },
@@ -32,8 +34,8 @@ export const Experience = [
         jobTitle: 'RF Engineer',
         bullets: [
                     'Create daily alarm summary reports for LTE and CDMA alarms.',
-                    'Analyze site alarms to clear them and, if necessary, dispatch field operations.',
-                    'Capture and analyze data by drive testing in order to better optimize networks.',
+                    'Analyze site alarms, clear them and, if need be, dispatch field techs.',
+                    'Drive test for data capture in order optimize cellular networks.',
                     'Work with design team to hardened small cell layout and design.',
                     'Visit sites for audits, design and optimization work.',
                     'Investigate and address customer trouble tickets. ',
@@ -66,13 +68,13 @@ export const Experience = [
         jobTitle: 'IC Physical Designer',
         bullets: [
                     'Designed physical layout of blocks for a 10Gb Network Processor.',
-                    'Created I/O macro blocks for top-level pad ring using 0.13-micron technology.',
-                    'Managed suite of Avanti tools including Apollo, Saturn, Astro and Enterprise.',
-                    'Performed floor planning, scan chain optimization, placement, GCTS, and routing,', 
-                    'Addionally performed timing closure, parasitic extraction, and physical verification.',
+                    'Created I/O macro blocks for top-level pad ring using 0.13µ tech.',
+                    'Managed suite of Avanti tools including Apollo, Saturn and Astro.',
+                    'Performed floor planning, scan chain optimization and placement.',
+                    'Also performed GCTS, routing, timing closure & parasitic extraction.', 
                     'Performed timing analysis on sub-micro blocks.',
-                    'Facilitated work within the physical design flow by designing custom PERL scripts.',
-                    'Verified backend connectivity with Hercules LVS/DRC and in-house tools.' 
+                    'Eased work within the design flow by coding custom PERL scripts.',
+                    'Verified backend connectivity with Hercules LVS/DRC.' 
             ]
     },
     {

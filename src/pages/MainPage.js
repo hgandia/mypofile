@@ -269,11 +269,7 @@ const MainPage = () => {
                                             repository.  For the app experience please click on the 'Live Demo'
                                             link underneath the app picture. 
                                         </p>
-                                        <Row>
-                                            <Col>
-                                                {/* <BoxSpread /> */}
-                                            </Col>
-                                        </Row>
+                                        
                                     </Col>
                                 <Col className={styles.orbitronFont}>
                                     <AboutMe />
@@ -285,7 +281,6 @@ const MainPage = () => {
                         factor={1} 
                         speed={3.3}
                         style={{
-                           // backgroundImage: 'linear-gradient(rgba(255,255,176,1), rgba(255,255,176,1), rgba(0,0,0,1))',
                             backgroundSize: 'cover',
                             backgroundAttachment: 'fixed',
                             backgroundPosition: 'center',

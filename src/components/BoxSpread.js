@@ -54,7 +54,7 @@ const BoxSpread = () => {
                 src={item.image} 
                 alt='skill icon' 
                 className={styles.boxSpreadItem} 
-            /><p style={{margin:'1px 0px', fontSize:'13px'}}>{item.name}</p>
+            /><p className={styles.skillIcon}>{item.name}</p>
            </animated.div>
         ))}
       </animated.div>

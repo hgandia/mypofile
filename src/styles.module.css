@@ -192,6 +192,7 @@ hr {
   align-items: center;
   justify-content: center;
   /* margin: 0px 10px; */
+  
 }
 
 .boxSpreadContainer {
@@ -206,6 +207,10 @@ hr {
   cursor: pointer;
   box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.05);
   will-change: width, height;
+  @media screen and (max-width: 768px){
+    grid-gap: 15px;
+    padding: 40px;
+  };
 }
 
 .boxSpreadItem {
@@ -215,6 +220,22 @@ hr {
   /* margin-top: 10px; */
   border-radius: 10px;
   will-change: transform, opacity;
+  @media screen and (max-width: 768px){
+    width: 100%;
+    height: 70%;
+    
+  };
+}
+
+.skillIcon{
+  margin: 1px 0px;
+  font-size: 13px;
+  @media screen and (max-width: 768px){
+    width: 75%;
+    height: 75%;
+    font-size: 10px;
+    margin: 1px 10px;
+  };
 }
 
 /* CSS Styles for the Accordion in the About Me section. */
@@ -342,9 +363,17 @@ hr {
 .carouselLeft {
   left: -65px;
   opacity: 1%;
+  @media screen and (max-width: 768px){
+    left: -40px;
+    opacity: 1%;
+  };
 }
 
 .carouselRight {
   right: -65px;
   opacity: 1%;
+  @media screen and (max-width: 768px){
+    right: -40px;
+    opacity: 1%;
+  };
 }
