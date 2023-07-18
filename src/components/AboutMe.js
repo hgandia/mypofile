@@ -13,7 +13,6 @@ import styles from '../styles.module.css';
 import BoxSpread from './BoxSpread';
 import { useState } from 'react';
 
-
 const AboutMe = () => {
     const [open, setOpen] = useState('0');
     

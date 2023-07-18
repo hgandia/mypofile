@@ -46,9 +46,7 @@ const EducationCarousel = (args) => {
                         />
                         {item.school}
                     </li>
-                    <li className={`${styles.liFlex} ${styles.liSubHeader1}`}
-                        // style={{marginTop:'-25px'}}
-                    >
+                    <li className={`${styles.liFlex} ${styles.liSubHeader1}`}>
                         {item.location}
                     </li>
                     <li className={`${styles.liFlex} ${styles.liSubHeader2}`}>
