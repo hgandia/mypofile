@@ -30,7 +30,12 @@ const liveDemo = [
   ''
 ];
 
-const pagesText = ['Church Front-end App', 'Church Back-end Server', 'Hangman - Terminal Game', 'Portfolio Page', 'Node.JS'];
+const pagesText = [
+                    'Church Front-end App', 
+                    'Church Back-end Server', 
+                    'Hangman - Terminal Game', 
+                    'Portfolio Page'
+                ];
 
 function Viewpager() {
   const index = useRef(0);
@@ -63,13 +68,14 @@ function Viewpager() {
       {props.map(({ x, display, scale }, i) => (
         <animated.div className={styles.page} {...bind()} key={i} style={{ display, x }}>
           <animated.h2 
-            className={styles.orbitronFont}
-            style={{color: '#FFF2CC', x, scale}}>
+            className={`${styles.orbitronFont} ${styles.appTitleTop}`}
+            style={{color: '#FFF2CC', x, scale}}
+          >
             {pagesText[i]}
           </animated.h2>
           <animated.div style={{ x, scale, backgroundImage: `url(${pages[i]})`, marginBottom: '10px' }} />
             <animated.h5 
-              className={styles.orbitronFont}
+              className={`${styles.orbitronFont} ${styles.appTitleBottom}`}
               style={{ x, scale}}>
               <a  href={github[i]}
                   style={{color: '#FFF2CC', margin: '25px'}} 

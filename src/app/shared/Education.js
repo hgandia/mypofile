@@ -1,5 +1,5 @@
 import sae from '../assets/sae1.jpg';
-import stevens from '../assets/stevens2.png';
+import stevens from '../assets/stevens3.png';
 import ccny from '../assets/ccny.jpg';
 import nucamp from '../assets/nucamp.png';
 

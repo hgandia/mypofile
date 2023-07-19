@@ -23,9 +23,15 @@
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 576px){
     font-size: 52px;
     margin-top: 10px;
+  }
+  @media screen and (min-width: 576.02px) and (max-width: 992px){
+    font-size: 50px;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1200px){
+    font-size: 60px;
   }
 }
 
@@ -52,10 +58,19 @@
     font-size: 64px;
   }
 }
+
 .h3_heading {
   font-size: 40px;
-  @media screen and (max-width: 768px){
-    font-size: 17px;
+  @media screen and (max-width: 576px){
+    font-size: 20px;
+    margin-top: -10px;
+  }
+  @media screen and (min-width: 576.02px) and (max-width: 992px){
+    font-size: 22px;
+    margin-top: -10px;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1200px){
+    font-size: 29px;
     margin-top: -10px;
   }
 }
@@ -80,12 +95,26 @@ hr {
 .projects_paragraph {
   font-size: 20px;
   margin: 30px 130px;
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 576px) {
     font-size: 15px;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 30px;
-  margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: 576.02px) and (max-width: 992px){
+    font-size: 15px;
+    margin-left: 4px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1200px){
+    font-size: 16px;
+    margin-left: 5px;
+    margin-right: 1px;
+    margin-top: 20px;
+    margin-bottom: 10px;
   }
 }
 
@@ -144,6 +173,40 @@ hr {
   };
 }
 /* The below css code was copied from react-spring viewpager example */
+.appTitleTop {
+  font-size: 40px;
+  @media screen and (max-width: 576px){
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  @media screen and (min-width: 576.02px) and (max-width: 992px){
+    font-size: 20px;
+    margin-top: -8px;
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1200px){
+    font-size: 30px;
+    margin-top: -12px;
+  }
+}
+
+.appTitleBottom {
+  font-size: 30px;
+  @media screen and (max-width: 576px){
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  @media screen and (min-width: 576.02px) and (max-width: 992px){
+    font-size: 17px;
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1200px){
+    font-size: 24px;
+  }
+}
+
 .page {
   position: absolute;
   width: 40%;
@@ -186,13 +249,9 @@ hr {
 .boxSpreadWrapper {
   width: 100%;
   height: 100%;
-  /* background: lightblue; */
-  /* padding: 20px; */
   display: flex;
   align-items: center;
-  justify-content: center;
-  /* margin: 0px 10px; */
-  
+  justify-content: center;  
 }
 
 .boxSpreadContainer {
@@ -200,42 +259,50 @@ hr {
   display: grid;
   grid-template-columns: repeat(4, minmax(20%, 1fr));
   grid-gap: 20px;
-  /* gap: 1px 40px; */
   padding: 70px;
-  /* margin-right: auto; */
   border-radius: 5px;
   cursor: pointer;
   box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.05);
   will-change: width, height;
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 576px){
     grid-gap: 15px;
     padding: 40px;
-  };
+  }
+  @media screen and (min-width: 992px) and (max-width: 1200px){
+    grid-gap: 15px;
+    padding: 40px;
+  }
 }
 
 .boxSpreadItem {
   padding: 10px 0px;
   width: 75%;
   height: 75%;
-  /* margin-top: 10px; */
   border-radius: 10px;
   will-change: transform, opacity;
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 576px){
     width: 100%;
     height: 70%;
-    
-  };
+  }
+  @media screen and (min-width: 992px) and (max-width: 1200px){
+    width: 100%;
+    height: 70%;
+  }
 }
 
 .skillIcon{
   margin: 1px 0px;
   font-size: 13px;
   @media screen and (max-width: 768px){
-    width: 75%;
+    width: 100%;
     height: 75%;
     font-size: 10px;
-    margin: 1px 10px;
-  };
+  }
+  @media screen and (min-width: 992px) and (max-width: 1200px){
+    width: 100%;
+    height: 75%;
+    font-size: 10px;
+  }
 }
 
 /* CSS Styles for the Accordion in the About Me section. */
@@ -257,19 +324,39 @@ hr {
 .liIcon {
   width: 10%;
   margin-right: 20px;
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 576px){
     width: 13%;
     margin-right: 7px;
-  };
+  }
+
+  @media screen and (min-width: 576.02px) and (max-width: 992px){
+    width: 11%;
+    /* margin-top: -2px; */
+    margin-right: 10px;
+    /* margin-left: -10px; */
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1200px){
+    width: 15%
+  }
 }
 
 .liHeader {
   display: flex;
   justify-content: flex-start;
   font: 30px bold;
-  @media screen and (max-width: 768px){
+
+  @media screen and (max-width: 576px){
     font: 20px bold;
-    /* margin-left:'90px'; */
+  }
+
+  @media screen and (min-width: 576.02px) and (max-width: 991px){
+    font: 15px bold;
+    /* margin-top: -10px; */
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1200px){
+    font: 20px bold;
   }
 }
 
@@ -277,10 +364,22 @@ hr {
   margin-left: 97px;
   margin-top: -40px;
   font-size: 13px;
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 576px){
     margin-left: 57px;
     font-size: 11px;
     margin-top: -30px;
+  }
+
+  @media screen and (min-width: 576.02px) and (max-width: 992px){
+    margin-left: 43px;
+    font-size: 11px;
+    margin-top: -17px;
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1200px){
+    margin-left: 80px;
+    font-size: 13px;
+    margin-top: -40px;
   }
 }
 
@@ -291,20 +390,52 @@ hr {
     margin-left: 57px;
     font-size: 11px;
   }
+
+  @media screen and (min-width: 576.02px) and (max-width: 992px){
+    margin-left: 43px;
+    font-size: 11px;
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1200px){
+    margin-left: 80px;
+    font-size: 13px;
+  }
 }
 
 .liSubHeader3 {
   margin: 15px 0px;
   font: 20px bold;
-  @media screen and (max-width: 768px){
+
+  @media screen and (max-width: 576px){
     margin-left: 3px;
+    font-size: 17px;
+  }
+
+  @media screen and (min-width: 576.02px) and (max-width: 992px){
+    font-size: 15px;
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1200px){
     font-size: 17px;
   }
 }
 
 .liBullet {
   font-size: 16px;
+
   @media screen and (max-width: 768px) {
+    font-size: 10px;
+    margin-left: -15px;
+    word-break: break-all;
+  }
+
+  @media screen and (min-width: 576.02px) and (max-width: 992px){
+    font-size: 7px;
+    margin-left: -15px;
+    word-break: break-all;
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1200px){
     font-size: 10px;
     margin-left: -15px;
     word-break: break-all;
@@ -331,10 +462,18 @@ hr {
   border-radius: 0;
   overflow-anchor: none;
   transition: var(--bs-accordion-transition);
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 576px){
     width: 100%;
     font-size: 17px;
-  };
+  }
+
+  @media screen and (min-width: 576.02px) and (max-width: 992px){
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1200px){
+    font-size: 26px;
+  }
 }
 
 /* .accordionButton::after {
@@ -363,17 +502,37 @@ hr {
 .carouselLeft {
   left: -65px;
   opacity: 1%;
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 576px){
     left: -40px;
     opacity: 1%;
-  };
+  }
+
+  @media screen and (min-width: 576.02px) and (max-width: 991px){
+    left: -33px;
+    opacity: 1%;
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1200px){
+    left: -40px;
+    opacity: 1%;
+  }
 }
 
 .carouselRight {
   right: -65px;
   opacity: 1%;
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 576px){
     right: -40px;
     opacity: 1%;
-  };
+  }
+
+  @media screen and (min-width: 576.02px) and (max-width: 991px){
+    right: -33px;
+    opacity: 1%;
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1200px){
+    right: -40px;
+    opacity: 1%;
+  }
 }
