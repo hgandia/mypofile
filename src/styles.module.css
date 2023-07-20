@@ -403,7 +403,9 @@ hr {
 }
 
 .liSubHeader3 {
-  margin: 15px 0px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 40px;
   font: 20px bold;
 
   @media screen and (max-width: 576px){
@@ -422,8 +424,9 @@ hr {
 
 .liBullet {
   font-size: 16px;
+  margin-left: 25px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 576px) {
     font-size: 10px;
     margin-left: -15px;
     word-break: break-all;
@@ -500,8 +503,9 @@ hr {
 } */
 
 .carouselLeft {
-  left: -65px;
+  left: -50px;
   opacity: 1%;
+  
   @media screen and (max-width: 576px){
     left: -40px;
     opacity: 1%;
@@ -519,8 +523,9 @@ hr {
 }
 
 .carouselRight {
-  right: -65px;
+  right: -50px;
   opacity: 1%;
+
   @media screen and (max-width: 576px){
     right: -40px;
     opacity: 1%;
