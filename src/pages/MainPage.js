@@ -250,26 +250,42 @@ const MainPage = () => {
                                             </Col>
                                         </Row> */}
                                         <p className={styles.projects_paragraph}>
-                                            Here, I would like to share with you some of the exciting 
-                                            projects I have been working on. These projects represent 
-                                            my passion, expertise, and dedication to creating innovative 
-                                            solutions. Please take a moment to explore the diverse range 
-                                            of projects listed by going through the pictured animated carousel.
+                                            I am an engineering professional with experience in RF engineering, 
+                                            IC physical design and some software development.  I have worked in the
+                                            semiconductor industry for two years and fourteen years in the wireless
+                                            communications industry.  For the last year and a half, I have been
+                                            studying and practicing full stack web development, where I would like to 
+                                            embark in next.   
                                         </p>
                                         <p className={styles.projects_paragraph}>
-                                            I have used multiple technologies to develop these projects. 
-                                            From CSS frameworks like bootstrap to JavaScript libraries 
-                                            like React.JS and Node.JS for back-end, to frameworks like Reactstrap, 
-                                            Redux, React-Router, ReactSpring and Express.JS for back-end, to programming
-                                            languages like JavaScript and Python. 
+                                            While my previous experience has been in RF Engineering, I am excited to 
+                                            transition into the world of software development and have been working 
+                                            diligently to acquire the necessary skills.
                                         </p>
                                         <p className={styles.projects_paragraph}>
-                                            For an in-depth look at the source code please follow the 
-                                            'Source Code' link that will take you to the respective github 
-                                            repository.  For the app experience please click on the 'Live Demo'
-                                            link underneath the app picture. 
+                                            Throughout my career as an RF Engineer, I have honed my ability to 
+                                            analyze complex problems, design efficient solutions, and collaborate 
+                                            with cross-functional teams. These skills, along with my natural curiosity 
+                                            and eagerness to learn, make me confident in my ability to thrive as a 
+                                            software Developer. 
                                         </p>
-                                        
+                                        <p className={styles.projects_paragraph}>
+                                            I have invested significant time and effort in upskilling, learning 
+                                            languages such as JavaScript, HTML, Python and CSS, as well as various 
+                                            frameworks and tools, including React, Node.js, Express, and Git. 
+                                            Additionally, I have completed several personal projects to gain practical
+                                            experience.
+                                        </p>
+                                        <p className={styles.projects_paragraph}>
+                                            I understand that transitioning to a new field can be a challenge, but I am 
+                                            eager to embrace the challenge and bring my unique perspective and experience 
+                                            to the team. I am confident that my skills and passion for software development 
+                                            make me an excellent prospect.
+                                        </p>
+                                        <p className={styles.projects_paragraph}>
+                                            Please look through the accordion to get a glimpse at my experience and 
+                                            skillset.
+                                        </p>
                                     </Col>
                                 <Col className={styles.orbitronFont}>
                                     <AboutMe />
