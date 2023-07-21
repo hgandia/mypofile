@@ -139,7 +139,7 @@ const MainPage = () => {
                             </Row>
                             <Row>
                                 <Col
-                                    md='6' sm='10'
+                                    md='12' lg ='6' xl='6'
                                     className={styles.orbitronFont}
                                     style={{color: '#FFF2CC'}}>
                                     <h3 className={styles.h3_heading}>Welcome to the Projects Section!</h3>
@@ -169,7 +169,7 @@ const MainPage = () => {
                                         link underneath the app picture. 
                                     </p>
                                 </Col>
-                                <Col me='6'className={styles.container}>
+                                <Col>
                                     <Viewpager />
                                 </Col> 
                             </Row>                           
@@ -240,15 +240,10 @@ const MainPage = () => {
                             </Row>
                             <Row>
                                 <Col
-                                        md='6' sm='10'
+                                        md='12' lg='6' xl='6' 
                                         className={styles.orbitronFont}
                                         style={{color: '#FFF2CC'}}>
                                         <h3 className={styles.h3_heading}>My name is Herbert Gandía</h3>
-                                        {/* <Row className='mx-5'>
-                                            <Col className='mx-5'>        
-                                                <hr  className='mx-5'/>
-                                            </Col>
-                                        </Row> */}
                                         <p className={styles.projects_paragraph}>
                                             I am an engineering professional with experience in RF engineering, 
                                             IC physical design and some software development.  I have worked in the
@@ -359,13 +354,10 @@ const MainPage = () => {
                             </Row>
                         </Container>
                             <Row>
-                                <Col md='3' className={styles.finger} style={{marginTop: '-120px'}}>
+                                <Col md='3' lg='2' xl='3' className={styles.finger} style={{marginTop: '-120px'}}>
                                     <img src={Arrow} alt='Arrow pointing to the right' />
                                 </Col>
-                                <Col md='9' 
-                                    className={styles.contactform}
-                                    style={{ marginTop: '70px'}}
-                                     >
+                                <Col lg='10' xl='9' className={styles.contactform}>
                                     <ContactForm />
                                 </Col>
                             </Row>

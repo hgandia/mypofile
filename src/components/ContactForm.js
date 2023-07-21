@@ -2,7 +2,7 @@ import { validateContactForm } from "../utils/validateContactForm";
 //import { postVisitor } from "../features/visitors/visitorSlice";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import { Button, Label, Col, FormGroup } from "reactstrap";
-import { useDispatch } from "react-redux";
+//import { useDispatch } from "react-redux";
 import styles from '../styles.module.css';
 
 const ContactForm = () => {
@@ -11,7 +11,7 @@ const ContactForm = () => {
       fontFamily:'orbitron, sans-serif'
     }
 
-    const dispatch = useDispatch();
+   // const dispatch = useDispatch();
 
     const handleSubmit = (values, { resetForm }) => {
         const petition = {
@@ -42,9 +42,9 @@ const ContactForm = () => {
       <Form>
         <FormGroup row>
           <Label htmlFor='firstname' md='2' className={styles.orbitronFont}>
-            First Name :
+            First Name:
           </Label>
-          <Col md='4'>
+          <Col md='7' lg= '5' xl='4'>
             <Field
                 name='firstname' 
                 placeholder='Nombre'
@@ -58,9 +58,9 @@ const ContactForm = () => {
         </FormGroup>
         <FormGroup row>
           <Label htmlFor='lastname' md='2' className={styles.orbitronFont}>
-            Last Name :
+            Last Name:
           </Label>
-          <Col md='4'>
+          <Col md='7' lg= '5' xl='4'>
             <Field
                 name='lastname'
                 placeholder='Apellido' 
@@ -74,9 +74,9 @@ const ContactForm = () => {
         </FormGroup>
         <FormGroup row>
           <Label htmlFor='organization' md='2' className={styles.orbitronFont}>
-            Organization :
+            Organization:
           </Label>
-          <Col md='4'>
+          <Col md='7' lg= '5' xl='4'>
             <Field
                 name='organization'
                 placeholder='Organización' 
@@ -90,9 +90,9 @@ const ContactForm = () => {
         </FormGroup>
         <FormGroup row>
           <Label htmlFor='email' md='2' className={styles.orbitronFont}>
-            E-mail :
+            E-mail:
           </Label>
-          <Col md='4'>
+          <Col md='7' lg= '5' xl='4'>
             <Field
                 name='email'
                 placeholder='Correo Electrónico'
@@ -107,9 +107,9 @@ const ContactForm = () => {
         </FormGroup>
         <FormGroup row>
             <Label htmlFor='feedback' md='2' className={styles.orbitronFont}>
-                Request :
+                Request:
             </Label>
-            <Col md='4'>
+            <Col md='7' lg= '5' xl='4'>
             <Field
                 name='feedback'
                 placeholder='Su mensaje/pedido aqui'
@@ -124,7 +124,7 @@ const ContactForm = () => {
             </Col>
         </FormGroup>
         <FormGroup row>
-            <Col md={{ size: 4, offset: 2}}>
+        <Col md={{ size: 7, offset: 2 }} lg={{size: 5, offset: 2 }} xl={{ size: 4, offset: 2 }}>
                 <Button 
                   style={{
                       backgroundColor: '#FFF2CC', 
