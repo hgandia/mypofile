@@ -1,8 +1,8 @@
 import { useSprings, animated } from '@react-spring/web';
 import edjWebsite from '../app/assets/edjWebsite1.jpg';
 import Backend from '../app/assets/edjWebsiteBackend.png';
-import Hangman from '../app/assets/Hangman1.jpg';
-import Portfolio from '../app/assets/portfolioHome.jpg';
+import Hangman from '../app/assets/Hangman.jpg';
+import Portfolio from '../app/assets/portfolioHome1.jpg';
 import { useDrag } from 'react-use-gesture';
 import useMeasure from 'react-use-measure';
 import styles from '../styles.module.css';

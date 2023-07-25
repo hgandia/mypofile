@@ -165,13 +165,30 @@ hr {
   }
 }
 
+.subTitle {
+  font-size: 20px;
+
+  @media screen and (max-width: 576px) {
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 576.02px) and (max-width: 992px){
+    font-size: 18px;
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1200px){
+    font-size: 18px;
+  }
+
+}
+
 .orbitronFont {
   font-family: 'Orbitron', sans-serif;
 }
 
 .circuit1 {
   background-image: url('./app/assets/Slide1_Graphics.png');
-  background-size: 5.1%;
+  background-size: 4.99%;
   background-attachment: fixed;
   background-position: right;
   background-repeat: no-repeat;
@@ -196,8 +213,9 @@ hr {
   background-position: right;
   background-repeat: no-repeat;
 
-  @media screen and (max-width: 768px){
-    background-size: 39%;
+  @media screen and (max-width: 576px){
+    background-image: url('./app/assets/Slide1_Graphics.png');
+    background-size: 17.2%;
   }
 
   @media screen and (min-width: 576.02px) and (max-width: 991px){
@@ -292,8 +310,8 @@ hr {
 .page > div {
   touch-action: none;
   background-size: cover;
+  background-position-x: center;
   background-repeat: no-repeat;
-  /* background-position:  center center; */
   width: 100%;
   height: 100%;
   will-change: transform;

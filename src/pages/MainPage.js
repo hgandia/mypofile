@@ -38,7 +38,6 @@ const MainPage = () => {
                             <NavbarToggler 
                                 style={{ backgroundColor: '#FFF2CC'}} 
                                 onClick={() => setIsOpen(!isOpen)} 
-                                className='me-1'
                             />
                             <Collapse isOpen={isOpen} navbar>
                                 <Nav className={styles.navigationFont} justified> 
@@ -350,7 +349,8 @@ const MainPage = () => {
                             <Row>
                                 <Col className={styles.contactme}>
                                     <h1 className={styles.h1_heading}>Contact Me</h1>
-                                    <p>~ For any questions or Inquiries please reach out ~</p></Col>
+                                    <p className={styles.subTitle}>~ For any questions or Inquiries please reach out ~</p>
+                                </Col>
                             </Row>
                         </Container>
                             <Row>
