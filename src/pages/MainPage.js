@@ -1,4 +1,5 @@
 import { Nav, Navbar, NavLink, NavItem, NavbarToggler, Collapse } from 'reactstrap';
+import NavBack from '../app/assets/Slide2_Graphics_Horizontal.png';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import ContactForm from '../components/ContactForm';
 import Arrow from '../app/assets/SVG/Arrow.gif';
@@ -17,62 +18,59 @@ const MainPage = () => {
     const [isOpen, setIsOpen] = useState(false);
     
     return(
+        <>
+            <Navbar expand='md' fixed='top' 
+                    style={{ 
+                                backgroundImage: `url(${NavBack})`, 
+                                backgroundSize:'50%', 
+                                backgroundRepeat:'no-repeat',
+                                backgroundPosition:'right' }}>
+                <NavbarToggler 
+                    style={{ backgroundColor: '#FFF2CC'}} 
+                    onClick={() => setIsOpen(!isOpen)} 
+                />
+                <Collapse isOpen={isOpen} navbar>
+                    <Nav className={styles.navigationFont} justified> 
+                        <NavItem className={styles.navigationFont} >
+                            <NavLink style={{ color: '#FFF2CC', textShadow:'-1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black' }}
+                                onClick={() => ref.current.scrollTo(0)}
+                            >
+                                Home
+                            </NavLink>
+                        </NavItem>
+                        <NavItem className={styles.navigationFont}>
+                            <NavLink style={{ color: '#FFF2CC', textShadow:'-1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black'}}
+                                onClick={() => ref.current.scrollTo(1)}
+                            >
+                                Projects
+                            </NavLink>
+                        </NavItem>
+                        <NavItem className={styles.navigationFont}>
+                            <NavLink style={{ color: '#FFF2CC', textShadow:'-1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black'}}
+                                onClick={() => ref.current.scrollTo(2)}
+                            >
+                                About
+                            </NavLink>
+                        </NavItem>
+                        <NavItem className={styles.navigationFont}>
+                            <NavLink style={{ color: '#FFF2CC', textShadow:'-1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black'}}
+                                onClick={() => ref.current.scrollTo(3)}
+                            >
+                                Contact
+                            </NavLink>
+                        </NavItem>
+                    </Nav>
+                </Collapse>
+            </Navbar>
             <Parallax 
-                pages={5} 
+                pages={4.5} 
                 ref={ref}  
                 style={{
                     backgroundImage: `url(${Logo})`,  
                     backgroundSize: 'cover',
                     backgroundAttachment: 'fixed',
-                    backgroundPosition: 'center',
+                    backgroundPosition: 'center'
                 }}>
-                    <ParallaxLayer 
-                        offset={0} 
-                        factor={0.5} 
-                        speed={0.2}
-                        style={{
-                            maxHeight: '10%'                            
-                        }} 
-                    >
-                        <Navbar expand='md' >
-                            <NavbarToggler 
-                                style={{ backgroundColor: '#FFF2CC'}} 
-                                onClick={() => setIsOpen(!isOpen)} 
-                            />
-                            <Collapse isOpen={isOpen} navbar>
-                                <Nav className={styles.navigationFont} justified> 
-                                    <NavItem className={styles.navigationFont} >
-                                        <NavLink style={{ color: '#FFF2CC'}}
-                                            onClick={() => ref.current.scrollTo(0)}
-                                        >
-                                            Home
-                                        </NavLink>
-                                    </NavItem>
-                                    <NavItem className={styles.navigationFont}>
-                                        <NavLink style={{ color: '#FFF2CC'}}
-                                            onClick={() => ref.current.scrollTo(1)}
-                                        >
-                                            Projects
-                                        </NavLink>
-                                    </NavItem>
-                                    <NavItem className={styles.navigationFont}>
-                                        <NavLink style={{ color: '#FFF2CC'}}
-                                            onClick={() => ref.current.scrollTo(2)}
-                                        >
-                                            About
-                                        </NavLink>
-                                    </NavItem>
-                                    <NavItem className={styles.navigationFont}>
-                                        <NavLink style={{ color: '#FFF2CC'}}
-                                            onClick={() => ref.current.scrollTo(3)}
-                                        >
-                                            Contact
-                                        </NavLink>
-                                    </NavItem>
-                                </Nav>
-                            </Collapse>
-                        </Navbar>
-                    </ParallaxLayer> 
                     <ParallaxLayer
                         offset={1}
                         factor={1}
@@ -86,51 +84,12 @@ const MainPage = () => {
                         }} 
                     />      
                     <ParallaxLayer 
-                        offset={1} 
+                        offset={1.06} 
                         speed={1.4}
                         className={styles.circuit1}
                         style={{
                             backgroundSize: ''
                         }}>
-                        <Navbar expand='md' light>
-                            <NavbarToggler 
-                                style={{ backgroundColor: '#FFF2CC'}} 
-                                onClick={() => setIsOpen(!isOpen)} 
-                                className='me-1'
-                            />
-                            <Collapse isOpen={isOpen} navbar>
-                                <Nav className={styles.navigationFont} justified> 
-                                    <NavItem className={styles.navigationFont} >
-                                        <NavLink style={{ color: '#FFF2CC'}}
-                                            onClick={() => ref.current.scrollTo(0)}
-                                        >
-                                            Home
-                                        </NavLink>
-                                    </NavItem>
-                                    <NavItem className={styles.navigationFont}>
-                                        <NavLink style={{ color: '#FFF2CC'}}
-                                            onClick={() => ref.current.scrollTo(1)}
-                                        >
-                                            Projects
-                                        </NavLink>
-                                    </NavItem>
-                                    <NavItem className={styles.navigationFont}>
-                                        <NavLink style={{ color: '#FFF2CC'}}
-                                            onClick={() => ref.current.scrollTo(2)}
-                                        >
-                                            About
-                                        </NavLink>
-                                    </NavItem>
-                                    <NavItem className={styles.navigationFont}>
-                                        <NavLink style={{ color: '#FFF2CC'}}
-                                            onClick={() => ref.current.scrollTo(3)}
-                                        >
-                                            Contact
-                                        </NavLink>
-                                    </NavItem>
-                                </Nav>
-                            </Collapse>
-                        </Navbar>
                             <Row>
                                 <Col>
                                     <h1 className={styles.projects}>PROJECTS</h1>
@@ -152,7 +111,7 @@ const MainPage = () => {
                                         projects I have been working on. These projects represent 
                                         my passion, expertise, and dedication to creating innovative 
                                         solutions. Please take a moment to explore the diverse range 
-                                        of projects listed by going through the pictured animated carousel.
+                                        of projects listed by dragging the pictured animated carousel.
                                     </p>
                                     <p className={styles.projects_paragraph}>
                                         I have used multiple technologies to develop these projects. 
@@ -186,52 +145,13 @@ const MainPage = () => {
                         }} 
                     />
                     <ParallaxLayer
-                        offset={2}
+                        offset={2.06}
                         factor={1}
                         speed={1.3}
                         className={styles.circuit2}
                         style={{
                            backgroundSize: ''
                         }}>
-                        <Navbar expand='md' light>
-                            <NavbarToggler 
-                                style={{ backgroundColor: '#FFF2CC'}} 
-                                onClick={() => setIsOpen(!isOpen)} 
-                                className='me-1'
-                            />
-                            <Collapse isOpen={isOpen} navbar>
-                                <Nav className={styles.navigationFont} justified> 
-                                    <NavItem className={styles.navigationFont} >
-                                        <NavLink style={{ color: '#FFF2CC'}}
-                                            onClick={() => ref.current.scrollTo(0)}
-                                        >
-                                            Home
-                                        </NavLink>
-                                    </NavItem>
-                                    <NavItem className={styles.navigationFont}>
-                                        <NavLink style={{ color: '#FFF2CC'}}
-                                            onClick={() => ref.current.scrollTo(1)}
-                                        >
-                                            Projects
-                                        </NavLink>
-                                    </NavItem>
-                                    <NavItem className={styles.navigationFont}>
-                                        <NavLink style={{ color: '#FFF2CC'}}
-                                            onClick={() => ref.current.scrollTo(2)}
-                                        >
-                                            About
-                                        </NavLink>
-                                    </NavItem>
-                                    <NavItem className={styles.navigationFont}>
-                                        <NavLink style={{ color: '#FFF2CC'}}
-                                            onClick={() => ref.current.scrollTo(3)}
-                                        >
-                                            Contact
-                                        </NavLink>
-                                    </NavItem>
-                                </Nav>
-                            </Collapse>
-                        </Navbar>
                             <Row>
                                 <Col >
                                     <h1 className={styles.projects}>ABOUT ME</h1>
@@ -300,51 +220,13 @@ const MainPage = () => {
                         }}
                     />
                     <ParallaxLayer 
-                        offset={3} 
+                        offset={3.06} 
                         factor={1} 
                         speed={-3.3}
                         className={styles.circuit3}
                         style={{  
                             backgroundSize: ''
                         }}>
-                        <Navbar expand='md'>
-                            <NavbarToggler 
-                                onClick={() => setIsOpen(!isOpen)} 
-                                className='me-1'
-                            />
-                            <Collapse isOpen={isOpen} navbar>
-                                <Nav className={styles.navigationFont} justified> 
-                                    <NavItem className={styles.navigationFont} >
-                                        <NavLink style={{ color: '#000000'}}
-                                            onClick={() => ref.current.scrollTo(0)}
-                                        >
-                                            Home
-                                        </NavLink>
-                                    </NavItem>
-                                    <NavItem className={styles.navigationFont}>
-                                        <NavLink style={{ color: '#000000'}}
-                                            onClick={() => ref.current.scrollTo(1)}
-                                        >
-                                            Projects
-                                        </NavLink>
-                                    </NavItem>
-                                    <NavItem className={styles.navigationFont}>
-                                        <NavLink style={{ color: '#000000'}}
-                                            onClick={() => ref.current.scrollTo(2)}
-                                        >
-                                            About
-                                        </NavLink>
-                                    </NavItem>
-                                    <NavItem className={styles.navigationFont}>
-                                        <NavLink style={{ color: '#000000'}}
-                                            onClick={() => ref.current.scrollTo(3)}
-                                        >
-                                            Contact
-                                        </NavLink>
-                                    </NavItem>
-                                </Nav>
-                            </Collapse>
-                        </Navbar>
                         <Container>
                             <Row>
                                 <Col className={styles.contactme}>
@@ -362,8 +244,9 @@ const MainPage = () => {
                                 </Col>
                             </Row>
                     </ParallaxLayer>
-            </Parallax>        
-);
+            </Parallax>
+        </>       
+    );
 }
 
 export default MainPage;

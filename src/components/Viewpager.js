@@ -49,7 +49,7 @@ function Viewpager() {
     }),
     [width]
   );
-  console.log('api: ', api);
+
   const bind = useDrag(({ active, movement: [mx], direction: [xDir], distance, cancel }) => {
     if (active && distance > width / 2) {
       index.current = clamp(index.current + (xDir > 0 ? -1 : 1), 0, pages.length - 1)
@@ -76,7 +76,7 @@ function Viewpager() {
           <animated.div style={{ x, scale, backgroundImage: `url(${pages[i]})`, marginBottom: '10px' }} />
             <animated.h5 
               className={`${styles.orbitronFont} ${styles.appTitleBottom}`}
-              style={{ x, scale}}>
+              style={{ x, scale}}> 
               <a  href={github[i]}
                   style={{color: '#FFF2CC', margin: '25px'}} 
                   target='_blank' 
