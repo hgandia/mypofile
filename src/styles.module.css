@@ -11,8 +11,26 @@
   font-family: 'Orbitron', sans-serif;
   font-weight: bold;
 
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 576px){
     font-size: 15px;
+  }
+}
+
+.navback {
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: right;
+
+  @media screen and (max-width: 576px){
+
+  }
+
+  @media screen and (min-width: 576.02px) and (max-width: 992px){
+    
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1200px){
+    
   }
 }
 

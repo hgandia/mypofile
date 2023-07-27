@@ -19,12 +19,10 @@ const MainPage = () => {
     
     return(
         <>
-            <Navbar expand='md' fixed='top' 
-                    style={{ 
-                                backgroundImage: `url(${NavBack})`, 
-                                backgroundSize:'50%', 
-                                backgroundRepeat:'no-repeat',
-                                backgroundPosition:'right' }}>
+            <Navbar expand='md' 
+                    fixed='top'
+                    className={styles.navback} 
+                    style={{ backgroundImage: `url(${NavBack})` }}>
                 <NavbarToggler 
                     style={{ backgroundColor: '#FFF2CC'}} 
                     onClick={() => setIsOpen(!isOpen)} 
@@ -33,29 +31,25 @@ const MainPage = () => {
                     <Nav className={styles.navigationFont} justified> 
                         <NavItem className={styles.navigationFont} >
                             <NavLink style={{ color: '#FFF2CC', textShadow:'-1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black' }}
-                                onClick={() => ref.current.scrollTo(0)}
-                            >
+                                onClick={() => ref.current.scrollTo(0)}>
                                 Home
                             </NavLink>
                         </NavItem>
                         <NavItem className={styles.navigationFont}>
                             <NavLink style={{ color: '#FFF2CC', textShadow:'-1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black'}}
-                                onClick={() => ref.current.scrollTo(1)}
-                            >
+                                onClick={() => ref.current.scrollTo(1)}>
                                 Projects
                             </NavLink>
                         </NavItem>
                         <NavItem className={styles.navigationFont}>
                             <NavLink style={{ color: '#FFF2CC', textShadow:'-1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black'}}
-                                onClick={() => ref.current.scrollTo(2)}
-                            >
+                                onClick={() => ref.current.scrollTo(2)}>
                                 About
                             </NavLink>
                         </NavItem>
                         <NavItem className={styles.navigationFont}>
                             <NavLink style={{ color: '#FFF2CC', textShadow:'-1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black'}}
-                                onClick={() => ref.current.scrollTo(3)}
-                            >
+                                onClick={() => ref.current.scrollTo(3)}>
                                 Contact
                             </NavLink>
                         </NavItem>
