@@ -73,6 +73,23 @@ function Viewpager() {
           >
             {pagesText[i]}
           </animated.h2>
+          {
+            i === pages.length-1 ? 
+                         <p style={{
+                                     color:'#FFF2CC', 
+                                     fontSize:'35px',  
+                                     float:'left',
+                                     marginLeft:'-120px',
+                                     marginTop:'290px'
+                                  }}>{'>>>'}</p> :
+                                  <p style={{
+                                    color:'#FFF2CC', 
+                                    fontSize:'35px',  
+                                    float:'left',
+                                    marginLeft:'-120px',
+                                    marginTop:'290px'
+                                    }}>{'<<<'}</p>
+          }
           <animated.div style={{ x, scale, backgroundImage: `url(${pages[i]})`, marginBottom: '10px' }} />
             <animated.h5 
               className={`${styles.orbitronFont} ${styles.appTitleBottom}`}

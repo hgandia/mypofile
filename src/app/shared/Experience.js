@@ -35,7 +35,7 @@ export const Experience = [
         bullets: [
                     'Create daily alarm summary reports for LTE and CDMA alarms.',
                     'Analyze site alarms, clear them and, if need be, dispatch field techs.',
-                    'Drive test for data capture in order optimize cellular networks.',
+                    'Drive test for data capture in order to optimize cellular networks.',
                     'Work with design team to hardened small cell layout and design.',
                     'Visit sites for audits, design and optimization work.',
                     'Investigate and address customer trouble tickets. ',
