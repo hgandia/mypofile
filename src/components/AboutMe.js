@@ -61,7 +61,7 @@ const AboutMe = () => {
                                                 <ul className={styles.liFlex}>
                                                     <li 
                                                         key={idx} 
-                                                        className={styles.liBullet}
+                                                        className={`${styles.liBullet} ${styles.victormono}`}
                                                     >
                                                         {bullet}
                                                     </li>

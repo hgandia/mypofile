@@ -46,10 +46,10 @@ const CertificationsSlides = Certifications.map((item) => {
                     />
                     {item.school}
                 </li>
-                <li className={`${styles.liFlex} ${styles.liSubHeader1}`}>
+                <li className={`${styles.liFlex} ${styles.liSubHeader1} ${styles.victormono}`}>
                     {item.location}
                 </li>
-                <li className={`${styles.liFlex} ${styles.liSubHeader2}`}>
+                <li className={`${styles.liFlex} ${styles.liSubHeader2} ${styles.victormono}`}>
                     {item.time}
                 </li>
                 <ul 
@@ -57,12 +57,12 @@ const CertificationsSlides = Certifications.map((item) => {
                     style={{
                         marginTop:'10px'
                         }}>
-                    <li className={styles.liBullet}>
+                    <li className={`${styles.liBullet} ${styles.victormono}`}>
                         Area of Study: <span style={{marginLeft:'1px'}}>{item.studyField}</span>
                     </li>
                 </ul>
                 <ul className={styles.liFlex}>
-                    <li className={styles.liBullet}>
+                    <li className={`${styles.liBullet} ${styles.victormono}`}>
                         Degree Received: <span style={{marginLeft:'1px'}}>{item.degree}</span>
                     </li>
                 </ul>
