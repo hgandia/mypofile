@@ -11,7 +11,7 @@ import { Skills }  from '../app/shared/Skills';
 import styles from '../styles.module.css';
 
 const BoxSpread = () => {
-  const [open, set] = useState(false);
+  const [open, set] = useState(true);
 
   const springApi = useSpringRef();
   const { size, ...rest } = useSpring({
