@@ -58,7 +58,7 @@ function Viewpager() {
     api.start(i => {
       if (i < index.current - 1 || i > index.current + 1) return { display: 'none' }
       const x = (i - index.current) * width + (active ? mx : 0)
-      const scale = active ? 1 - distance / width / 2  : 1
+      const scale = active ? 1 - distance / width / 2 : 1
       return { x, scale, display: 'block' }
     });
   });
@@ -69,27 +69,9 @@ function Viewpager() {
         <animated.div className={styles.page} {...bind()} key={i} style={{ display, x }}>
           <animated.h2 
             className={`${styles.orbitronFont} ${styles.appTitleTop}`}
-            style={{color: '#FFF2CC', x, scale}}
-          >
-            {pagesText[i]}
+            style={{color: '#FFF2CC', x, scale}}>
+              {pagesText[i]}
           </animated.h2>
-          {
-            i === pages.length-1 ? 
-                         <p style={{
-                                     color:'#FFF2CC', 
-                                     fontSize:'35px',  
-                                     float:'left',
-                                     marginLeft:'-120px',
-                                     marginTop:'290px'
-                                  }}>{'>>>'}</p> :
-                                  <p style={{
-                                    color:'#FFF2CC', 
-                                    fontSize:'35px',  
-                                    float:'left',
-                                    marginLeft:'-120px',
-                                    marginTop:'290px'
-                                    }}>{'<<<'}</p>
-          }
           <animated.div style={{ x, scale, backgroundImage: `url(${pages[i]})`, marginBottom: '10px' }} />
             <animated.h5 
               className={`${styles.orbitronFont} ${styles.appTitleBottom}`}

@@ -19,8 +19,8 @@ export const Experience = [
                     'Maintain and optimize multiple layers of technology in 5G, 4G & 3G. ',
                     'Improve on KPI\'s such as drops, blocks, throughput, SINR, etc.',
                     'Work on the finalization of small cell, oDAS nodes & macro layout.',
-                    'Analyze site alarms, clear them and, if need be, dispatch field techs.',
-                    'Worked on a SiriusXM satellite radio interference mitigation project.',
+                    'Analyze site alarms, clear them and, if needed, dispatch field tech.',
+                    'Worked on a SiriusXM radio interference mitigation project.',
                     'Created a MOP for market teams to follow in that same project.',
                     'Investigate and address customer trouble tickets.'
             ]
@@ -34,7 +34,7 @@ export const Experience = [
         jobTitle: 'RF Engineer',
         bullets: [
                     'Create daily alarm summary reports for LTE and CDMA alarms.',
-                    'Analyze site alarms, clear them and, if need be, dispatch field techs.',
+                    'Analyze site alarms, clear them and, if needed, dispatch field tech.',
                     'Drive test for data capture in order to optimize cellular networks.',
                     'Work with design team to hardened small cell layout and design.',
                     'Visit sites for audits, design and optimization work.',

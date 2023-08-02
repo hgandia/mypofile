@@ -565,7 +565,7 @@ hr {
   margin-left: 25px;
 
   @media screen and (max-width: 576px) {
-    font-size: 10px;
+    font-size: 9px;
     margin-left: -15px;
     word-break: break-all;
   }
@@ -577,7 +577,7 @@ hr {
   }
 
   @media screen and (min-width: 992px) and (max-width: 1200px){
-    font-size: 10px;
+    font-size: 9px;
     margin-left: -15px;
     word-break: break-all;
   }
