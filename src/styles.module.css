@@ -26,12 +26,14 @@
 }
 
 .navback {
-  background-size: 50%;
+  background-size: 0%;
   background-repeat: no-repeat;
   background-position: right;
 
   @media screen and (max-width: 576px){
-
+    background-size: 0%;
+    background-repeat: no-repeat;
+    background-position: right;
   }
 
   @media screen and (min-width: 576.02px) and (max-width: 992px){
@@ -54,7 +56,7 @@
 
   @media screen and (max-width: 576px){
     font-size: 52px;
-    margin-top: 10px;
+    margin-top: 40px;
   }
 
   @media screen and (min-width: 576.02px) and (max-width: 992px){
@@ -88,8 +90,9 @@
   display: flex;
   justify-content: center;
 
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 576px){
     font-size: 64px;
+    margin-top: 40px;
   }
 }
 
@@ -218,7 +221,7 @@ hr {
   background-repeat: no-repeat;
 
   @media screen and (max-width: 576px){
-    background-size: 17.2%;
+    background-size: 0%;
   }
 
   @media screen and (min-width: 576.02px) and (max-width: 991px){
@@ -239,7 +242,7 @@ hr {
 
   @media screen and (max-width: 576px){
     background-image: url('./app/assets/Slide1_Graphics.png');
-    background-size: 17.2%;
+    background-size: 0%;
   }
 
   @media screen and (min-width: 576.02px) and (max-width: 991px){
@@ -259,7 +262,7 @@ hr {
   background-repeat: no-repeat;
 
   @media screen and (max-width: 576px){
-    background-size: 73%;
+    background-size: 0%;
   }
 
   @media screen and (min-width: 576.02px) and (max-width: 991px){
