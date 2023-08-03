@@ -22,7 +22,7 @@ const MainPage = () => {
             <Navbar expand='md' 
                     fixed='top'
                     className={styles.navback} 
-                    style={{ backgroundImage: `url(${NavBack})` }}>
+                    style={{ backgroundImage: `url(${NavBack})`, borderBottom:'solid #FFF2CC', boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)' }}>
                 <NavbarToggler 
                     style={{ backgroundColor: '#FFF2CC'}} 
                     onClick={() => setIsOpen(!isOpen)} 
