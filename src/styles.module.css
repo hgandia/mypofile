@@ -37,7 +37,7 @@
   }
 
   @media screen and (min-width: 576.02px) and (max-width: 992px){
-    
+    border-bottom: solid #FFF2CC
   }
 
   @media screen and (min-width: 992px) and (max-width: 1200px){
@@ -65,6 +65,7 @@
   }
 
   @media screen and (min-width: 992px) and (max-width: 1200px){
+    margin: 10px 0px;
     font-size: 60px;
   }
 }
@@ -225,11 +226,11 @@ hr {
   }
 
   @media screen and (min-width: 576.02px) and (max-width: 991px){
-    background-size: 11.6%; 
+    background-size: 11.52%; 
   }
 
   @media screen and (min-width: 992px) and (max-width: 1200px){
-    background-size: 6.4%;
+    background-size: 5.91%;
   }
 }
 
@@ -246,11 +247,11 @@ hr {
   }
 
   @media screen and (min-width: 576.02px) and (max-width: 991px){
-    background-size: 21.1%; 
+    background-size: 20.9%; 
   }
 
   @media screen and (min-width: 992px) and (max-width: 1200px){
-    background-size: 11.4%;
+    background-size: 10.7%;
   }
 }
 
@@ -266,11 +267,11 @@ hr {
   }
 
   @media screen and (min-width: 576.02px) and (max-width: 991px){
-    background-size: 39.9%; 
+    background-size: 39.6%; 
   }
 
   @media screen and (min-width: 992px) and (max-width: 1200px){
-    background-size: 21.5%;
+    background-size: 20.3%;
   }
 }
 
