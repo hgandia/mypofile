@@ -38,7 +38,7 @@ const EducationCarousel = (args) => {
                 key={item.id}
             >
                 <List type='unstyled' style={{marginBottom: '90px'}}>
-                    <li className={styles.liHeader}>
+                    <li className={`${styles.liFlex} ${styles.liHeader}`}>
                         <img 
                             src={item.image} 
                             alt='school icon'
@@ -55,7 +55,7 @@ const EducationCarousel = (args) => {
                     <ul 
                         className={styles.liFlex} 
                         style={{ 
-                                marginTop:'10px'
+                                marginTop:'40px'
                             }}>
                         <li className={`${styles.liBullet} ${styles.victormono}`}>
                             Area of Study: <span style={{marginLeft:'1px'}}>{item.studyField}</span>

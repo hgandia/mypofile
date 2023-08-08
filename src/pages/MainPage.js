@@ -195,7 +195,7 @@ const MainPage = () => {
                                             skillset.
                                         </p>
                                     </Col>
-                                <Col className={styles.orbitronFont}>
+                                <Col>
                                     <AboutMe />
                                 </Col> 
                             </Row>

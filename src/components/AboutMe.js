@@ -29,22 +29,20 @@ const AboutMe = () => {
             <AccordionItem className={styles.accordionItem}>
                 <AccordionHeader 
                     targetId='1'
-                    cssModule={{ 'accordion-button': `${styles.accordionButton}`}}
-                    style={{fontSize:'36px'}}
-                >
-                    Volunteer Experience</AccordionHeader>
-                <AccordionBody accordionId='1' className={styles.accordionBody}>
+                    cssModule={{ 'accordion-button': `${styles.accordionButton}`}}>
+                    Volunteer Experience
+                </AccordionHeader>
+                <AccordionBody accordionId='1'>
                     {   
                         Vexperience.map((item, id) => {
                             return(
-                                id === 0 ?
-                                <List type='unstyled'>
-                                    <li className={styles.liHeader}>
-                                                <img 
-                                                    src={item.image}
-                                                    alt='company icon'
-                                                    className={styles.liIcon}   
-                                                />{item.employer}
+                                <List type='unstyled' key={id}>
+                                    <li className={`${styles.liFlex} ${styles.liHeader}`}>
+                                        <img 
+                                            src={item.image}
+                                            alt='company icon'
+                                            className={styles.liIcon}   
+                                        />{item.employer}
                                     </li>
                                     <li className={`${styles.liFlex} ${styles.liSubHeader1}`}>
                                         {item.location}
@@ -69,8 +67,7 @@ const AboutMe = () => {
                                             );
                                          })
                                     }
-                                </List> :
-                                false
+                                </List> 
                             );
                         })                        
                     }

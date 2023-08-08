@@ -38,7 +38,7 @@ const ProfessionalCarousel = (args) => {
             key={item.id}
         >
             <List type='unstyled' style={{marginBottom: '90px'}}>
-                <li className={styles.liHeader}>
+                <li className={`${styles.liFlex} ${styles.liHeader}`}>
                     <img 
                         src={item.image} 
                         alt='company icon'
