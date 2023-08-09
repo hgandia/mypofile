@@ -562,6 +562,7 @@ hr {
 
 .liSubHeader1 {
   font-family: 'Orbitron', sans-serif;
+  margin-top: -70px;
 
   @media screen and (max-width: 576px){
     margin-left: 63px;
