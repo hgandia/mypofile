@@ -110,7 +110,7 @@ export const Vexperience = [
     {
         id:0,
         image: ChurchLogo,
-        employer: 'Iglesia Pentecostal Estrella de Jacob, Inc',
+        employer: 'Iglesia Pentecostal Estrella de Jacob',
         location: 'Bronx, NY',
         time: '9/2010 - Present',
         jobTitle: 'Technical Lead',

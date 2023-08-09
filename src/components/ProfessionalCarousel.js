@@ -46,10 +46,10 @@ const ProfessionalCarousel = (args) => {
                     />
                     {item.employer}
                 </li>
-                <li className={`${styles.liFlex} ${styles.liSubHeader1} ${styles.victormono}`}>
+                <li className={`${styles.liFlex} ${styles.liSubHeader1}`}>
                     {item.location}
                 </li>
-                <li className={`${styles.liFlex} ${styles.liSubHeader2} ${styles.victormono}`}>
+                <li className={`${styles.liFlex} ${styles.liSubHeader2}`}>
                     {item.time}
                 </li>
                 <li className={`${styles.liFlex} ${styles.liSubHeader3}`}>

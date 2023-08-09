@@ -517,9 +517,6 @@ hr {
 }
 
 .liIcon {
-  width: 15%;
-  margin-right: 20px;
-
   @media screen and (max-width: 576px){
     width: 15%;
     margin-right: 5px;
@@ -527,23 +524,27 @@ hr {
 
   @media screen and (min-width: 576.02px) and (max-width: 992px){
     width: 10%;
-    margin-right: 5px;
+    margin-right: 10px;
   }
 
   @media screen and (min-width: 992px) and (max-width: 1200px){
     width: 15%;
     margin-right: 6px;
   }
+
+  @media screen and (min-width: 1200.02px){
+    width: 15%;
+    margin-right: 20px;
+  }
 }
 
 .liHeader {
-  font-size: 27px;
   font-family: 'Orbitron';
   font-weight: bold;
   color: #57554F;
 
   @media screen and (max-width: 576px){
-    font-size: 12px;
+    font-size: 14px;
   }
 
   @media screen and (min-width: 576.02px) and (max-width: 991px){
@@ -553,12 +554,13 @@ hr {
   @media screen and (min-width: 992px) and (max-width: 1200px){
     font-size: 13px;
   }
+
+  @media screen and (min-width: 1200.02px){
+    font-size: 27px;
+  }
 }
 
 .liSubHeader1 {
-  margin-left: 133px;
-  margin-top: -70px;
-  font-size: 15px;
   font-family: 'Orbitron', sans-serif;
 
   @media screen and (max-width: 576px){
@@ -568,9 +570,9 @@ hr {
   }
 
   @media screen and (min-width: 576.02px) and (max-width: 992px){
-    margin-left: 74px;
+    margin-left: 77px;
     font-size: 12px;
-    margin-top: -37px;
+    margin-top: -30px;
   }
 
   @media screen and (min-width: 992px) and (max-width: 1200px){
@@ -578,22 +580,25 @@ hr {
     font-size: 11px;
     margin-top: -40px;
   }
+
+  @media screen and (min-width: 1200.02px){
+    margin-left: 133px;
+    margin-top: -70px;
+    font-size: 15px;
+  }
 }
 
 .liSubHeader2 {
-  margin-left: 133px;
-  margin-top: 7px;
-  font-size: 15px;
   font-family: 'Orbitron', sans-serif;
 
   @media screen and (max-width: 576px){
     margin-left: 63px;
-    font-size: 11px;
+    font-size: 10px;
   }
 
   @media screen and (min-width: 576.02px) and (max-width: 992px){
-    margin-left: 74px;
-    font-size: 11px;
+    margin-left: 77px;
+    font-size: 12px;
     margin-top: 5px;
   }
 
@@ -601,19 +606,22 @@ hr {
     margin-left: 67px;
     font-size: 11px;
   }
+
+  @media screen and (min-width: 1200.02px){
+    margin-left: 133px;
+    margin-top: 7px;
+    font-size: 15px;
+  }
 }
 
 .liSubHeader3 {
-  margin-top: 40px;
-  margin-bottom: 15px;
-  margin-left: 40px;
-  font-size: 20px ;
   font-family: 'Victor Mono', sans-serif;
 
   @media screen and (max-width: 576px){
-    margin-left: 3px;
     font-size: 12px;
-    margin-top: 15px;
+    margin-left: 3px;
+    margin-bottom: 10px;
+    margin-top: 17px;
   }
 
   @media screen and (min-width: 576.02px) and (max-width: 992px){
@@ -625,12 +633,16 @@ hr {
     margin-left: -0.1px;
     margin-top: 20px;
   }
+
+  @media screen and (min-width: 1200.02px){
+    margin-top: 40px;
+    margin-bottom: 15px;
+    margin-left: 40px;
+    font-size: 20px ;
+  }
 }
 
 .liBullet {
-  font-size: 16px;
-  margin-left: 25px;
-
   @media screen and (max-width: 576px) {
     font-size: 9px;
     margin-left: -15px;
@@ -647,6 +659,11 @@ hr {
     font-size: 9px;
     margin-left: -15px;
     word-break: break-all;
+  }
+
+  @media screen and (min-width: 1200.02px){
+    font-size: 16px;
+    margin-left: 25px;
   }
 }
 
