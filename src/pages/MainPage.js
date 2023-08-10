@@ -175,7 +175,7 @@ const MainPage = () => {
                                             analyze complex problems, design efficient solutions, and collaborate 
                                             with cross-functional teams. These skills, along with my natural curiosity 
                                             and eagerness to learn, make me confident in my ability to thrive as a 
-                                            software Developer. 
+                                            software developer. 
                                         </p>
                                         <p className={styles.projects_paragraph}>
                                             I have invested significant time and effort in upskilling, learning 

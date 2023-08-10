@@ -519,7 +519,7 @@ hr {
 .liIcon {
   @media screen and (max-width: 576px){
     width: 15%;
-    margin-right: 5px;
+    margin-right: 5px;  
   }
 
   @media screen and (min-width: 576.02px) and (max-width: 992px){
@@ -617,6 +617,7 @@ hr {
 
 .liSubHeader3 {
   font-family: 'Victor Mono', sans-serif;
+  margin-top: 40px;
 
   @media screen and (max-width: 576px){
     font-size: 12px;
