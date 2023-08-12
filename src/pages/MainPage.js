@@ -29,27 +29,27 @@ const MainPage = () => {
                 />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className={styles.navigationFont} justified> 
-                        <NavItem className={styles.navigationFont} >
+                        <NavItem className={styles.navigationFont}>
                             <NavLink style={{ color: '#FFF2CC', textShadow:'-1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black' }}
-                                onClick={() => ref.current.scrollTo(0)}>
+                                onClick={() => ref.current.scrollTo(0)} href='#'>
                                 Home
                             </NavLink>
                         </NavItem>
                         <NavItem className={styles.navigationFont}>
                             <NavLink style={{ color: '#FFF2CC', textShadow:'-1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black'}}
-                                onClick={() => ref.current.scrollTo(1)}>
+                                onClick={() => ref.current.scrollTo(1)} href='#'>
                                 Projects
                             </NavLink>
                         </NavItem>
                         <NavItem className={styles.navigationFont}>
                             <NavLink style={{ color: '#FFF2CC', textShadow:'-1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black'}}
-                                onClick={() => ref.current.scrollTo(2)}>
+                                onClick={() => ref.current.scrollTo(2)} href='#'>
                                 About
                             </NavLink>
                         </NavItem>
                         <NavItem className={styles.navigationFont}>
                             <NavLink style={{ color: '#FFF2CC', textShadow:'-1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black'}}
-                                onClick={() => ref.current.scrollTo(3)}>
+                                onClick={() => ref.current.scrollTo(3)} href='#'>
                                 Contact
                             </NavLink>
                         </NavItem>
