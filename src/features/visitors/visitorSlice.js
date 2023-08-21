@@ -17,16 +17,16 @@ export const fetchVisitors = createAsyncThunk(
 export const postVisitor = createAsyncThunk(
     'visitors/postVisitor',
     async (petition) => {
-        const response = await fetch(baseUrl + 'contactus', {
+        const response = await fetch(baseUrl + '/', {
                                         method: 'POST',
                                         headers: {
                                                     'Content-Type': 'application/json'
                                                  },
                                         body: JSON.stringify(petition)
             });
-            
+            console.log('The petition in createAsyncThunk is: ', petition);
             if (!response.ok) {
-                return Promise.reject('Su pedido no ha sido sometido: ' + response.status);
+                return Promise.reject('Your request has not been submitted: ' + response.status);
             }
             const data = await response.json();
             console.log('Return data: ', data);

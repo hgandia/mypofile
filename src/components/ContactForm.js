@@ -1,8 +1,8 @@
 import { validateContactForm } from "../utils/validateContactForm";
-//import { postVisitor } from "../features/visitors/visitorSlice";
+import { postVisitor } from "../features/visitors/visitorSlice";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import { Button, Label, Col, FormGroup } from "reactstrap";
-//import { useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import styles from '../styles.module.css';
 
 const ContactForm = () => {
@@ -11,7 +11,7 @@ const ContactForm = () => {
       fontFamily:'orbitron, sans-serif'
     }
 
-   // const dispatch = useDispatch();
+    const dispatch = useDispatch();
 
     const handleSubmit = (values, { resetForm }) => {
         const petition = {
@@ -23,7 +23,7 @@ const ContactForm = () => {
           date: new Date(Date.now()).toISOString(),
         };
         console.log('The petition object is: ', petition);
-       // dispatch(postVisitor(petition));
+        dispatch(postVisitor(petition));
         resetForm();
     }
 
