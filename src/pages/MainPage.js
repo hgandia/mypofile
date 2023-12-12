@@ -92,48 +92,44 @@ const MainPage = () => {
                             </Row>
                             <Row>
                                 <Col
-                                        md='12' lg='6' xl='6' 
-                                        className={styles.orbitronFont}
-                                        style={{color: '#FFF2CC'}}>
-                                        <h3 className={styles.h3_heading}>My name is Herbert Gandía</h3>
-                                        <p className={styles.projects_paragraph}>
-                                            I am an engineering professional with experience in RF engineering, 
-                                            IC physical design and some software development.  I have worked in the
-                                            semiconductor industry for two years and fourteen years in the wireless
-                                            communications industry.  For the last year and a half, I have been
-                                            studying and practicing full stack web development, where I would like to 
-                                            embark in next.   
-                                        </p>
-                                        <p className={styles.projects_paragraph}>
-                                            While my previous experience has been in RF Engineering, I am excited to 
-                                            transition into the world of software development and have been working 
-                                            diligently to acquire the necessary skills.
-                                        </p>
-                                        <p className={styles.projects_paragraph}>
-                                            Throughout my career as an RF Engineer, I have honed my ability to 
-                                            analyze complex problems, design efficient solutions, and collaborate 
-                                            with cross-functional teams. These skills, along with my natural curiosity 
-                                            and eagerness to learn, make me confident in my ability to thrive as a 
-                                            software developer. 
-                                        </p>
-                                        <p className={styles.projects_paragraph}>
-                                            I have invested significant time and effort in upskilling, learning 
-                                            languages such as JavaScript, HTML, Python and CSS, as well as various 
-                                            frameworks and tools, including React, Node.js, Express, and Git. 
-                                            Additionally, I have completed several personal projects to gain practical
-                                            experience.
-                                        </p>
-                                        <p className={styles.projects_paragraph}>
-                                            I understand that transitioning to a new field can be a challenge, but I am 
-                                            eager to embrace the challenge and bring my unique perspective and experience 
-                                            to the team. I am confident that my skills and passion for software development 
-                                            make me an excellent prospect.
-                                        </p>
-                                        <p className={styles.projects_paragraph}>
-                                            Please look through the accordion to get a glimpse at my experience and 
-                                            skillset.
-                                        </p>
-                                    </Col>
+                                    md='12' lg='6'
+                                    className={styles.orbitronFont}
+                                    style={{color: '#FFF2CC'}}>
+                                    <h3 className={styles.h3_heading}>Welcome to my Web Development Journey</h3>
+                                    <p className={styles.aboutme_paragraph}>
+                                        Greetings! I'm Herbert Gandia, a seasoned RF Engineer who has 
+                                        recently embarked on an exciting transition into the world 
+                                        of Full Stack Web Development. With 14 years of experience 
+                                        in RF engineering, I've channeled my passion for problem-solving 
+                                        and analytical thinking into the dynamic realm of coding.   
+                                    </p>
+                                    <h4 className={styles.h3_heading}>About Me</h4>
+                                    <p className={styles.aboutme_paragraph}>
+                                        As an RF Engineer, I've navigated the complexities of 
+                                        designing, optimizing, and troubleshooting RF systems. 
+                                        Now, after a year and a half of dedicated study and hands-on 
+                                        projects, I'm thrilled to showcase my journey into the world 
+                                        of web development.
+                                    </p>
+                                    <h4 className={styles.h3_heading}>Bridging the Gap</h4>
+                                    <p className={styles.aboutme_paragraph}>
+                                        What sets me apart is my unique ability to bridge the gap 
+                                        between RF engineering and web development. My transition 
+                                        is not just a shift in career; it's a fusion of analytical 
+                                        thinking, technical acumen, and a relentless pursuit of excellence. 
+                                        From tackling intricate technical challenges to crafting elegant 
+                                        web solutions, my journey reflects a commitment to continuous 
+                                        learning and adaptability.
+                                    </p>
+                                    <h4 className={styles.h3_heading}>What You'll Find Here</h4>
+                                    <p className={styles.aboutme_paragraph}>
+                                        Explore my portfolio to witness the seamless integration 
+                                        of my engineering background with my newfound web development 
+                                        skills. From responsive web applications to server-side 
+                                        development, each project reflects my dedication to precision 
+                                        and innovation.
+                                    </p>
+                                </Col>
                                 <Col>
                                     <AboutMe />
                                 </Col> 
@@ -165,7 +161,7 @@ const MainPage = () => {
                             </Row>
                             <Row>
                                 <Col
-                                    md='12' lg ='6' xl='6'
+                                    md='12' lg ='6'
                                     className={styles.orbitronFont}
                                     style={{color: '#FFF2CC'}}>
                                     <h3 className={styles.h3_heading}>Welcome to the Projects Section!</h3>

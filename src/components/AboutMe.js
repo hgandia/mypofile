@@ -1,10 +1,4 @@
-import { 
-    Accordion, 
-    AccordionBody, 
-    AccordionHeader, 
-    AccordionItem,
-    List 
-} from 'reactstrap';
+import { Accordion, AccordionBody, AccordionHeader, AccordionItem, List } from 'reactstrap';
 import CertificationsCarousel from './CertificationsCarousel';
 import ProfessionalCarousel from './ProfessionalCarousel';
 import { Vexperience } from '../app/shared/Experience';
@@ -76,8 +70,7 @@ const AboutMe = () => {
             <AccordionItem className={styles.accordionItem}>
                 <AccordionHeader 
                     targetId='2' 
-                    cssModule={{ 'accordion-button': `${styles.accordionButton}`}}
-                >Professional Experience</AccordionHeader>
+                    cssModule={{ 'accordion-button': `${styles.accordionButton}`}}>Professional Experience</AccordionHeader>
                     <AccordionBody accordionId='2'>
                         <ProfessionalCarousel />
                     </AccordionBody>
