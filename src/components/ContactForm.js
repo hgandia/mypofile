@@ -47,7 +47,7 @@ const ContactForm = () => {
           <Col md='7' lg= '5' xl='4'>
             <Field
                 name='firstname' 
-                placeholder='Nombre'
+                placeholder='First Name'
                 className='form-control'
                 style={fieldStyle}
             />
@@ -63,7 +63,7 @@ const ContactForm = () => {
           <Col md='7' lg= '5' xl='4'>
             <Field
                 name='lastname'
-                placeholder='Apellido' 
+                placeholder='Last Name' 
                 className='form-control'
                 style={fieldStyle}
             />
@@ -79,7 +79,7 @@ const ContactForm = () => {
           <Col md='7' lg= '5' xl='4'>
             <Field
                 name='organization'
-                placeholder='Organización' 
+                placeholder='Organization' 
                 className='form-control'
                 style={fieldStyle}
             />
@@ -95,7 +95,7 @@ const ContactForm = () => {
           <Col md='7' lg= '5' xl='4'>
             <Field
                 name='email'
-                placeholder='Correo Electrónico'
+                placeholder='E-mail'
                 type='email' 
                 className='form-control'
                 style={fieldStyle}
@@ -112,7 +112,7 @@ const ContactForm = () => {
             <Col md='7' lg= '5' xl='4'>
             <Field
                 name='feedback'
-                placeholder='Su mensaje/pedido aqui'
+                placeholder='Message'
                 as='textarea'
                 rows='10' 
                 className='form-control'
