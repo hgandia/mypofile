@@ -57,7 +57,7 @@ const MainPage = () => {
                 </Collapse>
             </Navbar>
             <Parallax 
-                pages={4.5} 
+                pages={4} 
                 ref={ref}  
                 style={{
                     backgroundImage: `url(${Logo})`,  
