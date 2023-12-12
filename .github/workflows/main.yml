@@ -24,9 +24,7 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Firebase Login
-        run: npm install -g firebase-tools
-      - run: echo "$FIREBASE_TOKEN" | firebase login --no-localhost
-
-      - name: Deploy to Firebase
-        run: firebase deploy --token "$FIREBASE_TOKEN" --project myportfolio-393919
+      - name: Set up Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --token=${ secrets.FIREBASE_SERVICE_ACCOUNT_KEY }
