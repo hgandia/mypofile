@@ -27,4 +27,4 @@ jobs:
       - name: Set up Firebase
         uses: w9jds/firebase-action@master
         with:
-          args: deploy --token=${ secrets.FIREBASE_SERVICE_ACCOUNT_KEY }
+          args: deploy --token=${{ secrets.FIREBASE_SERVICE_ACCOUNT_KEY }}
