@@ -24,7 +24,7 @@ const AboutMe = () => {
                 <AccordionHeader 
                     targetId='1'
                     cssModule={{ 'accordion-button': `${styles.accordionButton}`}}>
-                    Volunteer Experience
+                    Freelance Projects
                 </AccordionHeader>
                 <AccordionBody accordionId='1'>
                     {   
