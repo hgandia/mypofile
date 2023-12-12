@@ -38,13 +38,13 @@ const MainPage = () => {
                         <NavItem className={styles.navigationFont}>
                             <NavLink style={{ color: '#FFF2CC', textShadow:'-1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black'}}
                                 onClick={() => ref.current.scrollTo(1)} href='#'>
-                                Projects
+                                About
                             </NavLink>
                         </NavItem>
                         <NavItem className={styles.navigationFont}>
                             <NavLink style={{ color: '#FFF2CC', textShadow:'-1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black'}}
                                 onClick={() => ref.current.scrollTo(2)} href='#'>
-                                About
+                                Projects
                             </NavLink>
                         </NavItem>
                         <NavItem className={styles.navigationFont}>
@@ -68,67 +68,6 @@ const MainPage = () => {
                     <ParallaxLayer
                         offset={1}
                         factor={1}
-                        speed={0}
-                        style={{
-                            backgroundImage: `url(${Slate1})`,  
-                            backgroundSize: 'cover',
-                            backgroundAttachment: 'fixed',
-                            backgroundPosition: 'center',
-                            backgroundRepeat:'no-repeat'
-                        }} 
-                    />      
-                    <ParallaxLayer 
-                        offset={1.06} 
-                        speed={1.4}
-                        className={styles.circuit1}
-                        style={{
-                            backgroundSize: ''
-                        }}>
-                            <Row>
-                                <Col>
-                                    <h1 className={styles.projects}>PROJECTS</h1>
-                                </Col>
-                            </Row>
-                            <Row>
-                                <Col
-                                    md='12' lg ='6' xl='6'
-                                    className={styles.orbitronFont}
-                                    style={{color: '#FFF2CC'}}>
-                                    <h3 className={styles.h3_heading}>Welcome to the Projects Section!</h3>
-                                    <Row className='mx-5'>
-                                        <Col className='mx-5'>        
-                                            <hr  className='mx-5'/>
-                                        </Col>
-                                    </Row>
-                                    <p className={styles.projects_paragraph}>
-                                        Here, I would like to share with you some of the exciting 
-                                        projects I have been working on. These projects represent 
-                                        my passion, expertise, and dedication to creating innovative 
-                                        solutions. Please take a moment to explore the diverse range 
-                                        of projects listed by dragging the pictured animated carousel.
-                                    </p>
-                                    <p className={styles.projects_paragraph}>
-                                        I have used multiple technologies to develop these projects. 
-                                        From CSS frameworks like bootstrap to JavaScript libraries 
-                                        like React.JS and Node.JS for back-end, to frameworks like Reactstrap, 
-                                        Redux, React-Router, ReactSpring and Express.JS for back-end, to programming
-                                        languages like JavaScript and Python. 
-                                    </p>
-                                    <p className={styles.projects_paragraph}>
-                                        For an in-depth look at the source code please follow the 
-                                        'Source Code' link that will take you to the respective github 
-                                        repository.  For the app experience please click on the 'Live Demo'
-                                        link underneath the app picture. 
-                                    </p>
-                                </Col>
-                                <Col>
-                                    <Viewpager />
-                                </Col> 
-                            </Row>                           
-                    </ParallaxLayer>
-                    <ParallaxLayer
-                        offset={2}
-                        factor={1}
                         speed={-2.5}
                         style={{
                             backgroundImage: `url(${Slate3})`,  
@@ -139,7 +78,7 @@ const MainPage = () => {
                         }} 
                     />
                     <ParallaxLayer
-                        offset={2.06}
+                        offset={1.06}
                         factor={1}
                         speed={1.3}
                         className={styles.circuit2}
@@ -199,6 +138,67 @@ const MainPage = () => {
                                     <AboutMe />
                                 </Col> 
                             </Row>
+                    </ParallaxLayer>
+                    <ParallaxLayer
+                        offset={2}
+                        factor={1}
+                        speed={0}
+                        style={{
+                            backgroundImage: `url(${Slate1})`,  
+                            backgroundSize: 'cover',
+                            backgroundAttachment: 'fixed',
+                            backgroundPosition: 'center',
+                            backgroundRepeat:'no-repeat'
+                        }} 
+                    />      
+                    <ParallaxLayer 
+                        offset={2.06} 
+                        speed={1.4}
+                        className={styles.circuit1}
+                        style={{
+                            backgroundSize: ''
+                        }}>
+                            <Row>
+                                <Col>
+                                    <h1 className={styles.projects}>PROJECTS</h1>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col
+                                    md='12' lg ='6' xl='6'
+                                    className={styles.orbitronFont}
+                                    style={{color: '#FFF2CC'}}>
+                                    <h3 className={styles.h3_heading}>Welcome to the Projects Section!</h3>
+                                    <Row className='mx-5'>
+                                        <Col className='mx-5'>        
+                                            <hr  className='mx-5'/>
+                                        </Col>
+                                    </Row>
+                                    <p className={styles.projects_paragraph}>
+                                        Here, I would like to share with you some of the exciting 
+                                        projects I have been working on. These projects represent 
+                                        my passion, expertise, and dedication to creating innovative 
+                                        solutions. Please take a moment to explore the diverse range 
+                                        of projects listed by dragging the pictured animated carousel.
+                                    </p>
+                                    <p className={styles.projects_paragraph}>
+                                        I have used multiple technologies to develop these projects. 
+                                        From CSS frameworks like bootstrap to JavaScript libraries 
+                                        like React.JS and Node.JS for back-end, to frameworks like Reactstrap, 
+                                        Redux, React-Router, ReactSpring and Express.JS for back-end, to programming
+                                        languages like JavaScript and Python. 
+                                    </p>
+                                    <p className={styles.projects_paragraph}>
+                                        For an in-depth look at the source code please follow the 
+                                        'Source Code' link that will take you to the respective github 
+                                        repository.  For the app experience please click on the 'Live Demo'
+                                        link underneath the app picture. 
+                                    </p>
+                                </Col>
+                                <Col>
+                                    <Viewpager />
+                                </Col> 
+                            </Row>                           
                     </ParallaxLayer>
                     <ParallaxLayer 
                         offset={3} 
