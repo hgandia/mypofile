@@ -1,10 +1,4 @@
-import { 
-          Carousel, 
-          CarouselControl, 
-          CarouselIndicators, 
-          CarouselItem,
-          List 
-        } from 'reactstrap';
+import { Carousel, CarouselControl, CarouselIndicators, CarouselItem, List } from 'reactstrap';
 import { Experience } from '../app/shared/Experience';
 import styles from '../styles.module.css';
 import { useState } from 'react';
@@ -105,9 +99,7 @@ const ProfessionalCarousel = (args) => {
           className={styles.carouselRight}
         />
       </Carousel>
-    
     );
-      
 };
 
 export default ProfessionalCarousel;

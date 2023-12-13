@@ -5,6 +5,7 @@ import sprint from '../assets/sprint.gif';
 import sony from '../assets/sony.jpg';
 import tMobile from '../assets/t-mobile.jpg'
 import ChurchLogo from '../assets/churchlogo.png';
+import ADMSLogo from '../assets/admsLogo.png';
 
 export const Experience = [
     {
@@ -112,15 +113,29 @@ export const Vexperience = [
         image: ChurchLogo,
         employer: 'Iglesia Pentecostal Estrella de Jacob',
         location: 'Bronx, NY',
-        time: '9/2010 - Present',
-        jobTitle: 'Technical Lead',
+        time: '2022 - Present',
+        jobTitle: 'Full Stack Web Developer',
         bullets: [
-                    'Design, install, optimize, and maintain sound reinforcement system.',
-                    'Design, install, optimize, and maintain video capturing system.',
-                    'Design, install, optimize, and upgrade computer system.',
-                    'Integrate video, sound to computer to stream good quality content.',
-                    'Instruct the team on the system, how to utilize and troubleshoot it.',
-                    'Create website using React.JS, CSS, & Node.JS for back-end.'
+                    'Developed a full stack web application using the MERN stack',
+                    'Developed underlying groundwork of user account logins using JWT',
+                    'Provided a method of contact for site visitors to reach the ministry',
+                    'Tech Used: React, HTML, CSS, JavaScript, Node, Bootstrap, MongoDB'
                 ] 
+    },
+    {
+        id:1,
+        image: ADMSLogo,
+        employer: 'ADMS del Concilio Latino Americano',
+        location: 'Hackensack, NJ',
+        time: '2023 - Present',
+        jobTitle: 'Full Stack Web Developer',
+        bullets: [
+                    'Developing a full stack e-commerce web app using the PERN stack',
+                    'Using PostgreSQL for database needs',
+                    'Developing underlying groundwork for user accounts, user registration',
+                    'Login authentication will be done using JWT to develop online security',
+                    'Provided a method of contact for site visitors to reach the ministry',
+                    'Tech Used: React, HTML, CSS, JavaScript, Node, Bootstrap & PostgreSQL'
+                ]
     }
 ];

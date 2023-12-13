@@ -1,8 +1,8 @@
-import { Accordion, AccordionBody, AccordionHeader, AccordionItem, List } from 'reactstrap';
+import { Accordion, AccordionBody, AccordionHeader, AccordionItem } from 'reactstrap';
 import CertificationsCarousel from './CertificationsCarousel';
 import ProfessionalCarousel from './ProfessionalCarousel';
-import { Vexperience } from '../app/shared/Experience';
 import EducationCarousel from './EducationCarousel';
+import ProjectsCarousel from './ProjectsCarousel';
 import styles from '../styles.module.css';
 import BoxSpread from './BoxSpread';
 import { useState } from 'react';
@@ -22,50 +22,11 @@ const AboutMe = () => {
         <Accordion open={open} toggle={toggle} className={styles.accordion} >
             <AccordionItem className={styles.accordionItem}>
                 <AccordionHeader 
-                    targetId='1'
-                    cssModule={{ 'accordion-button': `${styles.accordionButton}`}}>
-                    Freelance Projects
-                </AccordionHeader>
-                <AccordionBody accordionId='1'>
-                    {   
-                        Vexperience.map((item, id) => {
-                            return(
-                                <List type='unstyled' key={id}>
-                                    <li className={`${styles.liFlex} ${styles.liHeader}`}>
-                                        <img 
-                                            src={item.image}
-                                            alt='company icon'
-                                            className={styles.liIcon}   
-                                        />{item.employer}
-                                    </li>
-                                    <li className={`${styles.liFlex} ${styles.liSubHeader1}`}>
-                                        {item.location}
-                                    </li>
-                                    <li className={`${styles.liFlex} ${styles.liSubHeader2}`}>
-                                        {item.time}
-                                    </li>
-                                    <li className={`${styles.liFlex} ${styles.liSubHeader3}`}>
-                                        <u>{item.jobTitle}</u>
-                                    </li>
-                                    {
-                                        item.bullets.map((bullet, idx) => {
-                                            return(
-                                                <ul className={styles.liFlex}>
-                                                    <li 
-                                                        key={idx} 
-                                                        className={`${styles.liBullet} ${styles.victormono}`}
-                                                    >
-                                                        {bullet}
-                                                    </li>
-                                                </ul>
-                                            );
-                                         })
-                                    }
-                                </List> 
-                            );
-                        })                        
-                    }
-                </AccordionBody>
+                    targetId='1' 
+                    cssModule={{ 'accordion-button': `${styles.accordionButton}`}}>Freelance Projects</AccordionHeader>
+                    <AccordionBody accordionId='1'>
+                        <ProjectsCarousel />
+                    </AccordionBody>
             </AccordionItem>
             <AccordionItem className={styles.accordionItem}>
                 <AccordionHeader 

@@ -1,10 +1,4 @@
-import { 
-    Carousel, 
-    CarouselControl, 
-    CarouselIndicators, 
-    CarouselItem,
-    List
-} from "reactstrap";
+import { Carousel, CarouselControl, CarouselIndicators, CarouselItem, List } from "reactstrap";
 import { Certifications } from '../app/shared/Education';
 import styles from '../styles.module.css';
 import { useState } from "react";

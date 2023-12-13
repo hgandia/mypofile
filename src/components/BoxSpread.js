@@ -1,14 +1,7 @@
-import { useState } from 'react';
-import {
-  useTransition,
-  useSpring,
-  useChain,
-  config,
-  animated,
-  useSpringRef,
-} from '@react-spring/web';
+import { useTransition, useSpring, useChain, config, animated, useSpringRef } from '@react-spring/web';
 import { Skills }  from '../app/shared/Skills';
 import styles from '../styles.module.css';
+import { useState } from 'react';
 
 const BoxSpread = () => {
   const [open, set] = useState(true);
