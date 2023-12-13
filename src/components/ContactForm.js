@@ -114,7 +114,7 @@ const ContactForm = () => {
                 name='feedback'
                 placeholder='Message'
                 as='textarea'
-                rows='10' 
+                rows='3' 
                 className='form-control'
                 style={fieldStyle}
             />

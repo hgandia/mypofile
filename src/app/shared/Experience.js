@@ -119,7 +119,7 @@ export const Vexperience = [
                     'Developed a full stack web application using the MERN stack',
                     'Developed underlying groundwork of user account logins using JWT',
                     'Provided a method of contact for site visitors to reach the ministry',
-                    'Tech Used: React, HTML, CSS, JavaScript, Node, Bootstrap, MongoDB'
+                    'Tech Used: React, HTML, CSS, JS, Node, Bootstrap, MongoDB'
                 ] 
     },
     {
@@ -132,10 +132,10 @@ export const Vexperience = [
         bullets: [
                     'Developing a full stack e-commerce web app using the PERN stack',
                     'Using PostgreSQL for database needs',
-                    'Developing underlying groundwork for user accounts, user registration',
-                    'Login authentication will be done using JWT to develop online security',
+                    'Developing groundwork for user accounts, user registration',
+                    'Login authentication to be done using JWT to develop online security',
                     'Provided a method of contact for site visitors to reach the ministry',
-                    'Tech Used: React, HTML, CSS, JavaScript, Node, Bootstrap & PostgreSQL'
+                    'Tech Used: React, HTML, CSS, JS, Node, Bootstrap & PostgreSQL'
                 ]
     }
 ];

@@ -1,5 +1,4 @@
 import { Nav, Navbar, NavLink, NavItem, NavbarToggler, Collapse } from 'reactstrap';
-import NavBack from '../app/assets/Slide2_Graphics_Horizontal.png';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import ContactForm from '../components/ContactForm';
 import Arrow from '../app/assets/SVG/Arrow.gif';
@@ -21,8 +20,7 @@ const MainPage = () => {
         <>
             <Navbar expand='md' 
                     fixed='top'
-                    className={styles.navback} 
-                    style={{ backgroundImage: `url(${NavBack})` }}>
+                    className={styles.navback}>
                 <NavbarToggler 
                     style={{ backgroundColor: '#FFF2CC'}} 
                     onClick={() => setIsOpen(!isOpen)} 
@@ -138,7 +136,7 @@ const MainPage = () => {
                     <ParallaxLayer
                         offset={2}
                         factor={1}
-                        speed={0}
+                        speed={1}
                         style={{
                             backgroundImage: `url(${Slate1})`,  
                             backgroundSize: 'cover',
@@ -149,7 +147,8 @@ const MainPage = () => {
                     />      
                     <ParallaxLayer 
                         offset={2.06} 
-                        speed={1.4}
+                        speed={1.9}
+                        factor={1}
                         className={styles.circuit1}
                         style={{
                             backgroundSize: ''
@@ -212,7 +211,7 @@ const MainPage = () => {
                     <ParallaxLayer 
                         offset={3.06} 
                         factor={1} 
-                        speed={-3.3}
+                        speed={1.3}
                         className={styles.circuit3}
                         style={{  
                             backgroundSize: ''
