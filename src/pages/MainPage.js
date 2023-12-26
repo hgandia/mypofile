@@ -95,7 +95,7 @@ const MainPage = () => {
                                     style={{color: '#FFF2CC'}}>
                                     <h3 className={styles.h3_heading}>Welcome to my Web Development Journey</h3>
                                     <p className={styles.aboutme_paragraph}>
-                                        Greetings! I'm Herbert Gandia, a seasoned RF Engineer who has 
+                                        Greetings! I'm Herbert Gandia, an RF Engineer who has 
                                         recently embarked on an exciting transition into the world 
                                         of Full Stack Web Development. With 14 years of experience 
                                         in RF engineering, I've channeled my passion for problem-solving 
