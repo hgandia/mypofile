@@ -105,7 +105,7 @@ const MainPage = () => {
                                     <p className={styles.aboutme_paragraph}>
                                         As an RF Engineer, I've navigated the complexities of 
                                         designing, optimizing, and troubleshooting RF systems. 
-                                        Now, after a year and a half of dedicated study and hands-on 
+                                        Now, after two years of dedicated study and hands-on 
                                         projects, I'm thrilled to showcase my journey into the world 
                                         of web development.
                                     </p>
