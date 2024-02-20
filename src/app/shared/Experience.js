@@ -18,7 +18,7 @@ export const Experience = [
         bullets: [
                     'Maintain and optimize cellular networks in NYC on LTE & WCDMA.',
                     'Maintain and optimize multiple layers of technology in 5G, 4G & 3G. ',
-                    'Improve on KPI\'s such as drops, blocks, throughput, SINR, etc.',
+                    'Improve on KPIs such as drops, blocks, throughput, SINR, etc.',
                     'Work on the finalization of small cell, oDAS nodes & macro layout.',
                     'Analyze site alarms, clear them and, if needed, dispatch field tech.',
                     'Worked on a SiriusXM radio interference mitigation project.',
