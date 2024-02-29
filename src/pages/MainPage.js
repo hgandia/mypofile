@@ -103,7 +103,7 @@ const MainPage = () => {
                                     </p>
                                     <h4 className={styles.h3_heading}>About Me</h4>
                                     <p className={styles.aboutme_paragraph}>
-                                        As an RF Engineer, I've navigated the complexities of 
+                                        As an engineer, I've navigated the complexities of 
                                         designing, optimizing, and troubleshooting RF systems. 
                                         Now, after two years of dedicated study and hands-on 
                                         projects, I'm thrilled to showcase my journey into the world 
