@@ -3,6 +3,7 @@ import edjWebsite from '../app/assets/edjWebsite1.jpg';
 import Backend from '../app/assets/edjWebsiteBackend.png';
 import Hangman from '../app/assets/Hangman.jpg';
 import Portfolio from '../app/assets/portfolioHome1.jpg';
+import ADMS from '../app/assets/admsPage.png';
 import { useDrag } from 'react-use-gesture';
 import useMeasure from 'react-use-measure';
 import styles from '../styles.module.css';
@@ -13,28 +14,32 @@ const pages = [
     edjWebsite,
     Backend,
     Hangman,
-    Portfolio
+    Portfolio,
+    ADMS
 ];
 
 const github = [
     'https://github.com/hgandia/edj-react', 
     'https://github.com/hgandia/edjServer', 
     'https://github.com/hgandia/Hangman', 
-    'https://github.com/hgandia/myprofile'
+    'https://github.com/hgandia/myprofile',
+    'https://github.com/hgandia/damas'
 ];
 
 const liveDemo = [
   'https://estrelladejacob.org/home', 
   'https://estrelladejacob.org/contactus', 
   '', 
-  ''
+  '',
+  'https://adms-417121.web.app/home'
 ];
 
 const pagesText = [
                     'Church Front-end App', 
                     'Church Back-end Server', 
                     'Hangman - Terminal Game', 
-                    'Portfolio Page'
+                    'Portfolio Page',
+                    'ADMS'
                 ];
 
 function Viewpager() {
